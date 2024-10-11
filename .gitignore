@@ -302,9 +302,7 @@ ans[0-9]*.tex
 
 
 
-*.html
 *.sagetex.sage.py
-metadata.json
 *.tmp
 # multiwrite latex
 *.mw
