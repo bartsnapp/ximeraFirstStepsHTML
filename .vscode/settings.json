@@ -28,13 +28,13 @@
             "description": "Create HTML of the current file.",
             "tooltip": "Create HTML of the current file."
         },
-        {
-            "label": "Bake",
-            "alignment": "right",
-            "task": "Bake",
-            "description": "Bake this project.",
-            "tooltip": "Bake this project."
-        },
+//        {
+//            "label": "Bake",
+//            "alignment": "right",
+//            "task": "Bake",
+//            "description": "Bake this project.",
+//            "tooltip": "Bake this project."
+//        },
         {
             "label": "Serve",
             "alignment": "right",
