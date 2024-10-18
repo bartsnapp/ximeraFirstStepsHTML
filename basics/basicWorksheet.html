@@ -10,7 +10,7 @@
 <meta content="version 2.0.1" name="ximera"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" media="screen" rel="stylesheet"/> 
 <script src="https://ximera.osu.edu/public/javascripts/standalone.min.js" type="text/javascript"></script> 
-<meta name="dependency" content="66cd54747ac851e6603fbe5a57677056e2563d95 basics/basicWorksheet.tex"/></head><body> 
+<meta name="dependency" content="520336de1008552f10d6acb4ba15c582464e1de8 basics/basicWorksheet.tex"/></head><body> 
 <div class="preamble"> <script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\accordion }[0]{}
 \newcommand {\ungraded }[0]{}
@@ -60,10 +60,28 @@ Society.
 </p><!-- l. 53 -->
 <h3 class="sectionHead" id="asep-xxz-and-uqsl"><span class="titlemark">2   </span> <a id="x1-20002"></a>ASEP, XXZ, and \(U_q(sl_2)\)</h3>
 <!-- l. 55 --><p class="noindent">To begin to motivate the notes, we first introduce the asymmetric simple exclusion
-process (ASEP) and its relationship to the Heisenberg XXZ model and the quantum
-group \(U_q(sl_2).\)
-</p><!-- l. 58 --><p class="noindent"><img alt="PIC" src="../pictures/ASEPScreenshot.png"/>
+process (ASEP) and its relationship to the Heisenberg XXZ model and the
+quantum group \(U_q(sl_2).\) In ASEP, particles randomly jump on a lattice, which we
+assume to be one–dimensional. At most one particle may occupy a site, and
+jumps to occupied sites are blocked (hence the term “exclusion”). Jumps are
+nearest neighbour (hence the term “simple”). If the jumps are continuous–time
+exponential clocks with left rates \(\alpha \) and right rates \(\beta ,\) then let \(q=\sqrt {\beta /\alpha $} denote the asymmetry parameter. If \)q≠1,\( then the model is asymmetric (sometimes partially asymmetric), while for \)q=1\( the model is symmetric. For \)q=0\( or \)q=\(\infty \) the
+model is called totally asymmetric. The symmetric exclusion process (without
+the word simple) can be defined more generally on an arbritrary graph. In
+princple, so can the asymmetric exclusion process, although this is not as well
+studied.
+</p><!-- l. 65 --><p class="noindent"><img alt="PIC" src="../pictures/ASEPScreenshot.png"/>
+</p><!-- l. 67 --><p class="noindent">The generator of the simple exclusion process can be explicitly written. In the most
+elementary case where there are two lattice sites, then there are four possible
+configurations. Associate to each particle the vector \([1\ 0]\) and to each hole (i.e. a
+non–particle) the vector \([0 \ 1].\) Tensoring the vectors together, we can associate to each
+configuration a canonical basis element of the four–dimensional vector space \(\mathbb {C}\otimes \mathbb {C}.\) The
+field here is chosen to be the complex numbers because it is algebraically closed,
+although of course probabilities are real numbers.
+</p><!-- l. 74 --><p class="noindent"><img alt="PIC" src="../pictures/ASEPConfigurations.png"/>
+</p><!-- l. 76 --><p class="noindent">With that set up, the generator is then a \(4\times 4\) matrix
+                                 \[ \alpha \left ( \begin{array}{cccc} 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 1 &amp; 0 \\ 0 &amp; q^2 &amp; -q^2 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array} \right ) \]
 </p>
  
  
-<span ximera-compilation-date="" style="float:right"><small>2024-10-18 10:42:13</small></span></body></html>
+<span ximera-compilation-date="" style="float:right"><small>2024-10-18 18:26:22</small></span></body></html>
