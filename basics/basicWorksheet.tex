@@ -55,11 +55,11 @@ motivation. The goal is for a reader with a probability background to be able to
 To begin to motivate the notes, we first introduce the asymmetric simple exclusion process (ASEP) and its relationship to 
 the Heisenberg XXZ model and the quantum group $U_q(sl_2).$ 
 
-\subsection{ASEP}
+\subsection{Definition of ASEP}
 In ASEP, particles randomly jump on a lattice, which we assume to be
 one--dimensional. At most one particle may occupy a site, and jumps to occupied sites are blocked (hence the term ``exclusion'').
 Jumps are nearest neighbour (hence the term ``simple''). If the jumps are continuous--time exponential 
-clocks with left rates $\alpha$ and right rates $\beta,$ then let $q=\sqrt{\beta/\alpha$} denote the 
+clocks with left rates $\alpha$ and right rates $\beta,$ then let $q=\sqrt{\beta/\alpha}$ denote the 
 asymmetry parameter. If $q\neq 1,$ then the model is asymmetric (sometimes partially asymmetric), 
 while for $q=1$ the model is symmetric. For $q=0$ or $q=\infty$ the model is called totally asymmetric.
 The symmetric exclusion process (without the word simple) can be defined more generally on an arbritrary graph. In princple, so can 
@@ -101,7 +101,7 @@ With this notation, the generator is
 \]
 Similar notation using subscripts will be used throughout these notes.
 
-\subsubsection{Yang--Baxter Equation}
+\subsection{ASEP and Yang--Baxter Equation}
 
 Using the same notation, we say that a matrix \(R\) solves the \underline{braided Yang--Baxter Equation} if:
 \[
@@ -118,7 +118,7 @@ through direct computation. However, it maybe more helpful to consider some simp
 If \(P: V \otimes V \rightarrow V \otimes V\) denotes the permutation operator which sends
 \(u \otimes v\) to \(v \otimes u,\) then the braided Yang--Baxter equation becomes an identity of transpositions:
 \[
-(1\ 2) \circ (2 \ 3 ) \circ (1 \2 ) = (2 \ 3) \circ (1 \ 2) \circ (2 \ 3).
+(1\ 2) \circ (2 \ 3 ) \circ (1 \ 2 ) = (2 \ 3) \circ (1 \ 2) \circ (2 \ 3).
 \]
 This identity holds, since both sides equal the permutation \((1\ 3).\) An even more simple solution is 
 the identity matrix. 
@@ -153,35 +153,161 @@ A mildly helpful observation here is that \(T\) is stochastic, so its compositio
 matrices is also stochastic. Using these identities, one immediately verifies YBE for 
 \(R_{\alpha,0}\) and \(R_{1,\beta}.\) Furthermore, these two solutions are related up to the particle--hole involution.
 
+One notices that \(R_{\alpha,0}-\mathrm{id}_4\) is the generator of ASEP at two lattice sites. It is then
+natural to ask whether or not addition by constants affects integrability. The answer is ``no'' (otherwise 
+integrable probability would not exist). As some intuition, let us suppose that the generator has an 
+explicit set of eigenvectors and eigenvalues. In general, an arbitrary Markov process will have 
+complicated eigenvectors and eigenvalues, but for integrable models we expect ``nice'' eigenvectors
+and eigenvalues, from which probabilistic information can be extracted. Then addition by constants leaves
+the eigenvectors unaffects and only shifts the eigenvalues, leaving them just as ``nice.'' Thus, 
+it is fair to say that ASEP is integrable, at least on two lattice sites. 
+
+At this juncture, it is reasonable to object that nothing has been said about the integrability of ASEP
+on arbitrarily many lattice sites. We will put this question on hold, as the next section's discussion
+of the XXZ model will lay the foundation for answering this question.
 
 
 \subsection{XXZ model}
-We now turn our attention to a related model, called the quantum Heisenberg model. These were introduced
+Having established that ASEP is an integrable model at two lattice sites, it is natural to ask about
+other integrable models that look similar to ASEP, so that we can avoid re--inventing the wheel. Thus we 
+now turn our attention to a related model, called the quantum Heisenberg model. These were introduced
 by Werner Heisenberg to incorporate quantum mechanics into magnetism. Each lattice site has a microscopic
 magnetic dipole, which can either be up or down. If there are \(N\) lattice sites, 
-then the Hamiltonian acts on the \(2^N\)--dimensional vector space \(\mathbb{C}^2)^{\otimes N}.\)
+then the Hamiltonian acts on the \(2^N\)--dimensional vector space \((\mathbb{C}^2)^{\otimes N}.\)
+So, at the very least, the state space of the XXZ model is the same as the ASEP state space. 
 
-\section{Yang--Baxter Equation}
-State equation. Relationship to braids and permutationa and identities. 
+To define the model, first recall that Pauli spin matrices:
+\[
+\sigma^1 = \left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\right), \quad \quad \sigma^2 = \left( \begin{array}{cc} 0 & -i \\ i & 0 \end{array}\right), \sigma^3 = \left( \begin{array}{cc} 1 & 0 \\ 0 & -1 \end{array}\right).
+\]
+The notation \(\sigma^x,\sigma^y,\sigma^z\) are often used instead. 
+Note that these are traceless and are Hermitian, the latter property being important in physics (since
+Hermitian matrices have real eigenvalues, and these eigenvalues correspond to physical quantities). 
+Letting
+\[
+\sigma^a_j = (\mathrm{Id})^{\otimes j-1} \otimes \sigma^a \otimes (\mathrm{Id})^{\otimes N-j}
+\] 
+so that \(\sigma^a_j\) acts on the \(j\)--th lattice site while fixing the others, the Hamiltonian is then
+\[
+\frac{-1}{2}\sum_{j=1}^N \left( J_x \sigma^1_j \sigma^1_{j+1} + J_y \sigma^2_j \sigma^2_{j+1} + J_z \sigma^3_j\sigma^3_{j+1} - h\sigma^3_j\right).
+\]
+where \(J_x,J_y,J_z\) are some coupling constants and \(h\) is the external field. We impose periodic boundary
+conditions, so that \(\sigma^a_{N+1}=\sigma^a_1.\) If \(J_x,J_y,J_z\) are distinct then one obtains the 
+XYZ model. If \(J_x=J_y \neq J_z\) then this is the XXZ model; if \(J_x=J_y=J_z\) then it is the XXX model.
 
-Solution for 4 by 4 with ASEP. 
+Each summand in the Hamiltonian can be written as a four by four matrix:
+\[
+\left(\begin{array}{cccc}
+J_z + 2h & 0 & 0 & J_x-J_y \\
+0 & -J_z & J_x + J_y & 0 \\
+0 & J_x + J_y & -J_z & 0 \\
+J_x - J_y & 0 & 0 & J_z-2h
+\end{array}\right)
+\]
+If \(J_x=J_y,\) as assumed in the XXZ model, then the top--right and bottom--left entries are zero. In 
+this case, the non--zero entries are at least the same as in the ASEP generator. Recalling the previous
+section's heuristic that adding by constants does not change integrability, we can set \(J_z=1,h=0\) to
+obtain the matrix
+\[
+\mathrm{Id}_4 + \left( \begin{array}
+0 & 0 & 0 & 0 \\
+0 & -2 & 2J_x & 0 \\
+0 & 2J_x & -2 & 0\\
+0 & 0 & 0 & 0 
+\end{array}\right).
+\]
 
-State that adding a constant keeps eigenvectors same and only changes eigenvalues
+At this point, it is worth noticing that the YBE is a statement about operators on vector spaces, 
+which should not depend on the choice of bases on the vector spaces. In other words, conjugation 
+(which corresponds to a change of basis) should not affect integrability. As it turns out, conjugation by 
+\[
+\left( \begin{array}
+1 & 0 & 0 & 0 \\
+0 & 1 & \gamma-1 & 0 \\
+0 & 0 & \gamma & 0 \\
+0 & 0 & 0 & 1
+\end{array} \right)
+\]
+results in the ASEP generator on two sites. (Exercise left to the reader).
 
 
 
-\(U_q(sl_2).\)
+\subsection{\(sl_2\) symmetry}
+So far, we have determined that ASEP is integrable and is conjugate to the XXZ Hamiltonian
+(assuming that we are ignoring the question of arbitrary lattice sizes). As it turns out, the
+Pauli matrices form a basis of the real Lie algebra \(su_2\) corresponding to the real compact Lie group 
+\(SU(2).\) Here, a real Lie group means that the underlying field is the real numbers, not that
+all the entries are real (consider the unit circle in the complex plane as a real Lie group, for example).
 
-parameter dependent YBE and affine lie algebras
+The complex variant of \(SU(2)\) is the (non--compact) Lie group \(SL(2,\mathbb{C})\) of traceless 
+\(2 \times 2\) matrices with complex entries. For a variety of reasons, some of which answer historical,
+most mathematicians are introduce to the Lie algebra \(sl_2\) rather than \(su_2,\) so we will use that notation.
 
-\section{QG and then Hopf algebras}
-What is coproduct? 
+By definition, \(sl_2\) is the Lie algebra with basis denoted \(e,f,h\) and brackets
+\[
+[e,f]=h, \quad [h,e]=2e, \quad [h,f]=-2f.
+\]
+Note that the explicit matrices \(E_{12},E_{21},E_{11}-E_{22}\) satisfy these relations, where
+\(E_{ij}\) denotes the matrix with a \(1\) at the \(i,j\)--entry and a 0 everywhere else. 
 
-RTT construction?
+Returning to the XYZ model, one can calculate that the XXX model has \(SU(2)\) symmetry (exercise to the
+reader) in the sense that
+\[
+\sum_{j=1}^N \sigma^a_j
+\]
+commutes with the Hamiltonian of the XXX model for \(a=x,y,z.\) However, for the XXZ model, the
+commutation only works for \(a=z.\) Therefore, whatever algebra is underlying the XXZ model (and hence
+that of ASEP), we know that it can not be as simple as \(SU(2).\) Futhermore, since XXZ and ASEP have
+a free parameter, the algebra should be a one--parameter deformation of \(SU(2).\) This leads into
+the next topic of quantum groups. 
+
+\section{Quantum Group \(U_q(sl_2)\)}
+The Drinfel'd--Jimbo quantum groups are quantizations of the Lie groups. Rather confusingly, the
+quantum groups are not themselves groups. 
+
+Before diving into the rigorous definition, one notes where the quantization occurs. Using probabilistic
+intuition, we expect that the SSEP should have an underlying \(sl_2\) symmetry, whereas the
+ASEP should have the quantum group symmetry. However, SSEP and ASEP on a single lattice site are
+identical, so the quantization must require multiple lattice sites. We've established that in this
+case, the vector space is \((\mathbb{C}^{\otimes 2})^{\otimes N}.\) This raises the question:
+how does \(sl_2\) act on tensor powers?
+
+To answer this question, we take an aside about Lie algebras, which are tangent spaces to Lie groups
+at the origin. What this implies is that for a Lie group \(G\) with a Lie algebra \(g,\) we have that
+\[
+X \in g \text{ implies } \exp(tX) \in G \text{ for all } t\in \mathbb{R}
+\]
+and
+\[
+X = \frac{d}{dt} \exp(tX) \Big_{t=0}.
+\]
+Setting \(g=g_X(t)=\exp(tX),\) the natural action of a group on tensor products is
+\[
+g(v \otimes w)= gv \otimes gw.
+\]
+Taking derivatives and heuristically using Leibniz's rule for derivative of products, we obtain
+\[
+X(v \otimes w) = Xv \otimes w + v \otimes Xw.
+\]
+This is expressed through the \underline{co--product} \(\Delta: g \rightarrow g \otimes g\) defined by 
+\[
+\Delta(X) = 1 \otimes X + X \otimes 1.
+\]
+
+Since it is the co--product that allows for the algebra to act on multiple lattice sites (i.e. tensor powers),
+the quantization occurs in the co--product, not the algebra itself! As it turns out, the right deformation is
+\[
+\Delta(e) = q^h \otimes e + e \otimes 1, \quad \Delta(f) = 1 \otimes f + f \otimes q^{-h}, \quad \Delta(h)=h\otimes 1 + 1\otimes h,
+\]
+where we interpret \(q^h\) as a formal power series in \(h.\) Note that we do not deform the co--product
+of \(h,\) which is consistent with \(\sigma^z\) commuting with the XXZ model. 
+
 
 \section{Solutions to YBE, explicitly (less algebraic)}
 
-Fusion
+RTT construction?
+
+Fusion?
 
 Orthogonal polynomial vertex weights?
 
