@@ -10,7 +10,7 @@
 <meta content="version 2.0.1" name="ximera"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" media="screen" rel="stylesheet"/> 
 <script src="https://ximera.osu.edu/public/javascripts/standalone.min.js" type="text/javascript"></script> 
-<meta name="dependency" content="d344d415026480062ae89df3a9aefb7fab8fe83f basics/basicWorksheet.tex"/></head><body> 
+<meta name="dependency" content="4f870f6f81a1c6c4f1d3651e8fe942e808d6f320 basics/basicWorksheet.tex"/></head><body> 
 <div class="preamble"> <script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\accordion }[0]{}
 \newcommand {\ungraded }[0]{}
@@ -110,33 +110,47 @@ natural to try to find more general stochastic matrices which solve the Yang–B
 equation. The “simplest” generalization occurs when \(V\) is two–dimensional, with basis \(e_1,e_2.\)
 Using exclusion processes as a prototype, we can define the operator \(R_{\alpha \beta }\) by \[ R_{\alpha \beta }(e_1 \otimes e_1) = e_1 \otimes e_1, \quad R_{\alpha \beta }(e_2\otimes e_2) = e_2 \otimes e_2 \] and
 \begin{align*} R_{\alpha \beta }(e_1 \otimes e_2) &amp;= (1-\alpha )e_1 \otimes e_2 + \alpha e_2 \otimes e_1,\\ R_{\alpha \beta }(e_2 \otimes e_1) &amp;= \beta e_1\otimes e_2 + (1-\beta )e_2 \otimes e_1. \end{align*}
-</p><!-- l. 140 -->
+</p><!-- l. 139 --><p class="noindent">Inserting this matrix into the Yang–Baxter equation and evaluating at \(e_1 \otimes e_1 \otimes e_2,\) one finds that
+\(\alpha (1-\beta )=0\) is a necessary requirement for a solution to YBE. Evaluating \( R_{\alpha ,1}\) and \(R_{0,\beta }\) at \(e_1\otimes e_2 \otimes e_1\) and \(e_2 \otimes e_1 \otimes e_1\) yields no
+aditional equations. (Exercise left to the reader)
+</p><!-- l. 144 --><p class="noindent">One could also evaluate YBE at the three vectors \(e_2 \otimes e_1 \otimes e_1,e_1\otimes e_2 \otimes e_1\) and \(e_1 \otimes e_1 \otimes e_2,\) but instead we use another
+symmetry of ASEP. This is called <span class="underline">particle–hole involution.</span> In words, in an ASEP
+with drift to the right, the holes evolve as an ASEP with drift to the left.
+Symbolically, we define an involution \(T\) of \(V\) which switches \(e_1\) and \(e_2.\) Then \[ T^{\otimes 2} R_{\alpha ,\beta }T^{\otimes 2} = R_{\beta ,\alpha }, \quad \quad T^{\otimes 2} R_{\alpha ,\beta } = R_{1-\alpha ,1-\beta }, \quad \quad R_{\alpha ,\beta }T^{\otimes 2} = R_{1-\beta ,1-\alpha }. \] A mildly
+helpful observation here is that \(T\) is stochastic, so its composition with other stochastic
+matrices is also stochastic. Using these identities, one immediately verifies YBE for \(R_{\alpha ,0}\)
+and \(R_{1,\beta }.\) Furthermore, these two solutions are related up to the particle–hole
+involution.
+                                                                  
+
+                                                                  
+</p><!-- l. 158 -->
 <h4 class="subsectionHead" id="xxz-model"><span class="titlemark">2.2   </span> <a id="x1-50002.2"></a>XXZ model</h4>
-<!-- l. 141 --><p class="noindent">We now turn our attention to a related model, called the quantum Heisenberg model.
+<!-- l. 159 --><p class="noindent">We now turn our attention to a related model, called the quantum Heisenberg model.
 These were introduced by Werner Heisenberg to incorporate quantum mechanics into
 magnetism. Each lattice site has a microscopic magnetic dipole, which can either be
 up or down. If there are \(N\) lattice sites, then the Hamiltonian acts on the \(2^N\)–dimensional
 vector space \(\mathbb {C}^2)^{\otimes N}.\)
+</p><!-- l. 164 -->
+<h3 class="sectionHead" id="yangbaxter-equation1"><span class="titlemark">3   </span> <a id="x1-60003"></a>Yang–Baxter Equation</h3>
+<!-- l. 165 --><p class="noindent">State equation. Relationship to braids and permutationa and identities.
+</p><!-- l. 167 --><p class="noindent">Solution for 4 by 4 with ASEP.
+</p><!-- l. 169 --><p class="noindent">State that adding a constant keeps eigenvectors same and only changes eigenvalues
+</p><!-- l. 173 --><p class="noindent">\(U_q(sl_2).\)
+</p><!-- l. 175 --><p class="noindent">parameter dependent YBE and affine lie algebras
+</p><!-- l. 177 -->
+<h3 class="sectionHead" id="qg-and-then-hopf-algebras"><span class="titlemark">4   </span> <a id="x1-70004"></a>QG and then Hopf algebras</h3>
+<!-- l. 178 --><p class="noindent">What is coproduct?
+</p><!-- l. 180 --><p class="noindent">RTT construction?
+</p><!-- l. 182 -->
+<h3 class="sectionHead" id="solutions-to-ybe-explicitly-less-algebraic"><span class="titlemark">5   </span> <a id="x1-80005"></a>Solutions to YBE, explicitly (less algebraic)</h3>
+<!-- l. 184 --><p class="noindent">Fusion
+</p><!-- l. 186 --><p class="noindent">Orthogonal polynomial vertex weights?
                                                                   
 
                                                                   
-</p><!-- l. 146 -->
-<h3 class="sectionHead" id="yangbaxter-equation1"><span class="titlemark">3   </span> <a id="x1-60003"></a>Yang–Baxter Equation</h3>
-<!-- l. 147 --><p class="noindent">State equation. Relationship to braids and permutationa and identities.
-</p><!-- l. 149 --><p class="noindent">Solution for 4 by 4 with ASEP.
-</p><!-- l. 151 --><p class="noindent">State that adding a constant keeps eigenvectors same and only changes eigenvalues
-</p><!-- l. 155 --><p class="noindent">\(U_q(sl_2).\)
-</p><!-- l. 157 --><p class="noindent">parameter dependent YBE and affine lie algebras
-</p><!-- l. 159 -->
-<h3 class="sectionHead" id="qg-and-then-hopf-algebras"><span class="titlemark">4   </span> <a id="x1-70004"></a>QG and then Hopf algebras</h3>
-<!-- l. 160 --><p class="noindent">What is coproduct?
-</p><!-- l. 162 --><p class="noindent">RTT construction?
-</p><!-- l. 164 -->
-<h3 class="sectionHead" id="solutions-to-ybe-explicitly-less-algebraic"><span class="titlemark">5   </span> <a id="x1-80005"></a>Solutions to YBE, explicitly (less algebraic)</h3>
-<!-- l. 166 --><p class="noindent">Fusion
-</p><!-- l. 168 --><p class="noindent">Orthogonal polynomial vertex weights?
-</p><!-- l. 170 -->
+</p><!-- l. 188 -->
 <h3 class="sectionHead" id="research"><span class="titlemark">6   </span> <a id="x1-90006"></a>Research?</h3>
  
  
-<span ximera-compilation-date="" style="float:right"><small>2024-10-21 17:09:50</small></span></body></html>
+<span ximera-compilation-date="" style="float:right"><small>2024-10-21 17:37:11</small></span></body></html>
