@@ -5,10 +5,10 @@
 \title{Introducton to Quantum Groups and Yang-Baxter Equation For Probabilists}
 \license{CC: 0}
 \begin{document}
-%\begin{abstract}
-%    The Yang--Baxter equation is cool. 
-%\end{abstract}
-%\maketitle
+\begin{abstract}
+   The Yang--Baxter equation is cool. 
+\end{abstract}
+\maketitle
 %\part{Introduction}
 %\chapterstyle
 %    \activity{basics/basicWorksheet}
@@ -74,7 +74,7 @@ the vectors together, we can associate to each configuration a canonical basis e
 vector space $\mathbb{C}\otimes \mathbb{C}.$ The field here is chosen to be the complex numbers because
 it is algebraically closed, although of course probabilities are real numbers. 
 
-\includegraphics{ASEPConfigurations.png}
+\includegraphics[height=0.3cm]{ASEPConfigurations.png}
 
 With that set up, the generator is then a $4\times 4$ matrix
 $$
@@ -102,8 +102,14 @@ With this notation, the generator is
 Similar notation using subscripts will be used throughout these notes.
 
 \subsection{ASEP and Yang--Baxter Equation}
+The corresponding notion of integrability in the quantum case comes from Yang--Baxter equation. 
+It was shown by Baxter that when a matrix solves the Yang--Baxter equation, there are corresponding
+``commuting transfer matrices,'' which are analogous to conserved quantities in the classical setting. 
 
-Using the same notation, we say that a matrix \(R\) solves the \underline{braided Yang--Baxter Equation} if:
+
+
+Using the same notation as in the previous section, 
+we say that a matrix \(R\) solves the \underline{braided Yang--Baxter Equation} if:
 \[
 R_{12}R_{23}R_{12} = R_{23}R_{12}R_{23}.
 \]
@@ -112,7 +118,16 @@ An equivalent formulation is
 \[
 R_{12}R_{13}R_{23} = R_{23}R_{13}R_{12}
 \]
-(exercise left to the reader). Given an arbitrary matrix \(R,\) one can check that it satisfies the YBE
+(exercise left to the reader). 
+
+A visual representation of YBE is given by this image:
+
+\includegraphics[height=3cm]{YBEScreenshot.png}
+
+In some settings, the YBE occurs in the scattering of particles with quantum mechanics considerations, 
+such as the QISM (quantum inverse scattering method.)
+
+Given an arbitrary matrix \(R,\) one can check that it satisfies the YBE
 through direct computation. However, it maybe more helpful to consider some simple examples first. 
 
 If \(P: V \otimes V \rightarrow V \otimes V\) denotes the permutation operator which sends
@@ -178,7 +193,7 @@ So, at the very least, the state space of the XXZ model is the same as the ASEP 
 
 To define the model, first recall that Pauli spin matrices:
 \[
-\sigma^1 = \left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\right), \quad \quad \sigma^2 = \left( \begin{array}{cc} 0 & -i \\ i & 0 \end{array}\right), \sigma^3 = \left( \begin{array}{cc} 1 & 0 \\ 0 & -1 \end{array}\right).
+\sigma^1 = \left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\right), \quad \quad \sigma^2 = \left( \begin{array}{cc} 0 & -i \\ i & 0 \end{array}\right), \quad \quad \sigma^3 = \left( \begin{array}{cc} 1 & 0 \\ 0 & -1 \end{array}\right).
 \]
 The notation \(\sigma^x,\sigma^y,\sigma^z\) are often used instead. 
 Note that these are traceless and are Hermitian, the latter property being important in physics (since
@@ -209,7 +224,7 @@ this case, the non--zero entries are at least the same as in the ASEP generator.
 section's heuristic that adding by constants does not change integrability, we can set \(J_z=1,h=0\) to
 obtain the matrix
 \[
-\mathrm{Id}_4 + \left( \begin{array}
+\mathrm{Id}_4 + \left( \begin{array}{cccc}
 0 & 0 & 0 & 0 \\
 0 & -2 & 2J_x & 0 \\
 0 & 2J_x & -2 & 0\\
@@ -221,7 +236,7 @@ At this point, it is worth noticing that the YBE is a statement about operators 
 which should not depend on the choice of bases on the vector spaces. In other words, conjugation 
 (which corresponds to a change of basis) should not affect integrability. As it turns out, conjugation by 
 \[
-\left( \begin{array}
+\left( \begin{array}{cccc}
 1 & 0 & 0 & 0 \\
 0 & 1 & \gamma-1 & 0 \\
 0 & 0 & \gamma & 0 \\
@@ -279,7 +294,7 @@ X \in g \text{ implies } \exp(tX) \in G \text{ for all } t\in \mathbb{R}
 \]
 and
 \[
-X = \frac{d}{dt} \exp(tX) \Big_{t=0}.
+X = \frac{d}{dt} \exp(tX) \Big|_{t=0}.
 \]
 Setting \(g=g_X(t)=\exp(tX),\) the natural action of a group on tensor products is
 \[
