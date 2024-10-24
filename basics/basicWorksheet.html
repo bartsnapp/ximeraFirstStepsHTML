@@ -11,7 +11,7 @@ Kuan" name="author"/>
 <meta content="version 2.0.1" name="ximera"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" media="screen" rel="stylesheet"/> 
 <script src="https://ximera.osu.edu/public/javascripts/standalone.min.js" type="text/javascript"></script> 
-<meta name="dependency" content="c4b63241113591486356d88920837e225d63487d basics/basicWorksheet.tex"/></head><body> 
+<meta name="dependency" content="521da395ba7403d8340ea3db97fef88c7d3def7f basics/basicWorksheet.tex"/></head><body> 
 <div class="preamble"> <script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\accordion }[0]{}
 \newcommand {\ungraded }[0]{}
@@ -233,16 +233,33 @@ products, we obtain \[ X(v \otimes w) = Xv \otimes w + v \otimes Xw. \] This is 
 As it turns out, the right deformation is \[ \Delta (e) = q^h \otimes e + e \otimes 1, \quad \Delta (f) = 1 \otimes f + f \otimes q^{-h}, \quad \Delta (h)=h\otimes 1 + 1\otimes h, \] where we interpret \(q^h\) as a formal power series
 in \(h.\) Note that we do not deform the co–product of \(h,\) which is consistent with \(\sigma ^z\)
 commuting with the XXZ model.
-</p><!-- l. 321 -->
-<h3 class="sectionHead" id="solutions-to-ybe-explicitly-less-algebraic"><span class="titlemark">4   </span> <a id="x1-80004"></a>Solutions to YBE, explicitly (less algebraic)</h3>
-<!-- l. 323 --><p class="noindent">RTT construction?
-</p><!-- l. 325 --><p class="noindent">Fusion?
-</p><!-- l. 327 --><p class="noindent">Orthogonal polynomial vertex weights?
+</p><!-- l. 320 --><p class="noindent">Depending on the preferences of the author, the generator \(h\) may be replaced with \(k:=q^h\)
+with the co–product becoming \[ \Delta (k) = k \otimes k. \] (Exercise to the reader why that is the same
+co–product). In words, \(h\) is primitive and \(k\) is group–like.
+</p><!-- l. 328 -->
+<h4 class="subsectionHead" id="coalgebras-and-bialgebras"><span class="titlemark">3.1   </span> <a id="x1-80003.1"></a>Co-algebras and bi–algebras</h4>
+<!-- l. 329 --><p class="noindent">While I presented the co–product as the object that allows for multiple lattice sites,
+that is of course not how it is presented to algebraists. A more common
+description is that a co–algebra is dual to an algebra, with the co–product
+dual to the product. This subsection will provide a rigorous definition of a
+co–algebras.
                                                                   
 
                                                                   
-</p><!-- l. 329 -->
-<h3 class="sectionHead" id="research"><span class="titlemark">5   </span> <a id="x1-90005"></a>Research?</h3>
+</p><!-- l. 334 --><p class="noindent">Recall that an algebra \(A\) is a vector space with a multiplication operator \[ m: A \otimes A \rightarrow A \] which
+assumed to be bilinear. It is also associative in the sense that \[ m(x \otimes m(y \otimes z)) = m(m(x \otimes y) \otimes z), \] which essentially
+means that \( x(yz) = (xy)z.\) This is equivalently stated as \[ m \circ (m \otimes \mathrm {id}) = m \circ (\mathrm {id} \otimes m). \] Additionally, there is an identity element \(1 \in A\)
+satisfying \[ m(1 \otimes x) = m(x \otimes 1) = x. \] This can be written as an inclusion from the underlying field \(F\) to the
+algebra \(A.\)
+</p><!-- l. 352 --><p class="noindent">Before defining co–algebras, it will be useful to draw certain commutative diagrams. The
+associativity can be written as  <img alt="[Picture]" src="basicWorksheet-7d3c68f7daece895fcd3673bd3f742ff.svg"/>
+</p><!-- l. 364 -->
+<h3 class="sectionHead" id="solutions-to-ybe-explicitly-less-algebraic"><span class="titlemark">4   </span> <a id="x1-90004"></a>Solutions to YBE, explicitly (less algebraic)</h3>
+<!-- l. 366 --><p class="noindent">RTT construction?
+</p><!-- l. 368 --><p class="noindent">Fusion?
+</p><!-- l. 370 --><p class="noindent">Orthogonal polynomial vertex weights?
+</p><!-- l. 372 -->
+<h3 class="sectionHead" id="research"><span class="titlemark">5   </span> <a id="x1-100005"></a>Research?</h3>
  
  
-<span ximera-compilation-date="" style="float:right"><small>2024-10-23 19:42:10</small></span></body></html>
+<span ximera-compilation-date="" style="float:right"><small>2024-10-24 20:40:55</small></span></body></html>

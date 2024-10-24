@@ -1,5 +1,5 @@
 \documentclass{ximera}
-
+\usepackage{tikz}
 \author{Jeffrey Kuan}
 \input{../preamble} %% Loads the graphics path
 \title{Introducton to Quantum Groups and Yang-Baxter Equation For Probabilists}
@@ -316,6 +316,49 @@ the quantization occurs in the co--product, not the algebra itself! As it turns 
 \]
 where we interpret \(q^h\) as a formal power series in \(h.\) Note that we do not deform the co--product
 of \(h,\) which is consistent with \(\sigma^z\) commuting with the XXZ model. 
+
+Depending on the preferences of the author, the generator \(h\) may be replaced with \(k:=q^h\) with 
+the co--product becoming
+\[
+\Delta(k) = k \otimes k.
+\]
+(Exercise to the reader why that is the same co--product). In words, \(h\) is primitive and \(k\) is 
+group--like.
+
+\subsection{Co-algebras and bi--algebras}
+While I presented the co--product as the object that allows for multiple lattice sites, that is of 
+course not how it is presented to algebraists. A more common description is that a co--algebra is
+dual to an algebra, with the co--product dual to the product. This subsection will provide a rigorous
+definition of a co--algebras.
+
+Recall that an algebra \(A\) is a vector space with a multiplication operator
+\[
+m: A \otimes A \rightarrow A   
+\]
+which assumed to be bilinear. It is also associative in the sense that
+\[
+m(x \otimes m(y \otimes z)) = m(m(x \otimes y) \otimes z),   
+\]
+which essentially means that \( x(yz) = (xy)z.\) This is equivalently stated as
+\[
+m \circ (m \otimes \mathrm{id})   = m \circ (\mathrm{id} \otimes m).
+\]
+Additionally, there is an identity element \(1 \in A\) satisfying
+\[
+m(1 \otimes x) = m(x \otimes 1) = x.   
+\]
+This can be written as an inclusion from the underlying field \(F\) to the algebra \(A.\)
+
+Before defining co--algebras, it will be useful to draw certain commutative diagrams. The associativity
+can be written as
+\begin{tikzpicture}
+ \node (top) at (0,0) {\(A \otimes A \otimes A\)};
+ \node (left) at (-5,-5) {\(A \otimes A\)};
+ \draw[red,-latex,line width=2pt] (top)--(left) node[midway,above,sloped] () {above};
+\end{tikzpicture}
+
+
+
 
 
 \section{Solutions to YBE, explicitly (less algebraic)}
