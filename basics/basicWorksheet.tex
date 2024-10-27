@@ -48,7 +48,7 @@ focus on the Yang--Baxter equation. The exposition will use probability and math
 motivation. The goal is for a reader with a probability background to be able to read contemporary (as of
 2024) research papers in integrable probability. 
 
-\textbf{Acknolwedgements.} The author was supported by the London Mathematical Society. 
+\textbf{Acknowledgements.} The author was supported by the London Mathematical Society. 
 
 \section{ASEP, XXZ, and $U_q(sl_2)$}
 
@@ -122,7 +122,7 @@ R_{12}R_{13}R_{23} = R_{23}R_{13}R_{12}
 
 A visual representation of YBE is given by this image:
 
-\includegraphics[height=3cm]{YBEScreenshot.png}
+\includegraphics[height=8cm]{YBEScreenshot.png}
 
 In some settings, the YBE occurs in the scattering of particles with quantum mechanics considerations, 
 such as the QISM (quantum inverse scattering method.)
@@ -354,7 +354,11 @@ can be written as
 \begin{tikzpicture}
  \node (top) at (0,0) {\(A \otimes A \otimes A\)};
  \node (left) at (-5,-5) {\(A \otimes A\)};
- \draw[red,-latex,line width=2pt] (top)--(left) node[midway,above,sloped] () {$m \otimes \mathrm{id}$};
+ \node (right) at (5,-5) {\(A \otimes A\)};
+ \node (bottom) at (0,-10) {\(A\)};
+ \draw[black,-latex,line width=2pt] (top)--(left) node[midway,above] () {$m \otimes \mathrm{id}$};
+ \draw[black,-latex,line width=2pt] (top)--(right) node[midway,above] () {$\mathrm{id} \otimes m$};
+ \draw[black,-latex,line width=2pt] (left)--(bottom) node[midway,above] () {$m$};
 \end{tikzpicture}
 
 
