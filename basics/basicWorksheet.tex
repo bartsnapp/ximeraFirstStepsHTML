@@ -367,9 +367,52 @@ can be written as
  \draw[black,-latex,line width=2pt] (left)--(bottom) node[midway,above] () {$m$};
 \end{tikzpicture}
 
-I like Taylor Swift.
+
+If one reverses the arrow of this diagram, which is also fortunately easy on Tikz, one obtains
+\begin{tikzpicture}
+   \node (top) at (0,0) {\(A \otimes A \otimes A\)};
+   \node (left) at (-5,-5) {\(A \otimes A\)};
+   \node (right) at (5,-5) {\(A \otimes A\)};
+   \node (bottom) at (0,-10) {\(A\)};
+   \draw[black,-latex,line width=2pt] (left)--(top)  node[midway,above] () {$\Delta \otimes \mathrm{id}$};
+   \draw[black,-latex,line width=2pt] (right)--(top) node[midway,above] () {$\mathrm{id} \otimes \Delta$};
+   \draw[black,-latex,line width=2pt] (bottom)--(left) node[midway,above] () {$Delta$};
+   \draw[black,-latex,line width=2pt] (bottom)--(right) node[midway,above] () {$Delta$};
+\end{tikzpicture}
+The condition of \textit{co--associativity} means that this diagram commutes. 
+
+In a similar vein, the unit element can be represented as inclusion \(\iota: k \mapsto A\) from the base field 
+\(k\) to the algebra such that the following diagram commutes:
+\begin{tikzpicture}
+   \node (top) at (0,0) {\(k \otimes A \cong A \cong A \otimes k\)};
+   \node (left) at (-5,-5) {\(A \otimes A\)};
+   \node (right) at (5,-5) {\(A \otimes A\)};
+   \node (bottom) at (0,-10) {\(A\)};
+   \draw[black,-latex,line width=2pt] (top)--(left)  node[midway,above] () {$\iota \otimes \mathrm{id}$};
+   \draw[black,-latex,line width=2pt] (top)--(right) node[midway,above] () {$\mathrm{id} \otimes \iota$};
+   \draw[black,-latex,line width=2pt] (left)--(bottom) node[midway,above] () {$m$};
+   \draw[black,-latex,line width=2pt] (right)--(bottom) node[midway,above] () {$m$};
+   \draw[black,-latex,line width=2pt] (top)--(bottom) node[midway,above] () {$\mathrm{id}$};
+\end{tikzpicture}
 
 
+Reversing the direction of the arrows, one obtains
+\begin{tikzpicture}
+   \node (top) at (0,0) {\(k \otimes C \cong C \cong C \otimes k\)};
+   \node (left) at (-5,-5) {\(C \otimes C\)};
+   \node (right) at (5,-5) {\(C \otimes C\)};
+   \node (bottom) at (0,-10) {\(C\)};
+   \draw[black,-latex,line width=2pt] (left)--(top)  node[midway,above] () {$\epsilon \otimes \mathrm{id}$};
+   \draw[black,-latex,line width=2pt] (right)--(top) node[midway,above] () {$\mathrm{id} \otimes \epsilon$};
+   \draw[black,-latex,line width=2pt] (bottom)--(left) node[midway,above] () {$\Delta$};
+   \draw[black,-latex,line width=2pt] (bottom)--(right) node[midway,above] () {$\Delta$};
+   \draw[black,-latex,line width=2pt] (bottom)--(top) node[midway,above] () {$\mathrm{id}$};
+\end{tikzpicture}
+A co--algebra is a vector space \(C\) over the field \(k\) satisfying those commutative diagrams. 
+
+
+A bi--algebra is a vector space which is both an algebra and a co--algebra, such that the co--unit
+and co--product are algebra homomorphisms.
 
 
 \section{Solutions to YBE, explicitly (less algebraic)}
