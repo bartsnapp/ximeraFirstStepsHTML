@@ -3,7 +3,7 @@
 <meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator"/> 
 <meta content="width=device-width,initial-scale=1" name="viewport"/> 
 <link href="\aa:CssFile " rel="stylesheet" type="text/css"/> 
-<meta content="LectureNotesv3.tex" name="src"/> 
+<meta content="LectureNotesv4.tex" name="src"/> 
 <script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
  <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>  
 <meta content="Jeffrey
@@ -11,7 +11,7 @@ Kuan" name="author"/>
 <meta content="version 2.0.1" name="ximera"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" media="screen" rel="stylesheet"/> 
 <script src="https://ximera.osu.edu/public/javascripts/standalone.min.js" type="text/javascript"></script> 
-<meta name="dependency" content="c1e105a6c2ca6381a86b03e09d3f3a63555be2f8 basics/LectureNotesv3.tex"/><meta name="dependency" content="33b0ec58959de08350cda01cf3e68c607e50b95e basics/LectureNotesv3.tex"/><meta name="dependency" content="33b0ec58959de08350cda01cf3e68c607e50b95e basics/LectureNotesv3.tex"/><meta name="dependency" content="33b0ec58959de08350cda01cf3e68c607e50b95e basics/LectureNotesv3.tex"/><meta name="dependency" content="9109bfb784ad189bce5adcdb5537ddfe1c085dc0 basics/LectureNotesv3.tex"/><meta name="dependency" content="f9f9ac6046368514685a28fdc8d2d12e6438b8da basics/LectureNotesv3.tex"/><meta name="dependency" content="f9f9ac6046368514685a28fdc8d2d12e6438b8da basics/LectureNotesv3.tex"/><meta name="dependency" content="f9f9ac6046368514685a28fdc8d2d12e6438b8da basics/LectureNotesv3.tex"/><meta name="dependency" content="61f85e062ad856f29ba862226f1bed737761cb69 basics/LectureNotesv3.tex"/><meta name="dependency" content="198fde49af11c93f60765f5694a31d5e3bbf7943 basics/LectureNotesv3.tex"/><meta name="dependency" content="cfa308664f6a669905cfec6a8e70cf0302ec3252 basics/LectureNotesv3.tex"/></head><body> 
+<meta name="dependency" content="c140f5cf04d78c2d3becd57321f56cf3a0477e64 basics/LectureNotesv4.tex"/></head><body> 
 <div class="preamble"> <script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\accordion }[0]{}
 \newcommand {\ungraded }[0]{}
@@ -258,28 +258,35 @@ satisfying \[ m(1 \otimes x) = m(x \otimes 1) = x. \] This can be written as an 
 algebra \(A.\)
 </p><!-- l. 359 --><p class="noindent">Before defining co–algebras, it will be useful to draw certain
 commutative diagrams. The associativity can be written as
-<img alt="[Picture]" src="LectureNotesv3-54a8f2c7f65c472552e801c15602bfd1.svg"/>
+<img alt="[Picture]" src="LectureNotesv4-a4175f2cedfa6907e71fbae57b9d0229.svg"/>
                                                                   
 
                                                                   
 </p><!-- l. 372 --><p class="noindent">If one reverses the arrow of this diagram, which is also fortunately easy on Tikz, one
-obtains  <img alt="[Picture]" src="LectureNotesv3-fb0f28d94ca39727cebcec05e42cd1f2.svg"/>
-</p><!-- l. 384 --><p class="noindent">The condition of co–associativity means that this diagram commutes.
-</p><!-- l. 386 --><p class="noindent">In a similar vein, the unit element can be understood as an inclusion from the base
+obtains
+</p><!-- l. 374 --><p class="noindent"><img alt="[Picture]" src="LectureNotesv4-5d1b19d28f58057af1dab5596de953a5.svg"/>
+</p><!-- l. 385 --><p class="noindent">The condition of co–associativity means that this diagram commutes.
+</p><!-- l. 387 --><p class="noindent">In a similar vein, the unit element can be understood as an inclusion from the base
 field to the algebra such that the following diagram commutes:
                                                                   
 
                                                                   
-</p><!-- l. 389 --><p class="noindent"><img alt="[Picture]" src="LectureNotesv3-8c8c993b18dd9282b6dee8a4ee16db48.svg"/>
-</p><!-- l. 401 --><p class="noindent">Reversing the direction of the arrows, one obtains
+</p><!-- l. 390 --><p class="noindent"><img alt="[Picture]" src="LectureNotesv4-8c8c993b18dd9282b6dee8a4ee16db48.svg"/>
+</p><!-- l. 402 --><p class="noindent">Reversing the direction of the arrows, one obtains
                                                                   
 
                                                                   
-<img alt="[Picture]" src="LectureNotesv3-b17d6afe162062b119f7f022a922efab.svg"/>
-</p><!-- l. 414 --><p class="noindent">A co–algebra is a vector space with a co–product and co–unit satisfying the above
+</p><!-- l. 404 --><p class="noindent"><img alt="[Picture]" src="LectureNotesv4-b17d6afe162062b119f7f022a922efab.svg"/>
+</p><!-- l. 416 --><p class="noindent">A co–algebra is a vector space with a co–product and co–unit satisfying the above
 properties. A bi–algebra is an algebra and co–algebra such that the co–product and
 co–unit are also algebra homomorphisms.
+</p><!-- l. 420 --><p class="noindent">A Hopf algebra is a bi–algebra with an involutive anti–homomorphism \(S\) such that this
+diagram commutes:
+                                                                  
+
+                                                                  
+</p><!-- l. 423 --><p class="noindent"><img alt="[Picture]" src="LectureNotesv4-149281a495f9246f66076bf1651f2d19.svg"/>
 </p>
  
  
-<span ximera-compilation-date="" style="float:right"><small>2024-10-30 07:51:02</small></span><span ximera-compilation-date="" style="float:right"><small>2024-10-30 08:10:42</small></span><span ximera-compilation-date="" style="float:right"><small>2024-10-30 08:11:08</small></span><span ximera-compilation-date="" style="float:right"><small>2024-10-30 08:11:35</small></span><span ximera-compilation-date="" style="float:right"><small>2024-10-30 08:12:46</small></span><span ximera-compilation-date="" style="float:right"><small>2024-10-30 08:14:39</small></span><span ximera-compilation-date="" style="float:right"><small>2024-10-30 08:15:11</small></span><span ximera-compilation-date="" style="float:right"><small>2024-10-30 08:15:55</small></span><span ximera-compilation-date="" style="float:right"><small>2024-10-30 08:16:17</small></span><span ximera-compilation-date="" style="float:right"><small>2024-10-30 08:16:47</small></span><span ximera-compilation-date="" style="float:right"><small>2024-10-30 08:17:54</small></span></body></html>
+<span ximera-compilation-date="" style="float:right"><small>2024-10-30 08:25:27</small></span></body></html>
