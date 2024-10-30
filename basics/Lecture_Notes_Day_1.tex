@@ -338,6 +338,12 @@ course not how it is presented to algebraists. A more common description is that
 dual to an algebra, with the co--product dual to the product. This subsection will provide a rigorous
 definition of a co--algebras.
 
+One motivation is that the space of functions on an algebra is a co--algebra. The Lie algebra is
+actually itself a space of differential operators on a Lie group (it is the direction derivative), 
+so is a space of functions on the algebra of smooth functions on the Lie group. Thus, you would
+expect a Lie algebra to have a co--algebra structure.
+
+
 Recall that an algebra \(A\) is a vector space with a multiplication operator
 \[
 m: A \otimes A \rightarrow A   
@@ -437,6 +443,13 @@ commutes:
    \draw[black,-latex,line width=2pt] (top)--(mid) node[midway,above] () {$\epsilon$};
    \draw[black,-latex,line width=2pt] (mid)--(bottom) node[midway,above] () {$\iota$};
 \end{tikzpicture}
+
+Finally, I get to $R$--matrices. A Hopf algebra $H$ is co--commutative if the coproduct $\Delta$ equals its reversal
+$\Delta=:=P \circ \Delta$ where $P: H \otimes H \rightarrow H \otimes H$ maps $x\otimes y$ to $y \otimes x.$ 
+A Hopf algebra is almost co--commutative if there is an invertible element $R \in H \otimes H$ such that 
+$R \Delta(x) = \Delta'(x) R$ for all $x \in H.$
+
+An almost co--commtuative Hopf algebra is quasi--triangular if the element $R$ satisfies the Yang--Baxter equation.
 \end{document}
 
 \section{Solutions to YBE, explicitly (less algebraic)}
