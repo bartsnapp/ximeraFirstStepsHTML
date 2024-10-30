@@ -1,5 +1,6 @@
 \documentclass{ximera}
 \usepackage{tikz}
+\usepackage{amsmath,amssymb,amsfonts}
 \author{Jeffrey Kuan}
 \input{../preamble} %% Loads the graphics path
 \title{Introduction to Quantum Groups and Yang-Baxter Equation For Probabilists}
@@ -380,10 +381,11 @@ If one reverses the arrow of this diagram, which is also fortunately easy on Tik
    \draw[black,-latex,line width=2pt] (bottom)--(right) node[midway,above] () {$Delta$};
 \end{tikzpicture}
 
-The condition of \textit{co--associativity} means that this diagram commutes. 
+The condition of co--associativity means that this diagram commutes. 
 
-In a similar vein, the unit element can be represented as inclusion \(\iota: k \mapsto A\) from the base field 
-\(k\) to the algebra such that the following diagram commutes:
+In a similar vein, the unit element can be understood as an inclusion from the base field to 
+the algebra such that the following diagram commutes:
+
 \begin{tikzpicture}
    \node (top) at (0,0) {\(k \otimes A \cong A \cong A \otimes k\)};
    \node (left) at (-5,-5) {\(A \otimes A\)};
@@ -395,7 +397,6 @@ In a similar vein, the unit element can be represented as inclusion \(\iota: k \
    \draw[black,-latex,line width=2pt] (right)--(bottom) node[midway,above] () {$m$};
    \draw[black,-latex,line width=2pt] (top)--(bottom) node[midway,above] () {$\mathrm{id}$};
 \end{tikzpicture}
-
 
 Reversing the direction of the arrows, one obtains
 \begin{tikzpicture}
@@ -409,12 +410,11 @@ Reversing the direction of the arrows, one obtains
    \draw[black,-latex,line width=2pt] (bottom)--(right) node[midway,above] () {$\Delta$};
    \draw[black,-latex,line width=2pt] (bottom)--(top) node[midway,above] () {$\mathrm{id}$};
 \end{tikzpicture}
-A co--algebra is a vector space \(C\) over the field \(k\) satisfying those commutative diagrams. 
 
-
-A bi--algebra is a vector space which is both an algebra and a co--algebra, such that the co--unit
-and co--product are algebra homomorphisms.
-
+A co--algebra is a vector space with a co--product and co--unit satisfying the above properties. 
+A bi--algebra is an algebra and co--algebra such that the co--product and co--unit are also algebra
+homomorphisms.
+\end{document}
 
 \section{Solutions to YBE, explicitly (less algebraic)}
 
