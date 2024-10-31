@@ -454,9 +454,58 @@ A Hopf algebra is almost co--commutative if there is an invertible element $R \i
 $R \Delta(x) = \Delta'(x) R$ for all $x \in H.$
 
 An almost co--commtuative Hopf algebra is quasi--triangular if the element $R$ satisfies the Yang--Baxter equation.
-\end{document}
 
-\section{Solutions to YBE, explicitly (less algebraic)}
+
+\section{Explicit solutions to YBE}
+
+\subsection{Affine Lie algebras}
+Having shown that solutions to Yang--Baxter Equation can come from Hopf algebras, we now introduce a 
+spectral--dependent Yang--Baxter Equation that comes from affine Lie algebras. 
+
+Given a finite--dimensional Lie algebra $\mathfrak{g}$, define its affinization by
+$$
+\hat{\mathfrak{g}} = \mathfrak{g} \otimes_{\mathbb{C}} \oplus \mathbb{C}[t,t^{-1}] \oplus \mathbb{C}c
+$$
+where $c$ is a central element. In words, this is a one--dimensional central extension of the loop algebra
+over $\mathfrak{g}.$ The Lie bracket is then defined by 
+$$
+[a\otimes t^n, b\otimes t^m] = [a,b] \otimes t^{n+m} + (a,b)n\delta_{m,-n}c
+$$
+where $(\cdot,\cdot)$ is the Cartan--Killing form on $\mathfrak{g}.$ This Lie algebra is now
+infinite--dimensional, which makes its representation theory tricker. 
+
+There is an analogous quantum group $\mathcal{U}_q(\mathfrak{g}),$ which has an $R$--matrix satisfying
+Yang--Baxter equation. For modules where $c$ acts as $0$ (level $0$ representations), we can define an
+evaluation module by takng a module of $\mathfrak{g}$ and then letting $t$ act as multiplication by $z$. 
+If the element $R$ now acts on evaluation modules, then it depends on a parameter which we call the 
+spectral parameter. The Yang--Baxter equation now reads
+$$
+\check{R}_{12}(z) \check{R}_{13}(zw) \check{R}_{23}(w) = \check{R}_{23}(w) \check{R}_{13}(zw) \check{R}_{12}(z).
+$$
+If we attempt to find $4\times 4$ solutions to the spectral--dependent YBE analogous to ASEP, we get
+a two--parameter family of solutions, which end up being the weights of the stochastic six vertex model.
+
+\subsection{Fusion}
+In general, we do not really want to brute force solutions to the Yang--Baxter equation in arbitrary
+representations. Here, I present a way to construct new solutions from old solutions. 
+
+In linear algebra, for any vector space $V$, a symmetric tensor is an element of $V^{\otimes N}$ 
+preserved by any $P_{i,i+1}.$ For quantum groups, however, we have a $q$--deformation in the tensor powers
+so that $P$ and $\Delta$ no longer commute. However, there is still a symmetric tensor power
+$$
+\mathrm{Sym}^N V \subseteq V^{\otimes N}.
+$$
+
+In lieu of an extensive algebraic discussion, we present it in probabilistic language. Recall
+Pitman--Rogers intertwining: suppose there are 
+two Markov kernels $\Lambda$ and $\Phi$ such that $\Lambda\Phi=\mathrm{Id}$. Let $Q=\Lambda P\Phi$ and 
+assume $\Lambda P = Q\Lambda.$ Then $\Phi$ defends a Markov projection from $P$ to $Q$ (insert Tikz here!)
+This procedure is sometimes called fusion. 
+
+This intertwining can be constructed algebraically, but instead we draw a metaphor with stationary measures...
+
+
+\end{document}
 
 RTT construction?
 

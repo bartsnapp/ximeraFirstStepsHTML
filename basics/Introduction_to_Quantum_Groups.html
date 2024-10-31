@@ -11,7 +11,7 @@ Kuan" name="author"/>
 <meta content="version 2.0.1" name="ximera"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" media="screen" rel="stylesheet"/> 
 <script src="https://ximera.osu.edu/public/javascripts/standalone.min.js" type="text/javascript"></script> 
-<meta name="dependency" content="337d5da862aba0920d2adb3cb9bbe24b515c9f25 basics/Introduction_to_Quantum_Groups.tex"/></head><body> 
+<meta name="dependency" content="d86b8bde67bd2c468c1ca0a0f6f31a65a4d3a547 basics/Introduction_to_Quantum_Groups.tex"/></head><body> 
 <div class="preamble"> <script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\accordion }[0]{}
 \newcommand {\ungraded }[0]{}
@@ -145,24 +145,26 @@ helpful observation here is that \(T\) is stochastic, so its composition with ot
 matrices is also stochastic. Using these identities, one immediately verifies YBE for \(R_{\alpha ,0}\)
 and \(R_{1,\beta }.\) Furthermore, these two solutions are related up to the particle–hole
 involution.
-</p><!-- l. 181 --><p class="noindent">One notices that \(R_{\alpha ,0}-\mathrm {id}_4\) is the generator of ASEP at two lattice sites (note to self that
-this is not quite correct). It is then natural to ask whether or not addition
-by constants affects integrability. The answer is “no” (otherwise integrable
-probability would not exist). As some intuition, let us suppose that the generator
-has an explicit set of eigenvectors and eigenvalues. In general, an arbitrary
-Markov process will have complicated eigenvectors and eigenvalues, but for
+</p><!-- l. 181 --><p class="noindent">One notices that \(P\circ R_{\alpha ,0}-\mathrm {id}_4\) is the generator of ASEP at two lattice sites. It is then natural to
+ask whether or not addition by constants affects integrability. The answer is “no”
+(otherwise integrable probability would not exist). As some intuition, let us suppose
+that the generator has an explicit set of eigenvectors and eigenvalues. In general, an
+arbitrary Markov process will have complicated eigenvectors and eigenvalues, but for
 integrable models we expect “nice” eigenvectors and eigenvalues, from which
 probabilistic information can be extracted. Then addition by constants leaves the
 eigenvectors unaffects and only shifts the eigenvalues, leaving them just as
 “nice.” Thus, it is fair to say that ASEP is integrable, at least on two lattice
 sites.
-</p><!-- l. 191 --><p class="noindent">At this juncture, it is reasonable to object that nothing has been said about the
+</p><!-- l. 190 --><p class="noindent">At this juncture, it is reasonable to object that nothing has been said about the
 integrability of ASEP on arbitrarily many lattice sites. We will put this question on
 hold, as the next section’s discussion of the XXZ model will lay the foundation for
 answering this question.
-</p><!-- l. 196 -->
+</p><!-- l. 195 -->
+                                                                  
+
+                                                                  
 <h4 class="subsectionHead" id="xxz-model"><span class="titlemark">2.3   </span> <a id="x1-50002.3"></a>XXZ model</h4>
-<!-- l. 197 --><p class="noindent">Having established that ASEP is an integrable model at two lattice sites, it is natural
+<!-- l. 196 --><p class="noindent">Having established that ASEP is an integrable model at two lattice sites, it is natural
 to ask about other integrable models that look similar to ASEP, so that we can avoid
 re–inventing the wheel. Thus we now turn our attention to a related model, called the
 quantum Heisenberg model. These were introduced by Werner Heisenberg to
@@ -171,7 +173,7 @@ magnetic dipole, which can either be up or down. If there are \(N\) lattice site
 then the Hamiltonian acts on the \(2^N\)–dimensional vector space \((\mathbb {C}^2)^{\otimes N}.\) So, at the
 very least, the state space of the XXZ model is the same as the ASEP state
 space.
-</p><!-- l. 205 --><p class="noindent">To define the model, first recall that Pauli spin matrices: \[ \sigma ^1 = \left (\begin{array}{cc} 0 &amp; 1 \\ 1 &amp; 0 \end{array}\right ), \quad \quad \sigma ^2 = \left ( \begin{array}{cc} 0 &amp; -i \\ i &amp; 0 \end{array}\right ), \quad \quad \sigma ^3 = \left ( \begin{array}{cc} 1 &amp; 0 \\ 0 &amp; -1 \end{array}\right ). \] The notation \(\sigma ^x,\sigma ^y,\sigma ^z\) are
+</p><!-- l. 204 --><p class="noindent">To define the model, first recall that Pauli spin matrices: \[ \sigma ^1 = \left (\begin{array}{cc} 0 &amp; 1 \\ 1 &amp; 0 \end{array}\right ), \quad \quad \sigma ^2 = \left ( \begin{array}{cc} 0 &amp; -i \\ i &amp; 0 \end{array}\right ), \quad \quad \sigma ^3 = \left ( \begin{array}{cc} 1 &amp; 0 \\ 0 &amp; -1 \end{array}\right ). \] The notation \(\sigma ^x,\sigma ^y,\sigma ^z\) are
 often used instead. Note that these are traceless and are Hermitian, the
 latter property being important in physics (since Hermitian matrices have
 real eigenvalues, and these eigenvalues correspond to physical quantities).
@@ -180,130 +182,175 @@ Hamiltonian is then \[ \frac {-1}{2}\sum _{j=1}^N \left ( J_x \sigma ^1_j \sigma
 We impose periodic boundary conditions, so that \(\sigma ^a_{N+1}=\sigma ^a_1.\) If \(J_x,J_y,J_z\) are distinct then one
 obtains the XYZ model. If \(J_x=J_y \neq J_z\) then this is the XXZ model; if \(J_x=J_y=J_z\) then it is the XXX
 model.
-</p><!-- l. 224 --><p class="noindent">Each summand in the Hamiltonian can be written as a four by four matrix: \[ \left (\begin{array}{cccc} J_z + 2h &amp; 0 &amp; 0 &amp; J_x-J_y \\ 0 &amp; -J_z &amp; J_x + J_y &amp; 0 \\ 0 &amp; J_x + J_y &amp; -J_z &amp; 0 \\ J_x - J_y &amp; 0 &amp; 0 &amp; J_z-2h \end{array}\right ) \] If \(J_x=J_y,\)
+</p><!-- l. 223 --><p class="noindent">Each summand in the Hamiltonian can be written as a four by four matrix: \[ \left (\begin{array}{cccc} J_z + 2h &amp; 0 &amp; 0 &amp; J_x-J_y \\ 0 &amp; -J_z &amp; J_x + J_y &amp; 0 \\ 0 &amp; J_x + J_y &amp; -J_z &amp; 0 \\ J_x - J_y &amp; 0 &amp; 0 &amp; J_z-2h \end{array}\right ) \] If \(J_x=J_y,\)
 as assumed in the XXZ model, then the top–right and bottom–left entries
 are zero. In this case, the non–zero entries are at least the same as in the
 ASEP generator. Recalling the previous section’s heuristic that adding by
 constants does not change integrability, we can set \(J_z=1,h=0\) to obtain the matrix
 \[ \mathrm {Id}_4 + \left ( \begin{array}{cccc} 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; -2 &amp; 2J_x &amp; 0 \\ 0 &amp; 2J_x &amp; -2 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array}\right ). \]
-</p><!-- l. 246 --><p class="noindent">At this point, it is worth noticing that the YBE is a statement about operators on
+</p><!-- l. 245 --><p class="noindent">At this point, it is worth noticing that the YBE is a statement about operators on
 vector spaces, which should not depend on the choice of bases on the vector spaces.
 In other words, conjugation (which corresponds to a change of basis) should not
 affect integrability. As it turns out, conjugation by \[ \left ( \begin{array}{cccc} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; \gamma -1 &amp; 0 \\ 0 &amp; 0 &amp; \gamma &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{array} \right ) \] results in the ASEP generator on
 two sites. (Exercise left to the reader).
-</p><!-- l. 261 -->
+</p><!-- l. 260 -->
 <h4 class="subsectionHead" id="sl-symmetry"><span class="titlemark">2.4   </span> <a id="x1-60002.4"></a>\(sl_2\) symmetry</h4>
-<!-- l. 262 --><p class="noindent">So far, we have determined that ASEP is integrable and is conjugate to the XXZ
+<!-- l. 261 --><p class="noindent">So far, we have determined that ASEP is integrable and is conjugate to the XXZ
 Hamiltonian (assuming that we are ignoring the question of arbitrary lattice
 sizes). As it turns out, the Pauli matrices form a basis of the real Lie algebra \(su_2\)
 corresponding to the real compact Lie group \(SU(2).\) Here, a real Lie group means
 that the underlying field is the real numbers, not that all the entries are
+real (consider the unit circle in the complex plane as a real Lie group, for
+example).
                                                                   
 
                                                                   
-real (consider the unit circle in the complex plane as a real Lie group, for
-example).
-</p><!-- l. 268 --><p class="noindent">The complex variant of \(SU(2)\) is the (non–compact) Lie group \(SL(2,\mathbb {C})\) of traceless \(2 \times 2\) matrices with
+</p><!-- l. 267 --><p class="noindent">The complex variant of \(SU(2)\) is the (non–compact) Lie group \(SL(2,\mathbb {C})\) of traceless \(2 \times 2\) matrices with
 complex entries. For a variety of reasons, some of which answer historical, most
 mathematicians are introduce to the Lie algebra \(sl_2\) rather than \(su_2,\) so we will use that
 notation.
-</p><!-- l. 272 --><p class="noindent">By definition, \(sl_2\) is the Lie algebra with basis denoted \(e,f,h\) and brackets \[ [e,f]=h, \quad [h,e]=2e, \quad [h,f]=-2f. \] Note that the
+</p><!-- l. 271 --><p class="noindent">By definition, \(sl_2\) is the Lie algebra with basis denoted \(e,f,h\) and brackets \[ [e,f]=h, \quad [h,e]=2e, \quad [h,f]=-2f. \] Note that the
 explicit matrices \(E_{12},E_{21},E_{11}-E_{22}\) satisfy these relations, where \(E_{ij}\) denotes the matrix with a \(1\) at the
 \(i,j\)–entry and a 0 everywhere else.
-</p><!-- l. 279 --><p class="noindent">Returning to the XYZ model, one can calculate that the XXX model has \(SU(2)\) symmetry
+</p><!-- l. 278 --><p class="noindent">Returning to the XYZ model, one can calculate that the XXX model has \(SU(2)\) symmetry
 (exercise to the reader) in the sense that \[ \sum _{j=1}^N \sigma ^a_j \] commutes with the Hamiltonian of the
 XXX model for \(a=x,y,z.\) However, for the XXZ model, the commutation only works for \(a=z.\)
 Therefore, whatever algebra is underlying the XXZ model (and hence that of ASEP),
 we know that it can not be as simple as \(SU(2).\) Futhermore, since XXZ and ASEP have a
 free parameter, the algebra should be a one–parameter deformation of \(SU(2).\) This leads
 into the next topic of quantum groups.
-</p><!-- l. 290 -->
+</p><!-- l. 289 -->
 <h3 class="sectionHead" id="quantum-group-uqsl"><span class="titlemark">3   </span> <a id="x1-70003"></a>Quantum Group \(U_q(sl_2)\)</h3>
-<!-- l. 291 --><p class="noindent">The Drinfel’d–Jimbo quantum groups are quantizations of the Lie groups. Rather
+<!-- l. 290 --><p class="noindent">The Drinfel’d–Jimbo quantum groups are quantizations of the Lie groups. Rather
 confusingly, the quantum groups are not themselves groups.
-</p><!-- l. 294 --><p class="noindent">Before diving into the rigorous definition, one notes where the quantization
+</p><!-- l. 293 --><p class="noindent">Before diving into the rigorous definition, one notes where the quantization
 occurs. Using probabilistic intuition, we expect that the SSEP should have an
 underlying \(sl_2\) symmetry, whereas the ASEP should have the quantum group
 symmetry. However, SSEP and ASEP on a single lattice site are identical, so the
 quantization must require multiple lattice sites. We’ve established that in this
 case, the vector space is \((\mathbb {C}^{\otimes 2})^{\otimes N}.\) This raises the question: how does \(sl_2\) act on tensor
 powers?
-</p><!-- l. 301 --><p class="noindent">To answer this question, we take an aside about Lie algebras, which are tangent
+</p><!-- l. 300 --><p class="noindent">To answer this question, we take an aside about Lie algebras, which are tangent
 spaces to Lie groups at the origin. What this implies is that for a Lie group \(G\) with a
 Lie algebra \(g,\) we have that \[ X \in g \text { implies } \exp (tX) \in G \text { for all } t\in \mathbb {R} \] and \[ X = \frac {d}{dt} \exp (tX) \Big |_{t=0}. \] Setting \(g=g_X(t)=\exp (tX),\) the natural action of a group on tensor
 products is \[ g(v \otimes w)= gv \otimes gw. \] Taking derivatives and heuristically using Leibniz’s rule for derivative of
 products, we obtain \[ X(v \otimes w) = Xv \otimes w + v \otimes Xw. \] This is expressed through the <span class="underline">co–product</span> \(\Delta : g \rightarrow g \otimes g\) defined by
 \[ \Delta (X) = 1 \otimes X + X \otimes 1. \]
-</p><!-- l. 323 --><p class="noindent">Since it is the co–product that allows for the algebra to act on multiple lattice sites
+</p><!-- l. 322 --><p class="noindent">Since it is the co–product that allows for the algebra to act on multiple lattice sites
 (i.e. tensor powers), the quantization occurs in the co–product, not the algebra itself!
 As it turns out, the right deformation is \[ \Delta (e) = q^h \otimes e + e \otimes 1, \quad \Delta (f) = 1 \otimes f + f \otimes q^{-h}, \quad \Delta (h)=h\otimes 1 + 1\otimes h, \] where we interpret \(q^h\) as a formal power series
 in \(h.\) Note that we do not deform the co–product of \(h,\) which is consistent with \(\sigma ^z\)
 commuting with the XXZ model.
+</p><!-- l. 330 --><p class="noindent">Depending on the preferences of the author, the generator \(h\) may be replaced with \(k:=q^h\)
+with the co–product becoming \[ \Delta (k) = k \otimes k. \] (Exercise to the reader why that is the same
                                                                   
 
                                                                   
-</p><!-- l. 331 --><p class="noindent">Depending on the preferences of the author, the generator \(h\) may be replaced with \(k:=q^h\)
-with the co–product becoming \[ \Delta (k) = k \otimes k. \] (Exercise to the reader why that is the same
 co–product). In words, \(h\) is primitive and \(k\) is group–like.
-</p><!-- l. 339 -->
+</p><!-- l. 338 -->
 <h4 class="subsectionHead" id="coalgebras-and-bialgebras"><span class="titlemark">3.1   </span> <a id="x1-80003.1"></a>Co-algebras and bi–algebras</h4>
-<!-- l. 340 --><p class="noindent">While I presented the co–product as the object that allows for multiple lattice sites,
+<!-- l. 339 --><p class="noindent">While I presented the co–product as the object that allows for multiple lattice sites,
 that is of course not how it is presented to algebraists. A more common
 description is that a co–algebra is dual to an algebra, with the co–product
 dual to the product. This subsection will provide a rigorous definition of a
 co–algebras.
-</p><!-- l. 345 --><p class="noindent">One motivation is that the space of functions on an algebra is a co–algebra. The Lie
+</p><!-- l. 344 --><p class="noindent">One motivation is that the space of functions on an algebra is a co–algebra. The Lie
 algebra is actually itself a space of differential operators on a Lie group (it is the
 direction derivative), so is a space of functions on the algebra of smooth functions on
 the Lie group. Thus, you would expect a Lie algebra to have a co–algebra
 structure.
-</p><!-- l. 351 --><p class="noindent">Recall that an algebra \(A\) is a vector space with a multiplication operator \[ m: A \otimes A \rightarrow A \] which
+</p><!-- l. 350 --><p class="noindent">Recall that an algebra \(A\) is a vector space with a multiplication operator \[ m: A \otimes A \rightarrow A \] which
 assumed to be bilinear. It is also associative in the sense that \[ m(x \otimes m(y \otimes z)) = m(m(x \otimes y) \otimes z), \] which essentially
 means that \( x(yz) = (xy)z.\) This is equivalently stated as \[ m \circ (m \otimes \mathrm {id}) = m \circ (\mathrm {id} \otimes m). \] Additionally, there is an identity element \(1 \in A\)
 satisfying \[ m(1 \otimes x) = m(x \otimes 1) = x. \] This can be written as an inclusion from the underlying field \(F\) to the
 algebra \(A.\)
-</p><!-- l. 369 --><p class="noindent">Before defining co–algebras, it will be useful to draw certain
+</p><!-- l. 368 --><p class="noindent">Before defining co–algebras, it will be useful to draw certain
 commutative diagrams. The associativity can be written as
                                                                   
 
                                                                   
 <img alt="[Picture]" src="Introduction_to_Quantum_Groups-2fb1b0fa0d5322e8a07dfa4ae767b44a.svg"/>
-</p><!-- l. 383 --><p class="noindent">If one reverses the arrow of this diagram, which is also fortunately easy on Tikz, one
+</p><!-- l. 382 --><p class="noindent">If one reverses the arrow of this diagram, which is also fortunately easy on Tikz, one
 obtains
                                                                   
 
                                                                   
-</p><!-- l. 385 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-af043ee0a0becbf9c6370f84fc978b04.svg"/>
-</p><!-- l. 396 --><p class="noindent">The condition of co–associativity means that this diagram commutes.
-</p><!-- l. 398 --><p class="noindent">In a similar vein, the unit element can be understood as an inclusion from the base
+</p><!-- l. 384 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-af043ee0a0becbf9c6370f84fc978b04.svg"/>
+</p><!-- l. 395 --><p class="noindent">The condition of co–associativity means that this diagram commutes.
+</p><!-- l. 397 --><p class="noindent">In a similar vein, the unit element can be understood as an inclusion from the base
 field to the algebra such that the following diagram commutes:
                                                                   
 
                                                                   
-</p><!-- l. 401 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-cd8ec40eeace09d42aaadbf27fd1b826.svg"/>
-</p><!-- l. 413 --><p class="noindent">Reversing the direction of the arrows, one obtains
+</p><!-- l. 400 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-cd8ec40eeace09d42aaadbf27fd1b826.svg"/>
+</p><!-- l. 412 --><p class="noindent">Reversing the direction of the arrows, one obtains
                                                                   
 
                                                                   
-</p><!-- l. 415 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-ee0fc7f78327171c156f314f5fe01f8c.svg"/>
-</p><!-- l. 427 --><p class="noindent">A co–algebra is a vector space with a co–product and co–unit satisfying the above
+</p><!-- l. 414 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-ee0fc7f78327171c156f314f5fe01f8c.svg"/>
+</p><!-- l. 426 --><p class="noindent">A co–algebra is a vector space with a co–product and co–unit satisfying the above
 properties. A bi–algebra is an algebra and co–algebra such that the co–product and
 co–unit are also algebra homomorphisms.
-</p><!-- l. 431 --><p class="noindent">A Hopf algebra is a bi–algebra with an involutive anti–homomorphism \(S\) such that this
+</p><!-- l. 430 --><p class="noindent">A Hopf algebra is a bi–algebra with an involutive anti–homomorphism \(S\) such that this
 diagram commutes:
                                                                   
 
                                                                   
-</p><!-- l. 434 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-6c6dca5eb0aa21f6e6ccdb2c08e60ab5.svg"/>
-</p><!-- l. 452 --><p class="noindent">Finally, I get to \(R\)–matrices. A Hopf algebra \(H\) is co–commutative if the coproduct \(\Delta \)
+</p><!-- l. 433 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-6c6dca5eb0aa21f6e6ccdb2c08e60ab5.svg"/>
+</p><!-- l. 451 --><p class="noindent">Finally, I get to \(R\)–matrices. A Hopf algebra \(H\) is co–commutative if the coproduct \(\Delta \)
 equals its reversal \(\Delta =:=P \circ \Delta \) where \(P: H \otimes H \rightarrow H \otimes H\) maps \(x\otimes y\) to \(y \otimes x.\) A Hopf algebra is almost co–commutative if
 there is an invertible element \(R \in H \otimes H\) such that \(R \Delta (x) = \Delta &#39;(x) R\) for all \(x \in H.\)
-</p><!-- l. 457 --><p class="noindent">An almost co–commtuative Hopf algebra is quasi–triangular if the element \(R\) satisfies
+</p><!-- l. 456 --><p class="noindent">An almost co–commtuative Hopf algebra is quasi–triangular if the element \(R\) satisfies
 the Yang–Baxter equation.
-</p>
                                                                   
 
                                                                   
+</p><!-- l. 459 -->
+<h3 class="sectionHead" id="explicit-solutions-to-ybe"><span class="titlemark">4   </span> <a id="x1-90004"></a>Explicit solutions to YBE</h3>
+<!-- l. 461 -->
+<h4 class="subsectionHead" id="affine-lie-algebras"><span class="titlemark">4.1   </span> <a id="x1-100004.1"></a>Affine Lie algebras</h4>
+<!-- l. 462 --><p class="noindent">Having shown that solutions to Yang–Baxter Equation can come from Hopf algebras,
+we now introduce a spectral–dependent Yang–Baxter Equation that comes from
+affine Lie algebras.
+</p><!-- l. 465 --><p class="noindent">Given a finite–dimensional Lie algebra \(\mathfrak {g}\), define its affinization by
+                                 \[ \hat {\mathfrak {g}} = \mathfrak {g} \otimes _{\mathbb {C}} \oplus \mathbb {C}[t,t^{-1}] \oplus \mathbb {C}c \]
+ where \(c\) is a central element. In words, this is a one–dimensional central extension of
+the loop algebra over \(\mathfrak {g}.\) The Lie bracket is then defined by
+                                 \[ [a\otimes t^n, b\otimes t^m] = [a,b] \otimes t^{n+m} + (a,b)n\delta _{m,-n}c \]
+ where \((\cdot ,\cdot )\) is the Cartan–Killing form on \(\mathfrak {g}.\) This Lie algebra is now infinite–dimensional,
+which makes its representation theory tricker.
+                                                                  
+
+                                                                  
+</p><!-- l. 477 --><p class="noindent">There is an analogous quantum group \(\mathcal {U}_q(\mathfrak {g}),\) which has an \(R\)–matrix satisfying Yang–Baxter
+equation. For modules where \(c\) acts as \(0\) (level \(0\) representations), we can define an
+evaluation module by takng a module of \(\mathfrak {g}\) and then letting \(t\) act as multiplication
+by \(z\). If the element \(R\) now acts on evaluation modules, then it depends on a
+parameter which we call the spectral parameter. The Yang–Baxter equation now
+reads
+                                 \[ \check {R}_{12}(z) \check {R}_{13}(zw) \check {R}_{23}(w) = \check {R}_{23}(w) \check {R}_{13}(zw) \check {R}_{12}(z). \]
+ If we attempt to find \(4\times 4\) solutions to the spectral–dependent YBE analogous to ASEP,
+we get a two–parameter family of solutions, which end up being the weights of the
+stochastic six vertex model.
+</p><!-- l. 488 -->
+<h4 class="subsectionHead" id="fusion"><span class="titlemark">4.2   </span> <a id="x1-110004.2"></a>Fusion</h4>
+<!-- l. 489 --><p class="noindent">In general, we do not really want to brute force solutions to the Yang–Baxter
+equation in arbitrary representations. Here, I present a way to construct new
+solutions from old solutions.
+</p><!-- l. 492 --><p class="noindent">In linear algebra, for any vector space \(V\), a symmetric tensor is an element of \(V^{\otimes N}\)
+preserved by any \(P_{i,i+1}.\) For quantum groups, however, we have a \(q\)–deformation in the
+tensor powers so that \(P\) and \(\Delta \) no longer commute. However, there is still a symmetric
+tensor power
+                                                                  
+
+                                                                  
+                                 \[ \mathrm {Sym}^N V \subseteq V^{\otimes N}. \]
+</p><!-- l. 499 --><p class="noindent">In lieu of an extensive algebraic discussion, we present it in probabilistic language.
+Recall Pitman–Rogers intertwining: suppose there are two Markov kernels \(\Lambda \) and \(\Phi \) such
+that \(\Lambda \Phi =\mathrm {Id}\). Let \(Q=\Lambda P\Phi \) and assume \(\Lambda P = Q\Lambda .\) Then \(\Phi \) defends a Markov projection from \(P\) to \(Q\) (insert Tikz
+here!)
+</p><!-- l. 504 --><p class="noindent">This intertwining can be constructed algebraically ...
+</p>
  
  
-<span ximera-compilation-date="" style="float:right"><small>2024-10-31 11:36:25</small></span></body></html>
+<span ximera-compilation-date="" style="float:right"><small>2024-10-31 12:25:08</small></span></body></html>
