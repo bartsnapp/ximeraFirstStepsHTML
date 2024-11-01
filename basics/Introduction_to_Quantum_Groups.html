@@ -11,7 +11,7 @@ Kuan" name="author"/>
 <meta content="version 2.0.1" name="ximera"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" media="screen" rel="stylesheet"/> 
 <script src="https://ximera.osu.edu/public/javascripts/standalone.min.js" type="text/javascript"></script> 
-<meta name="dependency" content="d86b8bde67bd2c468c1ca0a0f6f31a65a4d3a547 basics/Introduction_to_Quantum_Groups.tex"/></head><body> 
+<meta name="dependency" content="33ddbcacd7a5ec42ea5ef51f56e372ce4abe55a3 basics/Introduction_to_Quantum_Groups.tex"/></head><body> 
 <div class="preamble"> <script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\accordion }[0]{}
 \newcommand {\ungraded }[0]{}
@@ -26,7 +26,8 @@ Kuan" name="author"/>
 I finish writing them. I tested it out using NVDA, a screen reader. It works best if
 you uncheck “graphic” and “clickable” in the settings.
 </p><!-- l. 26 --><p class="noindent">I am still finding typos and mistakes, please so take this webpage as a draft for now.
-It is updated as of the 30 October lecture.
+It is updated as of the 31 October lecture. To load the most updated version, click
+the orange “update” button at the top of the page.
 </p>
 <h3 class="sectionHead" id="introduction"><span class="titlemark">1   </span> <a id="x1-10001"></a>Introduction</h3>
 <!-- l. 31 --><p class="noindent">Broadly speaking, <strong>integrable probability</strong> is a branch of probability theory which
@@ -52,10 +53,10 @@ momentum and energy became operators which generally do not commute;
 additionally, the values of these quantities only take discrete, “quantized” values. In
 this context, the concept of “conserved quantities” becomes “commuting operators,”
 and values of the quantities are eigenvalues of eigenstates. At the time, their
-approaches were called the “quantum inverse scattering method.” Since then, the
                                                                   
 
                                                                   
+approaches were called the “quantum inverse scattering method.” Since then, the
 method has been generalized to abstract algebraic objects, such as Hopf
 algebras.
 </p><!-- l. 55 --><p class="noindent">These notes will introduce one such algebraic object, known as <strong>quantum groups,</strong>
@@ -89,10 +90,10 @@ configurations. Associate to each particle the vector \([1\ 0]\) and to each hol
 non–particle) the vector \([0 \ 1].\) Tensoring the vectors together, we can associate to each
 configuration a canonical basis element of the four–dimensional vector space \(\mathbb {C}\otimes \mathbb {C}.\) The
 field here is chosen to be the complex numbers because it is algebraically closed,
-although of course probabilities are real numbers.
                                                                   
 
                                                                   
+although of course probabilities are real numbers.
 </p><!-- l. 86 --><p class="noindent"><img alt="PIC" height="8" src="../pictures/ASEPConfigurations.png" width="8"/>
 </p><!-- l. 88 --><p class="noindent">With that set up, the generator is then a \(4\times 4\) matrix
                                  \[ \alpha \left ( \begin{array}{cccc} 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 1 &amp; 0 \\ 0 &amp; q^2 &amp; -q^2 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array} \right ). \]
@@ -348,9 +349,21 @@ tensor power
 </p><!-- l. 499 --><p class="noindent">In lieu of an extensive algebraic discussion, we present it in probabilistic language.
 Recall Pitman–Rogers intertwining: suppose there are two Markov kernels \(\Lambda \) and \(\Phi \) such
 that \(\Lambda \Phi =\mathrm {Id}\). Let \(Q=\Lambda P\Phi \) and assume \(\Lambda P = Q\Lambda .\) Then \(\Phi \) defends a Markov projection from \(P\) to \(Q\) (insert Tikz
-here!)
-</p><!-- l. 504 --><p class="noindent">This intertwining can be constructed algebraically ...
-</p>
+here!) This procedure is sometimes called fusion.
+</p><!-- l. 505 --><p class="noindent">This intertwining can be constructed algebraically, but instead we draw a metaphor
+with stationary measures. We want to show that
+                                 \[ \Lambda P = \Lambda P \Phi \Lambda . \]
+ If for all \(v\), we have that \(v\Lambda \) is stationary under \(P\), i.e. \(v\Lambda P = \v \Lambda \), then the above intertwining
+becomes
+                                 \[ v\Lambda = v\Lambda \Phi \Lambda \]
+ which then follows from \(\Lambda \Phi =\mathrm {Id}.\)
+</p><!-- l. 517 --><p class="noindent">Calculating the fused vertex weights then requires orthogonal polynomials (insert
+equations later).
+                                                                  
+
+                                                                  
+</p><!-- l. 519 -->
+<h4 class="subsectionHead" id="construction-with-central-elements"><span class="titlemark">4.3   </span> <a id="x1-120004.3"></a>Construction with Central Elements</h4>
  
  
-<span ximera-compilation-date="" style="float:right"><small>2024-10-31 12:25:08</small></span></body></html>
+<span ximera-compilation-date="" style="float:right"><small>2024-11-01 09:26:41</small></span></body></html>

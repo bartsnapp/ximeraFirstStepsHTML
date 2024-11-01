@@ -24,7 +24,7 @@ Accessibility statement: these notes will eventually be WCAG2.1AA compliant, onc
 It works best if you uncheck ``graphic'' and ``clickable'' in the settings. 
 
 I am still finding typos and mistakes, please so take this webpage as a draft for now. It is updated as of
-the 30 October lecture.
+the 31 October lecture. To load the most updated version, click the orange ``update'' button at the top of the page.
 
 \section{Introduction}
 
@@ -502,14 +502,28 @@ two Markov kernels $\Lambda$ and $\Phi$ such that $\Lambda\Phi=\mathrm{Id}$. Let
 assume $\Lambda P = Q\Lambda.$ Then $\Phi$ defends a Markov projection from $P$ to $Q$ (insert Tikz here!)
 This procedure is sometimes called fusion. 
 
-This intertwining can be constructed algebraically, but instead we draw a metaphor with stationary measures...
+This intertwining can be constructed algebraically, but instead we draw a metaphor with stationary measures.
+We want to show that 
+$$
+\Lambda P = \Lambda P \Phi \Lambda.
+$$
+If for all $v$, we have that $v\Lambda$ is stationary under $P$, i.e. $v\Lambda P = \v\Lambda$, then the
+above intertwining becomes 
+$$
+v\Lambda = v\Lambda \Phi \Lambda
+$$
+which then follows from $\Lambda\Phi=\mathrm{Id}.$
+
+Calculating the fused vertex weights then requires orthogonal polynomials (insert equations later).
+
+\subsection{Construction with Central Elements}
 
 
 \end{document}
 
 RTT construction?
 
-Fusion?
+
 
 Orthogonal polynomial vertex weights?
 
