@@ -11,7 +11,7 @@ Kuan" name="author"/>
 <meta content="version 2.0.1" name="ximera"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" media="screen" rel="stylesheet"/> 
 <script src="https://ximera.osu.edu/public/javascripts/standalone.min.js" type="text/javascript"></script> 
-<meta name="dependency" content="1a25e1caffb9a61d175a843b64d89365aa454034 basics/Introduction_to_Quantum_Groups.tex"/></head><body> 
+<meta name="dependency" content="f75856965c70416f5e0a1b198b1151b9b5c84bb5 basics/Introduction_to_Quantum_Groups.tex"/></head><body> 
 <div class="preamble"> <script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\accordion }[0]{}
 \newcommand {\ungraded }[0]{}
@@ -22,11 +22,11 @@ Kuan" name="author"/>
  </div><style> .activity-body pre { white-space: pre; background-color: lightgray; } .xmyoutube { aspect-ratio: 16/9; min-width: 75%; } .image-environment img { width: unset; } </style> 
 
 <div class="maketitle"></div>
-<!-- l. 26 --><p class="noindent">Accessibility statement: these notes will eventually be WCAG2.1AA compliant, once
-I finish writing them. I tested it out using NVDA, a screen reader. It works best if
-you uncheck “graphic” and “clickable” in the settings. I am also testing out
-dyslexia–friendly fonts right now. You can also  <a href="https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/Introduction_to_Quantum_Groups.tex">download the TeX source
-file.</a>
+<!-- l. 26 --><p class="noindent">Accessibility statement:  <a href="https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/Introduction_to_Quantum_Groups_WCAG">A WCAG2.1AA compliant version of these notes</a> will
+eventually available, once I finish writing them. I tested it out using NVDA, a screen
+reader. It works best if you uncheck “graphic” and “clickable” in the settings. I am
+also testing out dyslexia–friendly fonts right now. You can also  <a href="https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/Introduction_to_Quantum_Groups.tex">download the TeX
+source file.</a>
 </p>
 <h3 class="sectionHead" id="about-this-webpage"><span class="titlemark">1   </span> <a id="x1-10001"></a>About this webpage</h3>
 <!-- l. 32 --><p class="noindent">These lecture notes were created with  <a href="https://ximera.osu.edu/">Ximera</a>, an interactive textbook platform
@@ -57,7 +57,7 @@ these set of lecture notes, we will introduce the relevant algebraic background 
 probabilistic researcher as the target audience.
 </p><!-- l. 58 --><p class="noindent">We first summarize some mathematical results since the early 1990s which
 contextualize the field in its current (2024) state. The well–known  <a href="https://en.wikipedia.org/wiki/Tracy%E2%80%93Widom_distribution">Tracy–Widom
-distribution</a> was first discovered in <span class="cite">[<a href="#XTW93">14</a>]</span>, <span class="cite">[<a href="#XTW94">15</a>]</span>, where it describes the asymptotic
+distribution</a> was first discovered in <span class="cite">[<a href="#XTW93">18</a>]</span>, <span class="cite">[<a href="#XTW94">19</a>]</span>, where it describes the asymptotic
 fluctuations of the largest eigenvalues of the  <a href="https://en.wikipedia.org/wiki/Random_matrix#Gaussian_ensembles">Gaussian Unitary Ensemble</a>. In those
 papers, the distibution is defined in terms of a Fredholm determinant. Several years
 later, a surprising result of <span class="cite">[<a href="#XBDJ99">2</a>]</span> proved that the Tracy–Widom distribution also
@@ -70,7 +70,7 @@ Tracy–Widom asymptotics. At this point in time, a complete list of all such mo
 and relevant papers would be incredibly long, but for the purposes of these notes we
 can restrict to models with known quantum group symmetry. The canonical such
 model is the asymmetric simple exclusion process in one dimension. For an example
-of what these exact formulas look like, consider the result of <span class="cite">[<a href="#XTW08">16</a>]</span>, which shows
+of what these exact formulas look like, consider the result of <span class="cite">[<a href="#XTW08">20</a>]</span>, which shows
 that for an ASEP with initial conditions \(y_1&lt;\ldots &lt;y_N\), the probability at being in state \(x_1&lt;\ldots &lt;x_N\)
 at time \(t\) is given by a sum over \(N!\) terms, with each summand being a \(N\)–fold
 integral:
@@ -85,12 +85,12 @@ The term \(A_{\sigma }\) is defined to be
  and \(S_{\alpha \beta }\) is the “scattering term”
                                  \[ S_{\alpha \beta } = -\frac {1+q\xi _{\alpha }\xi _{\beta }-(1+q)\xi _{\alpha }}{1+q\xi _{\alpha }\xi _{\beta }-(1+q)\xi _{\beta }}. \]
  The term \(q\) is the asymmetry parameter. When \(q=0,\) the totally asymmetric case, the
-formula reduces to a determinantal expression found in <span class="cite">[<a href="#XSch97a">12</a>]</span>. In this sense, the
+formula reduces to a determinantal expression found in <span class="cite">[<a href="#XSch97a">16</a>]</span>. In this sense, the
 summation over the symmetric group \(S_N\) is related to  <a href="https://en.wikipedia.org/wiki/Leibniz_formula_for_determinants">Leibniz’s determinantal
 formula.</a>
 </p><!-- l. 101 --><p class="noindent">The asymptotic analysis proving Tracy–Widom convergence was done in the
-follow-up paper <span class="cite">[<a href="#XTW09">17</a>]</span>, generalizing the result for the totally asymmetric case \((q=0)\) in
-<span class="cite">[<a href="#XJoh00">8</a>]</span>. Generally speaking, exact formulas and asymptotic analysis are easier
+follow-up paper <span class="cite">[<a href="#XTW09">21</a>]</span>, generalizing the result for the totally asymmetric case \((q=0)\) in
+<span class="cite">[<a href="#XJoh00">10</a>]</span>. Generally speaking, exact formulas and asymptotic analysis are easier
 when \(q=0.\) However, we will later see that this is not true when using quantum
 groups.
 </p><!-- l. 108 --><p class="noindent">At this point, the reader may be curious why any exact formulas should exist in the
@@ -136,17 +136,17 @@ process (ASEP) and its relationship to the Heisenberg XXZ model and the quantum
 group \(U_q(sl_2).\)
 </p><!-- l. 151 -->
 <h4 class="subsectionHead" id="definition-of-asep"><span class="titlemark">3.1   </span> <a id="x1-40003.1"></a>Definition of ASEP</h4>
-<!-- l. 152 --><p class="noindent">ASEP was introduced in the mathematics community in <span class="cite">[<a href="#XSpi70">13</a>]</span>, and previously in a
-biology paper <span class="cite">[<a href="#XMGP68">9</a>]</span>. In ASEP, particles randomly jump on a lattice, which we assume to
-be one–dimensional. At most one particle may occupy a site, and jumps to occupied
-sites are blocked (hence the term “exclusion”). Jumps are nearest neighbour (hence
-the term “simple”). If the jumps are continuous–time exponential clocks with left
-rates \(\alpha \) and right rates \(\beta ,\) then let \(q=\sqrt {\beta /\alpha }\) denote the asymmetry parameter. If \(q\neq 1,\) then the model
-is asymmetric (sometimes partially asymmetric), while for \(q=1\) the model is symmetric.
-For \(q=0\) or \(q=\infty \) the model is called totally asymmetric. The symmetric exclusion process
-(without the word simple) can be defined more generally on an arbritrary graph. In
-princple, so can the asymmetric exclusion process, although this is not as well
-studied.
+<!-- l. 152 --><p class="noindent">ASEP was introduced in the mathematics community in <span class="cite">[<a href="#XSpi70">17</a>]</span>, and previously in a
+biology paper <span class="cite">[<a href="#XMGP68">11</a>]</span>. In ASEP, particles randomly jump on a lattice, which we assume
+to be one–dimensional. At most one particle may occupy a site, and jumps to
+occupied sites are blocked (hence the term “exclusion”). Jumps are nearest neighbour
+(hence the term “simple”). If the jumps are continuous–time exponential clocks with
+left rates \(\alpha \) and right rates \(\beta ,\) then let \(q=\sqrt {\beta /\alpha }\) denote the asymmetry parameter. If \(q\neq 1,\) then the
+model is asymmetric (sometimes partially asymmetric), while for \(q=1\) the model is
+symmetric. For \(q=0\) or \(q=\infty \) the model is called totally asymmetric. The symmetric exclusion
+process (without the word simple) can be defined more generally on an arbritrary
+graph. In princple, so can the asymmetric exclusion process, although this is not as
+well studied.
 </p><!-- l. 162 --><p class="noindent"><img alt="PIC" src="../pictures/ASEPScreenshot.png"/>
                                                                   
 
@@ -233,8 +233,8 @@ answering this question.
 to ask about other integrable models that look similar to ASEP, so that we can
 avoid re–inventing the wheel. Thus we now turn our attention to a related
 model, called the quantum Heisenberg model. These were introduced by
-Werner Heisenberg <span class="cite">[<a href="#XHei28">5</a>]</span> to incorporate quantum mechanics into magnetism, and
-<span class="cite">[<a href="#XGS92">10</a>, <a href="#XADHR94">1</a>]</span> pointed out the the XXZ Hamiltonian is conjugate to the ASEP
+Werner Heisenberg <span class="cite">[<a href="#XHei28">7</a>]</span> to incorporate quantum mechanics into magnetism, and
+<span class="cite">[<a href="#XGS92">12</a>, <a href="#XADHR94">1</a>]</span> pointed out the the XXZ Hamiltonian is conjugate to the ASEP
 generator.
 </p><!-- l. 286 --><p class="noindent">Each lattice site has a microscopic magnetic dipole, which can either be up or down.
 If there are \(N\) lattice sites, then the Hamiltonian acts on the \(2^N\)–dimensional vector space \((\mathbb {C}^2)^{\otimes N}.\)
@@ -266,7 +266,7 @@ two sites. (Exercise left to the reader).
                                                                   
 <h4 class="subsectionHead" id="sl-symmetry"><span class="titlemark">3.4   </span> <a id="x1-70003.4"></a>\(sl_2\) symmetry</h4>
 <!-- l. 348 --><p class="noindent">Next, we introduce the \(sl_2\) symmetry of ASEP. This was first observed in the seminal
-paper of <span class="cite">[<a href="#XSch97">11</a>]</span>.
+paper of <span class="cite">[<a href="#XSch97">15</a>]</span>.
 </p><!-- l. 350 --><p class="noindent">So far, we have determined that ASEP is integrable and is conjugate to the XXZ
 Hamiltonian (assuming that we are ignoring the question of arbitrary lattice
 sizes). As it turns out, the Pauli matrices form a basis of the real Lie algebra \(su_2\)
@@ -290,7 +290,7 @@ free parameter, the algebra should be a one–parameter deformation of \(SU(2).\
 into the next topic of quantum groups.
 </p><!-- l. 378 -->
 <h3 class="sectionHead" id="quantum-group-uqsl"><span class="titlemark">4   </span> <a id="x1-80004"></a>Quantum Group \(U_q(sl_2)\)</h3>
-<!-- l. 379 --><p class="noindent">The Drinfel’d–Jimbo quantum groups <span class="cite">[<a href="#XDri85">4</a>, <a href="#XJim85">7</a>]</span> are quantizations of the Lie groups.
+<!-- l. 379 --><p class="noindent">The Drinfel’d–Jimbo quantum groups <span class="cite">[<a href="#XDri85">6</a>, <a href="#XJim85">9</a>]</span> are quantizations of the Lie groups.
 Rather confusingly, the quantum groups are not themselves groups.
 </p><!-- l. 382 --><p class="noindent">Before diving into the rigorous definition, one notes where the quantization
 occurs. Using probabilistic intuition, we expect that the SSEP should have an
@@ -321,7 +321,7 @@ co–product). In words, \(h\) is primitive and \(k\) is group–like.
 <!-- l. 428 --><p class="noindent">In this section, we will define  <a href="https://en.wikipedia.org/wiki/Hopf_algebra">Hopf algebras,</a> which are named after  <a href="https://en.wikipedia.org/wiki/Heinz_Hopf">Heinz Hopf.</a>
 (This is a different Hopf than the namesake of the Cole–Hopf trasnformation,
 who is named Eberhard Hopf). The original paper possibly goes back to
-<span class="cite">[<a href="#XHop41">6</a>]</span>.
+<span class="cite">[<a href="#XHop41">8</a>]</span>.
 </p><!-- l. 433 --><p class="noindent">While I presented the co–product as the object that allows for multiple lattice sites,
 that is of course not how it is presented to algebraists. A more common
 description is that a co–algebra is dual to an algebra, with the co–product
@@ -337,56 +337,49 @@ assumed to be bilinear. It is also associative in the sense that \[ m(x \otimes 
 means that \( x(yz) = (xy)z.\) This is equivalently stated as \[ m \circ (m \otimes \mathrm {id}) = m \circ (\mathrm {id} \otimes m). \] Additionally, there is an identity element \(1 \in A\)
 satisfying \[ m(1 \otimes x) = m(x \otimes 1) = x. \] This can be written as an inclusion from the underlying field \(F\) to the
 algebra \(A.\)
-</p><!-- l. 462 --><p class="noindent">Before defining co–algebras, it will be useful to draw certain
-commutative diagrams. The associativity can be written as
+</p><!-- l. 462 --><p class="noindent">Before defining co–algebras, it will be useful to draw certain commutative diagrams.
                                                                   
 
                                                                   
-<img alt="[Picture]" src="Introduction_to_Quantum_Groups-b44eae090e36749fbe65e45ee59a4f49.svg"/>
+The associativity can be written as  <img alt="[Picture]" src="Introduction_to_Quantum_Groups-bae53b21480fc93c9dd5b0c7399c691c.svg"/>
 </p><!-- l. 476 --><p class="noindent">If one reverses the arrow of this diagram, which is also fortunately easy on Tikz, one
 obtains
-                                                                  
-
-                                                                  
-</p><!-- l. 478 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-7286cd14df526bca1a4c99bd5bcd8139.svg"/>
+</p><!-- l. 478 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-dd7c25167eaff271578cab4b6c343436.svg"/>
 </p><!-- l. 489 --><p class="noindent">The condition of co–associativity means that this diagram commutes.
 </p><!-- l. 491 --><p class="noindent">In a similar vein, the unit element can be understood as an inclusion from the base
 field to the algebra such that the following diagram commutes:
                                                                   
 
                                                                   
-</p><!-- l. 494 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-c0153e93137ce368ac3f3c3f7117eee8.svg"/>
+</p><!-- l. 494 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-3b14351ddba53a21eb748f6c074920f5.svg"/>
 </p><!-- l. 506 --><p class="noindent">Reversing the direction of the arrows, one obtains
-                                                                  
-
-                                                                  
-</p><!-- l. 508 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-dd4a03392af243cbc78ef0fe0a3f3304.svg"/>
+</p><!-- l. 508 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-dfffd5a1dd452aef5e95d661f0b9b83b.svg"/>
 </p><!-- l. 520 --><p class="noindent">A co–algebra is a vector space with a co–product and co–unit satisfying the above
 properties. For \(U_q(\mathfrak {sl}_2)\) the co–unit is
                                  \[ \epsilon (e)=\epsilon (f)=0, \quad \epsilon (q^h)=1. \]
 </p><!-- l. 526 --><p class="noindent">A bi–algebra is an algebra and co–algebra such that the co–product and co–unit are
 also algebra homomorphisms.
-</p><!-- l. 529 --><p class="noindent">A Hopf algebra is a bi–algebra with an anti–homomorphism \(S\) such that this diagram
-commutes:
                                                                   
 
                                                                   
-</p><!-- l. 532 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-52a343d1fe09f5d6f77d3ded789f32af.svg"/>
+</p><!-- l. 529 --><p class="noindent">A Hopf algebra is a bi–algebra with an anti–homomorphism \(S\) such that this diagram
+commutes:
+</p><!-- l. 532 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-f9745204225c28241dbc2c37dad7778c.svg"/>
 </p><!-- l. 550 --><p class="noindent">Finally, I get to \(R\)–matrices. A Hopf algebra \(H\) is co–commutative if the coproduct \(\Delta \)
 equals its reversal \(\Delta =:=P \circ \Delta \) where \(P: H \otimes H \rightarrow H \otimes H\) maps \(x\otimes y\) to \(y \otimes x.\) A Hopf algebra is almost co–commutative if
 there is an invertible element \(R \in H \otimes H\) such that \(R \Delta (x) = \Delta &#39;(x) R\) for all \(x \in H.\)
 </p><!-- l. 555 --><p class="noindent">An almost co–commtuative Hopf algebra is quasi–triangular if the additional
 relations hold for the element \(R\):
-                                                                  
-
-                                                                  
                                  \[ (\Delta \otimes \mathrm {id})(R) = R_{13}R_{23}, \quad (\mathrm {id} \otimes \Delta )(R) = R_{13}R_{12}. \]
  In a quasi–triangular Hopf algebra, the \(R\)–matrix satisfies the Yang–Baxter
 equation.
+                                                                  
+
+                                                                  
 </p><!-- l. 562 -->
 <h3 class="sectionHead" id="explicit-solutions-to-ybe"><span class="titlemark">5   </span> <a id="x1-100005"></a>Explicit solutions to YBE</h3>
 <!-- l. 564 -->
-<h4 class="subsectionHead" id="affine-lie-algebras"><span class="titlemark">5.1   </span> <a id="x1-110005.1"></a>Affine Lie algebras</h4>
+<h4 class="subsectionHead" id="affine-lie-algebras-and-vertex-models"><span class="titlemark">5.1   </span> <a id="x1-110005.1"></a>Affine Lie algebras and vertex models</h4>
 <!-- l. 565 --><p class="noindent">Having shown that solutions to Yang–Baxter Equation can come from Hopf algebras,
 we now introduce a spectral–dependent Yang–Baxter Equation that comes from
 affine Lie algebras.
@@ -394,12 +387,12 @@ affine Lie algebras.
                                  \[ \hat {\mathfrak {g}} = \mathfrak {g} \otimes _{\mathbb {C}} \oplus \mathbb {C}[t,t^{-1}] \oplus \mathbb {C}c \]
  where \(c\) is a central element. In words, this is a one–dimensional central extension of
 the loop algebra over \(\mathfrak {g}.\) The Lie bracket is then defined by
-                                                                  
-
-                                                                  
                                  \[ [a\otimes t^n, b\otimes t^m] = [a,b] \otimes t^{n+m} + (a,b)n\delta _{m,-n}c \]
  where \((\cdot ,\cdot )\) is the Cartan–Killing form on \(\mathfrak {g}.\) This Lie algebra is now infinite–dimensional,
 which makes its representation theory tricker.
+                                                                  
+
+                                                                  
 </p><!-- l. 580 --><p class="noindent">There is an analogous quantum group \(\mathcal {U}_q(\mathfrak {g}),\) which has an \(R\)–matrix satisfying Yang–Baxter
 equation. For modules where \(c\) acts as \(0\) (level \(0\) representations), we can define an
 evaluation module by takng a module of \(\mathfrak {g}\) and then letting \(t\) act as multiplication
@@ -409,29 +402,37 @@ reads
                                  \[ \check {R}_{12}(z) \check {R}_{13}(zw) \check {R}_{23}(w) = \check {R}_{23}(w) \check {R}_{13}(zw) \check {R}_{12}(z). \]
  If we attempt to find \(4\times 4\) solutions to the spectral–dependent YBE analogous to ASEP,
 we get a two–parameter family of solutions, which end up being the weights of the
-stochastic six vertex model.
-</p><!-- l. 591 -->
+stochastic six vertex model, which we now define.
+</p><!-- l. 592 --><p class="noindent">The stochastic six vertex model was defined in <span class="cite">[<a href="#XGS92">12</a>]</span>, with the generic six
+vertex model going back to <span class="cite">[<a href="#XPau35">14</a>]</span>. The six weights are displayed below:
+<img alt="[Picture]" src="Introduction_to_Quantum_Groups-bb5913409b8fb687cf650d0f829117c2.svg"/> The number of arrows coming in
+from the bottom and left must equal the number of arrows coming out from
+the top and right. Thus, there are \(6 = \binom {4}{2}\) possible vertices. On a two–dimensional
+lattice, perhaps with fixed boundary conditions, this defines a weight on
+configurations:
+</p><!-- l. 633 --><p class="noindent"><img alt="PIC" height="1138" src="Images-figure6.svg" width="1280"/>
+</p><!-- l. 635 -->
 <h4 class="subsectionHead" id="fusion"><span class="titlemark">5.2   </span> <a id="x1-120005.2"></a>Fusion</h4>
-<!-- l. 592 --><p class="noindent">In general, we do not really want to brute force solutions to the Yang–Baxter
+<!-- l. 636 --><p class="noindent">In general, we do not really want to brute force solutions to the Yang–Baxter
 equation in arbitrary representations. Here, I present a way to construct new
 solutions from old solutions.
                                                                   
 
                                                                   
-</p><!-- l. 595 --><p class="noindent">In linear algebra, for any vector space \(V\), a symmetric tensor is an element of \(V^{\otimes N}\)
+</p><!-- l. 639 --><p class="noindent">In linear algebra, for any vector space \(V\), a symmetric tensor is an element of \(V^{\otimes N}\)
 preserved by any \(P_{i,i+1}.\) For quantum groups, however, we have a \(q\)–deformation in the
 tensor powers so that \(P\) and \(\Delta \) no longer commute. However, there is still a symmetric
 tensor power
                                  \[ \mathrm {Sym}^N V \subseteq V^{\otimes N}. \]
-</p><!-- l. 602 --><p class="noindent">In lieu of an extensive algebraic discussion, we present it in probabilistic language.
+</p><!-- l. 646 --><p class="noindent">In lieu of an extensive algebraic discussion, we present it in probabilistic language.
 Recall Pitman–Rogers intertwining: suppose there are two Markov kernels \(\Lambda \) and \(\Phi \)
 such that \(\Lambda \Phi =\mathrm {Id}\). Let \(Q=\Lambda P\Phi \) and assume \(\Lambda P = Q\Lambda .\) Then \(\Phi \) defends a Markov projection from \(P\) to
 \(Q\):
-</p><!-- l. 608 --><p class="noindent"><img alt="PIC" src="../pictures/MarkovProjection.png"/>
-</p><!-- l. 610 --><p class="noindent">More specifically, if \(X(t)\) is a Markov process on state space \(S\) and \(\Phi :S\rightarrow \hat {S}\) is deterministic, with a
+</p><!-- l. 652 --><p class="noindent"><img alt="PIC" src="../pictures/MarkovProjection.png"/>
+</p><!-- l. 654 --><p class="noindent">More specifically, if \(X(t)\) is a Markov process on state space \(S\) and \(\Phi :S\rightarrow \hat {S}\) is deterministic, with a
 Markov kernel \(\Lambda : \hat {S}\rightarrow S,\) then \(\Phi (X(t))\) is a Markov process on \(\hat {S}.\)
-</p><!-- l. 613 --><p class="noindent">This procedure is sometimes called fusion.
-</p><!-- l. 615 --><p class="noindent">This intertwining can be constructed algebraically, but instead we draw a metaphor
+</p><!-- l. 657 --><p class="noindent">This procedure is sometimes called fusion.
+</p><!-- l. 659 --><p class="noindent">This intertwining can be constructed algebraically, but instead we draw a metaphor
 with stationary measures. We want to show that
                                  \[ \Lambda P = \Lambda P \Phi \Lambda . \]
  If for all \(v\), we have that \(v\Lambda \) is stationary under \(P\), i.e. \(v\Lambda P = v\Lambda \), then the above intertwining
@@ -441,19 +442,19 @@ becomes
                                                                   
                                  \[ v\Lambda = v\Lambda \Phi \Lambda \]
  which then follows from \(\Lambda \Phi =\mathrm {Id}.\)
-</p><!-- l. 627 --><p class="noindent">Calculating the fused vertex weights then requires orthogonal polynomials (please
+</p><!-- l. 671 --><p class="noindent">Calculating the fused vertex weights then requires orthogonal polynomials (please
 reference the Appendix).
-</p><!-- l. 629 --><p class="noindent">Question: do these weights satisfy YBE? In fact, they might not! At least for some
+</p><!-- l. 673 --><p class="noindent">Question: do these weights satisfy YBE? In fact, they might not! At least for some
 Lie algebras. But they seem to for type \(A.\)
-</p><!-- l. 632 -->
+</p><!-- l. 676 -->
 <h4 class="subsectionHead" id="construction-with-central-elements"><span class="titlemark">5.3   </span> <a id="x1-130005.3"></a>Construction with Central Elements</h4>
-<!-- l. 633 --><p class="noindent">From here, let \(k=q^h.\)
-</p><!-- l. 635 --><p class="noindent">We define some subalgebras by letting \(U^{&gt; 0}\) be generated by \(e,\) and \(U^{&lt;0}\) generated by \(f\)
+<!-- l. 680 --><p class="noindent">From here, let \(k=q^h.\)
+</p><!-- l. 682 --><p class="noindent">We define some subalgebras by letting \(U^{&gt; 0}\) be generated by \(e,\) and \(U^{&lt;0}\) generated by \(f\)
 and \(U^0\) generated by \(k\). Analogously, \(U^{\geq 0}\) is generated by \(e,k\) and \(U^{\leq 0}\) is generated by \(f,k\).
 There are central elements, sometimes called Casimir elements, that have the
 form
                                  \[ C \in U^0 + U^{&lt; 0}U^{&gt; 0}. \]
-</p><!-- l. 642 --><p class="noindent">One reason for introducing these subalgebras is because of the highest weight
+</p><!-- l. 689 --><p class="noindent">One reason for introducing these subalgebras is because of the highest weight
 representations. We call \(V\) a highest weight representation if there exists a vector \(v,\)
 called the highest weight vector, such that
                                                                   
@@ -465,7 +466,7 @@ given by
                                  \[ Cv = av \]
  for some complex number \(a.\) Also let \(\{v_{\mu }:\mu \in \mathcal {B}\}\) denote a basis of \(V,\) where each \(v_{\mu }\) can be expressed
 as \(F^{\mu }v\) for some \(F^{\mu } \in U^{\leq 0}.\)
-</p><!-- l. 654 --><p class="noindent">We define the Hamiltonian \(H\) by taking the co–product of \(C\) on tensor powers of
+</p><!-- l. 701 --><p class="noindent">We define the Hamiltonian \(H\) by taking the co–product of \(C\) on tensor powers of
 representations:
                                  \[ H = \Delta (C) \vert _{V \otimes V}. \]
  We want to find a diagonal matrix \(G\) such that \(G^{-1}HG-c\mathrm {Id}\) is the generator of a continuous–time
@@ -479,7 +480,7 @@ form
                                  \[ g=\sum _{\boldsymbol {\mu }=(\mu _1,\mu _2)\in \mathcal {B}\times \mathcal {B}} g(\boldsymbol {\mu }) v_{\mu _1}\otimes v_{\mu _2} \]
  then the diagonal matrix \(G(\boldsymbol {\mu },\boldsymbol {\mu })=g(\boldsymbol {\mu })\) will satisfy the necessary requirement, as long as \(g(\boldsymbol {\mu })\) is always
 nonzero.
-</p><!-- l. 668 --><p class="noindent">As it turns out, \(g=v\otimes v\) (the tensor power of the highest weight vector) will satsify
+</p><!-- l. 715 --><p class="noindent">As it turns out, \(g=v\otimes v\) (the tensor power of the highest weight vector) will satsify
                                  \[ Hg=a^2g \]
  due to the form of the co–product and the central element. However, this choice will
 have zero entries. So instead we take \(g\) of the form
@@ -489,20 +490,22 @@ calculations).
                                                                   
 
                                                                   
-</p><!-- l. 679 -->
+</p><!-- l. 726 -->
 <h3 class="sectionHead" id="appendix"><span class="titlemark">6   </span> <a id="x1-140006"></a>Appendix</h3>
-<!-- l. 681 --><p class="noindent">This section will cover topics that were not included in the in–person lectures, but
-are still worth mentioning.
-</p><!-- l. 683 --><p class="noindent">I may make this a separate webpage later.
-</p><!-- l. 685 -->
-<h4 class="subsectionHead" id="rtt-construction"><span class="titlemark">6.1   </span> <a id="x1-150006.1"></a>RTT Construction</h4>
-<!-- l. 689 -->
-<h4 class="subsectionHead" id="orthogonal-polynomial-vertex-weights"><span class="titlemark">6.2   </span> <a id="x1-160006.2"></a>Orthogonal polynomial vertex weights</h4>
-<!-- l. 691 -->
-<h4 class="subsectionHead" id="hecke-algebras"><span class="titlemark">6.3   </span> <a id="x1-170006.3"></a>Hecke algebras</h4>
-<!-- l. 693 -->
-<h3 class="likesectionHead" id="references"><a id="x1-18000"></a>References</h3>
-<!-- l. 693 --><div class="thebibliography">
+<!-- l. 728 --><p class="noindent">This section will cover topics that were not included in the in–person lectures, but
+are still worth mentioning. The links go to a separate webpage with the mathematical
+content.
+</p>
+     <ul class="itemize1">
+     <li class="itemize"> <a href="https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/RTT_Construction_WCAG">RTT Construction</a>
+     </li>
+     <li class="itemize"> <a href="https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/Orth_Poly_WCAG">Orthogonal polynomial vertex weights</a>
+     </li>
+     <li class="itemize"> <a href="https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/Hecke_Algebras_WCAG">Hecke algebras</a>
+</li></ul>
+<!-- l. 740 -->
+<h3 class="likesectionHead" id="references"><a id="x1-15000"></a>References</h3>
+<!-- l. 740 --><div class="thebibliography">
     <p class="bibitem"><span class="biblabel">
   [1]<span class="bibsp">   </span></span><a id="XADHR94"></a>F.  C.  Alcaraz,  M.  Droz,  M.  Henkel,  and  V.  Rittenberg,Ann.  Phys.
     (N.Y.)230:250 (1994).
@@ -520,70 +523,91 @@ are still worth mentioning.
     Physics, 70:323–337, 1972.
     </p>
     <p class="bibitem"><span class="biblabel">
-  [4]<span class="bibsp">   </span></span><a id="XDri85"></a>Drinfeld, V. G. (1985), ”Hopf algebras and the quantum Yang–Baxter
+  [4]<span class="bibsp">   </span></span><a id="XCGRS16"></a>Carinci, G., Giardiná, C., Redig, F. Redig, T. Sasamoto. A generalized
+    asymmetric  exclusion  process  with  stochastic  duality.  Probab.  Theory
+    Relat. Fields 166, 887–933 (2016).
+    </p>
+    <p class="bibitem"><span class="biblabel">
+  [5]<span class="bibsp">   </span></span><a id="XCP16"></a>Corwin, I., Petrov, L. Stochastic Higher Spin Vertex Models on the Line.
+    Commun. Math. Phys. 343, 651–700 (2016).
+    </p>
+    <p class="bibitem"><span class="biblabel">
+  [6]<span class="bibsp">   </span></span><a id="XDri85"></a>Drinfeld, V. G. (1985), ”Hopf algebras and the quantum Yang–Baxter
     equation”, Doklady Akademii Nauk SSSR, 283 (5): 1060–1064,
     </p>
     <p class="bibitem"><span class="biblabel">
-  [5]<span class="bibsp">   </span></span>
+  [7]<span class="bibsp">   </span></span>
     <a id="XHei28"></a>Heisenberg, W. (1 September 1928). ”Zur Theorie des Ferromagnetismus”
     [On the theory of ferromagnetism]. Zeitschrift für Physik (in German). 49
     (9): 619–636.
     </p>
     <p class="bibitem"><span class="biblabel">
-  [6]<span class="bibsp">   </span></span><a id="XHop41"></a>Hopf,         Heinz         (1941).         ”Über         die         Topologie
+  [8]<span class="bibsp">   </span></span><a id="XHop41"></a>Hopf,         Heinz         (1941).         ”Über         die         Topologie
     der Gruppen–Mannigfaltigkeiten und ihre Verallgemeinerungen”. Ann. of
     Math. 2 (in German). 42 (1): 22–52.
     </p>
     <p class="bibitem"><span class="biblabel">
-  [7]<span class="bibsp">   </span></span><a id="XJim85"></a>Jimbo, Michio (1985), ”A q-difference analogue of \(U(g)\) and the Yang-Baxter
+  [9]<span class="bibsp">   </span></span><a id="XJim85"></a>Jimbo, Michio (1985), ”A q-difference analogue of \(U(g)\) and the Yang-Baxter
     equation”, Letters in Mathematical Physics, 10 (1): 63–69,
     </p>
     <p class="bibitem"><span class="biblabel">
-  [8]<span class="bibsp">   </span></span><a id="XJoh00"></a>Johansson,    K.,    ”Shape    fluctuations    and    random    matrices”,
+ [10]<span class="bibsp">   </span></span><a id="XJoh00"></a>Johansson,    K.,    ”Shape    fluctuations    and    random    matrices”,
     Communications in Mathematical Physics, 209 (2): 437–476, 2000.
-    </p>
-    <p class="bibitem"><span class="biblabel">
-  [9]<span class="bibsp">   </span></span><a id="XMGP68"></a>MacDonald CT, Gibbs JH, Pipkin AC. Kinetics of biopolymerization
-    on nucleic acid templates. Biopolymers. 1968;6(1):1–5.
-    </p>
-    <p class="bibitem"><span class="biblabel">
- [10]<span class="bibsp">   </span></span><a id="XGS92"></a>L.-H. Gwa and H. Spohn,Phys. Rev. A 46:844 (1992).
-    </p>
-    <p class="bibitem"><span class="biblabel">
- [11]<span class="bibsp">   </span></span><a id="XSch97"></a>G. Schütz, Duality relations for asymmetric exclusion processes, J Stat
-    Phys 86, 1265–1287 (1997).
                                                                   
 
                                                                   
     </p>
     <p class="bibitem"><span class="biblabel">
- [12]<span class="bibsp">   </span></span><a id="XSch97a"></a>G. Schütz, Exact solution of the master equation for the asymmetric
+ [11]<span class="bibsp">   </span></span><a id="XMGP68"></a>MacDonald CT, Gibbs JH, Pipkin AC. Kinetics of biopolymerization
+    on nucleic acid templates. Biopolymers. 1968;6(1):1–5.
+    </p>
+    <p class="bibitem"><span class="biblabel">
+ [12]<span class="bibsp">   </span></span><a id="XGS92"></a>L.-H. Gwa and H. Spohn,Phys. Rev. A 46:844 (1992).
+    </p>
+    <p class="bibitem"><span class="biblabel">
+ [13]<span class="bibsp">   </span></span><a id="XRP81"></a>L.C.G. Rogers and J.W. Pitman, Markov Functions, The Annals of
+    Probability, Vol. 9, No. 4 (Aug., 1981), pp. 573-582 (10 pages)
+    </p>
+    <p class="bibitem"><span class="biblabel">
+ [14]<span class="bibsp">   </span></span><a id="XPau35"></a>Pauling, L. (1935). ”The Structure and Entropy of Ice and of Other
+    Crystals with Some Randomness of Atomic Arrangement”. Journal of the
+    American Chemical Society. 57 (12): 2680–2684.
+    </p>
+    <p class="bibitem"><span class="biblabel">
+ [15]<span class="bibsp">   </span></span><a id="XSch97"></a>G. Schütz, Duality relations for asymmetric exclusion processes, J Stat
+    Phys 86, 1265–1287 (1997).
+    </p>
+    <p class="bibitem"><span class="biblabel">
+ [16]<span class="bibsp">   </span></span><a id="XSch97a"></a>G. Schütz, Exact solution of the master equation for the asymmetric
     exclusion process. J. Stat Physics, <strong>88</strong> 427–445 (1997).
     </p>
     <p class="bibitem"><span class="biblabel">
- [13]<span class="bibsp">   </span></span><a id="XSpi70"></a>F. Spitzer, Interaction of Markov Processes, Advances in Mathematics,
+ [17]<span class="bibsp">   </span></span><a id="XSpi70"></a>F. Spitzer, Interaction of Markov Processes, Advances in Mathematics,
     Volume 5, Issue 2, October 1970, Pages 246–290.
     </p>
     <p class="bibitem"><span class="biblabel">
- [14]<span class="bibsp">   </span></span><a id="XTW93"></a>Tracy, Craig A. Widom, Harold, ”Level-spacing distributions and the
+ [18]<span class="bibsp">   </span></span><a id="XTW93"></a>Tracy, Craig A. Widom, Harold, ”Level-spacing distributions and the
     Airy kernel”, Physics Letters B. 305 (1—2): 115-–118 (1993).
     </p>
     <p class="bibitem"><span class="biblabel">
- [15]<span class="bibsp">   </span></span><a id="XTW94"></a>Tracy, C. A.; Widom, H. (1994), ”Level-spacing distributions and the
+ [19]<span class="bibsp">   </span></span><a id="XTW94"></a>Tracy, C. A.; Widom, H. (1994), ”Level-spacing distributions and the
     Airy kernel”, Communications in Mathematical Physics, 159 (1): 151-–174
     (1994).
+                                                                  
+
+                                                                  
     </p>
     <p class="bibitem"><span class="biblabel">
- [16]<span class="bibsp">   </span></span><a id="XTW08"></a>C. Tracy and H. Widom, “Integral Formulas for the Asymmetric Simple
+ [20]<span class="bibsp">   </span></span><a id="XTW08"></a>C. Tracy and H. Widom, “Integral Formulas for the Asymmetric Simple
     Exclusion  Process,”  Comm.  Math.  Phys.,  volume  279,  pages  815–844
     (2008).
     </p>
     <p class="bibitem"><span class="biblabel">
- [17]<span class="bibsp">   </span></span><a id="XTW09"></a>Tracy,  C.  A.;  Widom,  H.,  ”Asymptotics  in  ASEP  with  step  initial
+ [21]<span class="bibsp">   </span></span><a id="XTW09"></a>Tracy,  C.  A.;  Widom,  H.,  ”Asymptotics  in  ASEP  with  step  initial
     condition”, Communications in Mathematical Physics, 290 (1): 129–154,
     2009.
 </p>
     </div>
  
  
-<span ximera-compilation-date="" style="float:right"><small>2024-11-29 00:17:36</small></span></body></html>
+<span ximera-compilation-date="" style="float:right"><small>2024-11-29 16:23:57</small></span></body></html>

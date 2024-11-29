@@ -23,7 +23,7 @@
 %    \chapterstyle
 %    \activity{basics/graphicsInteractives}
 
-Accessibility statement: these notes will eventually be WCAG2.1AA compliant, once I finish writing them. I tested it out using NVDA, a screen reader.
+Accessibility statement: \href{https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/Introduction_to_Quantum_Groups_WCAG}{A WCAG2.1AA compliant version of these notes} will eventually available, once I finish writing them. I tested it out using NVDA, a screen reader.
 It works best if you uncheck ``graphic'' and ``clickable'' in the settings. I am also testing out dyslexia--friendly 
 fonts right now. 
 You can also \href{https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/Introduction_to_Quantum_Groups.tex}{download the TeX source file.}
@@ -461,7 +461,7 @@ This can be written as an inclusion from the underlying field \(F\) to the algeb
 
 Before defining co--algebras, it will be useful to draw certain commutative diagrams. The associativity
 can be written as
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.5]
  \node (top) at (0,0) {\(A \otimes A \otimes A\)};
  \node (left) at (-5,-5) {\(A \otimes A\)};
  \node (right) at (5,-5) {\(A \otimes A\)};
@@ -475,7 +475,7 @@ can be written as
 
 If one reverses the arrow of this diagram, which is also fortunately easy on Tikz, one obtains
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.5]
    \node (top) at (0,0) {\(A \otimes A \otimes A\)};
    \node (left) at (-5,-5) {\(A \otimes A\)};
    \node (right) at (5,-5) {\(A \otimes A\)};
@@ -491,7 +491,7 @@ The condition of co--associativity means that this diagram commutes.
 In a similar vein, the unit element can be understood as an inclusion from the base field to 
 the algebra such that the following diagram commutes:
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.5]
    \node (top) at (0,0) {\(k \otimes A \cong A \cong A \otimes k\)};
    \node (left) at (-5,-5) {\(A \otimes A\)};
    \node (right) at (5,-5) {\(A \otimes A\)};
@@ -505,7 +505,7 @@ the algebra such that the following diagram commutes:
 
 Reversing the direction of the arrows, one obtains
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.5]
    \node (top) at (0,0) {\(k \otimes C \cong C \cong C \otimes k\)};
    \node (left) at (-5,-5) {\(C \otimes C\)};
    \node (right) at (5,-5) {\(C \otimes C\)};
@@ -529,7 +529,7 @@ homomorphisms.
 A Hopf algebra is a bi--algebra with an anti--homomorphism $S$ such that this diagram
 commutes:
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.5]
    \node (top) at (0,0) {\(H\)};
    \node (left) at (-5,-5) {\(H \otimes H\)};
    \node (right) at (5,-5) {\(H \otimes H\)};
@@ -561,7 +561,7 @@ In a quasi--triangular Hopf algebra, the $R$--matrix satisfies the Yang--Baxter 
 
 \section{Explicit solutions to YBE}
 
-\subsection{Affine Lie algebras}
+\subsection{Affine Lie algebras and vertex models}
 Having shown that solutions to Yang--Baxter Equation can come from Hopf algebras, we now introduce a 
 spectral--dependent Yang--Baxter Equation that comes from affine Lie algebras. 
 
@@ -586,7 +586,51 @@ $$
 \check{R}_{12}(z) \check{R}_{13}(zw) \check{R}_{23}(w) = \check{R}_{23}(w) \check{R}_{13}(zw) \check{R}_{12}(z).
 $$
 If we attempt to find $4\times 4$ solutions to the spectral--dependent YBE analogous to ASEP, we get
-a two--parameter family of solutions, which end up being the weights of the stochastic six vertex model.
+a two--parameter family of solutions, which end up being 
+the weights of the stochastic six vertex model, which we now define.
+
+The stochastic six vertex model was defined in \cite{GS92}, with 
+the generic six vertex model going back to \cite{Pau35}. The six weights
+are displayed below:
+\begin{tikzpicture}[scale=0.5]
+   \draw [dashed](-1,0) -- (0,0) ;
+   \draw [dashed] (0,0) -- (1,0) ;
+   \draw [dashed] (0,-1) -- (0,0);
+   \draw [dashed] (0,0) -- (0,1);
+   \draw (1.5,0) node {$1$};
+   \draw [dashed](3,0) -- (4,0) ;
+   \draw [dashed] (4,0) -- (5,0) ;
+   \draw [->, very thick] (4,-1) -- (4,0);
+   \draw [->, very thick] (4,0) -- (4,1);
+   \draw (5.5,0) node {$b_1$};
+   \draw [dashed](7,0) -- (8,0) ;
+   \draw [->, very thick] (8,0) -- (9,0) ;
+   \draw [->, very thick] (8,-1) -- (8,0);
+   \draw [dashed] (8,0) -- (8,1);
+   \draw (9.5,0) node {$1-b_1$};
+   \draw [->, very thick](-1,-2.5) -- (0,-2.5) ;
+   \draw [->, very thick] (0,-2.5) -- (1,-2.5) ;
+   \draw [->, very thick] (0,-3.5) -- (0,-2.5);
+   \draw [->, very thick] (0,-2.5) -- (0,-1.5);
+   \draw (1.5,-2.5) node {$1$};
+   \draw [->, very thick](3,-2.5) -- (4,-2.5) ;
+   \draw [->, very thick] (4,-2.5) -- (5,-2.5) ;
+   \draw [dashed] (4,-3.5) -- (4,-2.5);
+   \draw [dashed] (4,-2.5) -- (4,-1.5);
+   \draw (5.5,-2.5) node {$b_2$};
+   \draw [->, very thick](7,-2.5) -- (8,-2.5) ;
+   \draw [dashed] (8,-2.5) -- (9,-2.5) ;
+   \draw [dashed] (8,-3.5) -- (8,-2.5);
+   \draw [->, very thick] (8,-2.5) -- (8,-1.5);
+   \draw (9.5,-2.5) node {$1-b_2$};
+\end{tikzpicture}
+The number of arrows coming 
+in from the bottom and left must equal the number of arrows coming out
+from the top and right. Thus, there are $6 = \binom{4}{2}$ possible
+vertices. On a two--dimensional lattice, perhaps with fixed boundary conditions, 
+this defines a weight on configurations:
+
+\includegraphics{Images-figure6.eps}
 
 \subsection{Fusion}
 In general, we do not really want to brute force solutions to the Yang--Baxter equation in arbitrary
@@ -630,6 +674,9 @@ Question: do these weights satisfy YBE? In fact, they might not! At least
 for some Lie algebras. But they seem to for type $A.$
 
 \subsection{Construction with Central Elements}
+
+
+
 From here, let $k=q^h.$
 
 We define some subalgebras by letting $U^{> 0}$ be generated by $e,$ and $U^{<0}$ generated by $f$ and
@@ -679,16 +726,16 @@ for some appropriate choice of coefficients $c(\mu_1,\mu_2)$ (reference the appe
 \section{Appendix}
 
 This section will cover topics that were not included in the in--person lectures, but are still worth mentioning.
+The links go to a separate webpage with the mathematical content.
 
-I may make this a separate webpage later.
+\begin{itemize}
+\item \href{https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/RTT_Construction_WCAG}{RTT Construction}
 
-\subsection{RTT Construction}
+\item \href{https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/Orth_Poly_WCAG}{Orthogonal polynomial vertex weights}
 
+\item \href{https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/Hecke_Algebras_WCAG}{Hecke algebras}
 
-
-\subsection{Orthogonal polynomial vertex weights}
-
-\subsection{Hecke algebras}
+\end{itemize}
 
 \begin{thebibliography}{10}
 
@@ -700,6 +747,12 @@ Journal of the American Mathematical Society, 12 (4): 1119--1178,
 
 \bibitem{Bax72} R. J. Baxter. One-dimensional anisotropic Heisenberg chain. 
 Ann. Physics, 70:323--337, 1972.
+
+\bibitem{CGRS16} Carinci, G., Giardin\'{a}, C., Redig, F. Redig, T. Sasamoto. A generalized asymmetric exclusion process with 
+stochastic duality. Probab. Theory Relat. Fields 166, 887--933 (2016). 
+
+\bibitem{CP16} Corwin, I., Petrov, L. Stochastic Higher Spin Vertex Models on the Line. 
+Commun. Math. Phys. 343, 651--700 (2016).
 
 \bibitem{Dri85} Drinfeld, V. G. (1985), "Hopf algebras and the quantum Yang–Baxter equation", 
 Doklady Akademii Nauk SSSR, 283 (5): 1060--1064, 
@@ -720,6 +773,12 @@ Communications in Mathematical Physics, 209 (2): 437--476, 2000.
 Biopolymers. 1968;6(1):1--5.
 
 \bibitem{GS92} L.-H. Gwa and H. Spohn,Phys. Rev. A 46:844 (1992).
+
+\bibitem{RP81} L.C.G. Rogers and J.W. Pitman, Markov Functions,
+The Annals of Probability, Vol. 9, No. 4 (Aug., 1981), pp. 573-582 (10 pages)
+
+\bibitem{Pau35} Pauling, L. (1935). "The Structure and Entropy of Ice and of Other Crystals with Some Randomness of Atomic Arrangement". 
+Journal of the American Chemical Society. 57 (12): 2680–2684.
 
 \bibitem{Sch97} G. Sch\"{u}tz, Duality relations for asymmetric exclusion processes, J Stat Phys 86, 1265–1287 (1997).
 
