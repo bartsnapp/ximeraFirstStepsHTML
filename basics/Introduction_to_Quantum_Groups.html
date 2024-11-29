@@ -11,7 +11,7 @@ Kuan" name="author"/>
 <meta content="version 2.0.1" name="ximera"/> 
 <link href="https://ximera.osu.edu/public/stylesheets/standalone.css" media="screen" rel="stylesheet"/> 
 <script src="https://ximera.osu.edu/public/javascripts/standalone.min.js" type="text/javascript"></script> 
-<meta name="dependency" content="f75856965c70416f5e0a1b198b1151b9b5c84bb5 basics/Introduction_to_Quantum_Groups.tex"/></head><body> 
+<meta name="dependency" content="0ae82f00a2e279ab6db7acf44ed04bb33f12b26c basics/Introduction_to_Quantum_Groups.tex"/></head><body> 
 <div class="preamble"> <script type="math/tex">\newenvironment {prompt}{}{}
 \newcommand {\accordion }[0]{}
 \newcommand {\ungraded }[0]{}
@@ -33,11 +33,10 @@ source file.</a>
 hosted by Ohio State University. The Ximera Project is funded 2024-2026 (with no
 other external funding) by a $2,125,000  <a href="https://www.ed.gov/grants-and-programs/grants-higher-education/improvement-postsecondary-education/open-textbooks-pilot-program">Open Textbooks Pilot Program</a> grant from
 the federal Department of Education.
-</p><!-- l. 36 --><p class="noindent">I am still finding typos and mistakes, please so take this webpage as a draft for now.
-It is updated with all three lectures. The next update(s) will include appropriate
-references. To load the most updated version, click the orange “update” button at
-the top of the page. If it is not there, then you are reading the most up-to-date
-version. The button looks like this:
+</p><!-- l. 36 --><p class="noindent">These notes have not yet been peer–reviewed. However, it is updated with all three
+lectures. To load the most updated version, click the orange “update” button at the
+top of the page. If it is not there, then you are reading the most up-to-date version.
+The button looks like this:
 </p><!-- l. 40 --><p class="noindent"><img alt="PIC" src="../pictures/UpdateButton.png"/>
 </p><!-- l. 42 --><p class="noindent">Recordings of the lectures are available on  <a href="https://warwick.ac.uk/fac/sci/maths/people/staff/oleg_zaboronski/jeffrey_kuan_visit/">Oleg Zaboronski’s webpage.</a>
 </p><!-- l. 45 --><p class="noindent">Funding was provided by  <a href="https://www.lms.ac.uk/grants/visits-uk-scheme-2">The London Mathematical Society</a> and Lancaster
@@ -47,10 +46,10 @@ Mary University of London, and Ximera.
 <h3 class="sectionHead" id="introduction"><span class="titlemark">2   </span> <a id="x1-20002"></a>Introduction</h3>
 <!-- l. 51 --><p class="noindent">Broadly speaking, <strong>integrable probability</strong> is a branch of probability theory which
 studies models which have exact solutions. For this reason, these models are often
+called <strong>exactly solvable.</strong> From these exact solutions, one can derive precise
                                                                   
 
                                                                   
-called <strong>exactly solvable.</strong> From these exact solutions, one can derive precise
 <strong>universal</strong> asymptotics, such as the famed Tracy–Widom distribution. The origin of
 these solutions are usually due to algebraic symmetries underlying the model. In
 these set of lecture notes, we will introduce the relevant algebraic background with a
@@ -351,9 +350,9 @@ field to the algebra such that the following diagram commutes:
                                                                   
 
                                                                   
-</p><!-- l. 494 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-3b14351ddba53a21eb748f6c074920f5.svg"/>
+</p><!-- l. 494 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-3cf8e89194a705b708d323b4ce50d576.svg"/>
 </p><!-- l. 506 --><p class="noindent">Reversing the direction of the arrows, one obtains
-</p><!-- l. 508 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-dfffd5a1dd452aef5e95d661f0b9b83b.svg"/>
+</p><!-- l. 508 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-d5e0b8820293d161db308af35526c7a2.svg"/>
 </p><!-- l. 520 --><p class="noindent">A co–algebra is a vector space with a co–product and co–unit satisfying the above
 properties. For \(U_q(\mathfrak {sl}_2)\) the co–unit is
                                  \[ \epsilon (e)=\epsilon (f)=0, \quad \epsilon (q^h)=1. \]
@@ -403,36 +402,36 @@ reads
  If we attempt to find \(4\times 4\) solutions to the spectral–dependent YBE analogous to ASEP,
 we get a two–parameter family of solutions, which end up being the weights of the
 stochastic six vertex model, which we now define.
-</p><!-- l. 592 --><p class="noindent">The stochastic six vertex model was defined in <span class="cite">[<a href="#XGS92">12</a>]</span>, with the generic six
-vertex model going back to <span class="cite">[<a href="#XPau35">14</a>]</span>. The six weights are displayed below:
-<img alt="[Picture]" src="Introduction_to_Quantum_Groups-bb5913409b8fb687cf650d0f829117c2.svg"/> The number of arrows coming in
-from the bottom and left must equal the number of arrows coming out from
-the top and right. Thus, there are \(6 = \binom {4}{2}\) possible vertices. On a two–dimensional
-lattice, perhaps with fixed boundary conditions, this defines a weight on
-configurations:
-</p><!-- l. 633 --><p class="noindent"><img alt="PIC" height="1138" src="Images-figure6.svg" width="1280"/>
-</p><!-- l. 635 -->
+</p><!-- l. 592 --><p class="noindent">The stochastic six vertex model was defined in <span class="cite">[<a href="#XGS92">12</a>]</span>, with the generic six vertex model
+going back to <span class="cite">[<a href="#XPau35">14</a>]</span>. The six weights are displayed below:
+</p><!-- l. 596 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-a7a136b8c2b8d54f27e03e7d75c5c8e9.svg"/>
+</p><!-- l. 629 --><p class="noindent">The number of arrows coming in from the bottom and left must equal the number of
+arrows coming out from the top and right. Thus, there are \(6 = \binom {4}{2}\) possible vertices. On a
+two–dimensional lattice, perhaps with fixed boundary conditions, this defines a
+weight on configurations:
+</p><!-- l. 635 --><p class="noindent"><img alt="PIC" height="289" src="Images-figure6.svg" width="325"/>
+</p><!-- l. 637 -->
 <h4 class="subsectionHead" id="fusion"><span class="titlemark">5.2   </span> <a id="x1-120005.2"></a>Fusion</h4>
-<!-- l. 636 --><p class="noindent">In general, we do not really want to brute force solutions to the Yang–Baxter
+<!-- l. 638 --><p class="noindent">In general, we do not really want to brute force solutions to the Yang–Baxter
 equation in arbitrary representations. Here, I present a way to construct new
-solutions from old solutions.
+solutions from old solutions. The original idea comes from <span class="cite">[<a href="#XCP16">5</a>]</span>.
                                                                   
 
                                                                   
-</p><!-- l. 639 --><p class="noindent">In linear algebra, for any vector space \(V\), a symmetric tensor is an element of \(V^{\otimes N}\)
+</p><!-- l. 642 --><p class="noindent">In linear algebra, for any vector space \(V\), a symmetric tensor is an element of \(V^{\otimes N}\)
 preserved by any \(P_{i,i+1}.\) For quantum groups, however, we have a \(q\)–deformation in the
 tensor powers so that \(P\) and \(\Delta \) no longer commute. However, there is still a symmetric
 tensor power
                                  \[ \mathrm {Sym}^N V \subseteq V^{\otimes N}. \]
-</p><!-- l. 646 --><p class="noindent">In lieu of an extensive algebraic discussion, we present it in probabilistic language.
-Recall Pitman–Rogers intertwining: suppose there are two Markov kernels \(\Lambda \) and \(\Phi \)
+</p><!-- l. 649 --><p class="noindent">In lieu of an extensive algebraic discussion, we present it in probabilistic language.
+Recall Pitman–Rogers intertwining <span class="cite">[?]</span>: suppose there are two Markov kernels \(\Lambda \) and \(\Phi \)
 such that \(\Lambda \Phi =\mathrm {Id}\). Let \(Q=\Lambda P\Phi \) and assume \(\Lambda P = Q\Lambda .\) Then \(\Phi \) defends a Markov projection from \(P\) to
 \(Q\):
-</p><!-- l. 652 --><p class="noindent"><img alt="PIC" src="../pictures/MarkovProjection.png"/>
-</p><!-- l. 654 --><p class="noindent">More specifically, if \(X(t)\) is a Markov process on state space \(S\) and \(\Phi :S\rightarrow \hat {S}\) is deterministic, with a
+</p><!-- l. 655 --><p class="noindent"><img alt="PIC" src="../pictures/MarkovProjection.png"/>
+</p><!-- l. 657 --><p class="noindent">More specifically, if \(X(t)\) is a Markov process on state space \(S\) and \(\Phi :S\rightarrow \hat {S}\) is deterministic, with a
 Markov kernel \(\Lambda : \hat {S}\rightarrow S,\) then \(\Phi (X(t))\) is a Markov process on \(\hat {S}.\)
-</p><!-- l. 657 --><p class="noindent">This procedure is sometimes called fusion.
-</p><!-- l. 659 --><p class="noindent">This intertwining can be constructed algebraically, but instead we draw a metaphor
+</p><!-- l. 660 --><p class="noindent">This procedure is sometimes called fusion.
+</p><!-- l. 662 --><p class="noindent">This intertwining can be constructed algebraically, but instead we draw a metaphor
 with stationary measures. We want to show that
                                  \[ \Lambda P = \Lambda P \Phi \Lambda . \]
  If for all \(v\), we have that \(v\Lambda \) is stationary under \(P\), i.e. \(v\Lambda P = v\Lambda \), then the above intertwining
@@ -442,57 +441,62 @@ becomes
                                                                   
                                  \[ v\Lambda = v\Lambda \Phi \Lambda \]
  which then follows from \(\Lambda \Phi =\mathrm {Id}.\)
-</p><!-- l. 671 --><p class="noindent">Calculating the fused vertex weights then requires orthogonal polynomials (please
+</p><!-- l. 674 --><p class="noindent">Calculating the fused vertex weights then requires orthogonal polynomials (please
 reference the Appendix).
-</p><!-- l. 673 --><p class="noindent">Question: do these weights satisfy YBE? In fact, they might not! At least for some
-Lie algebras. But they seem to for type \(A.\)
-</p><!-- l. 676 -->
+</p><!-- l. 676 --><p class="noindent">At this point, a natural question arises: do these weights satisfy YBE? For the
+stochastic vertex models, they do. For interacting particle systems such as ASEP, the
+situation seems to be dependent on the choice of Lie algebra.
+</p><!-- l. 681 -->
 <h4 class="subsectionHead" id="construction-with-central-elements"><span class="titlemark">5.3   </span> <a id="x1-130005.3"></a>Construction with Central Elements</h4>
-<!-- l. 680 --><p class="noindent">From here, let \(k=q^h.\)
-</p><!-- l. 682 --><p class="noindent">We define some subalgebras by letting \(U^{&gt; 0}\) be generated by \(e,\) and \(U^{&lt;0}\) generated by \(f\)
-and \(U^0\) generated by \(k\). Analogously, \(U^{\geq 0}\) is generated by \(e,k\) and \(U^{\leq 0}\) is generated by \(f,k\).
-There are central elements, sometimes called Casimir elements, that have the
+<!-- l. 682 --><p class="noindent">Here, we mention a method for constructing <span class="underline">non–integrable</span> interacting particle
+systems using central elements. The original argument goes back to <span class="cite">[<a href="#XSch97">15</a>]</span> for ASEP
+(which happens to be integrable), and was then generalized in <span class="cite">[<a href="#XCGRS16">4</a>]</span> for a partial
+exclusion process, where an arbitrary number of particles may occupy a
+site.
+</p><!-- l. 689 --><p class="noindent">From here, let \(k=q^h.\) We define some subalgebras by letting \(U^{&gt; 0}\) be generated by \(e,\) and \(U^{&lt;0}\)
+generated by \(f\) and \(U^0\) generated by \(k\). Analogously, \(U^{\geq 0}\) is generated by \(e,k\) and \(U^{\leq 0}\) is generated by
+\(f,k\). There are central elements, sometimes called Casimir elements, that have the
 form
-                                 \[ C \in U^0 + U^{&lt; 0}U^{&gt; 0}. \]
-</p><!-- l. 689 --><p class="noindent">One reason for introducing these subalgebras is because of the highest weight
-representations. We call \(V\) a highest weight representation if there exists a vector \(v,\)
-called the highest weight vector, such that
                                                                   
 
                                                                   
+                                 \[ C \in U^0 + U^{&lt; 0}U^{&gt; 0}. \]
+</p><!-- l. 696 --><p class="noindent">One reason for introducing these subalgebras is because of the highest weight
+representations. We call \(V\) a highest weight representation if there exists a vector \(v,\)
+called the highest weight vector, such that
                                  \[ U^{&gt;0}v=0 \]
  and \(V\) is generated by \(U^{\leq 0}v.\) Then the action of the Casimir on the highest weight vector is
 given by
                                  \[ Cv = av \]
  for some complex number \(a.\) Also let \(\{v_{\mu }:\mu \in \mathcal {B}\}\) denote a basis of \(V,\) where each \(v_{\mu }\) can be expressed
 as \(F^{\mu }v\) for some \(F^{\mu } \in U^{\leq 0}.\)
-</p><!-- l. 701 --><p class="noindent">We define the Hamiltonian \(H\) by taking the co–product of \(C\) on tensor powers of
+</p><!-- l. 708 --><p class="noindent">We define the Hamiltonian \(H\) by taking the co–product of \(C\) on tensor powers of
 representations:
+                                                                  
+
+                                                                  
                                  \[ H = \Delta (C) \vert _{V \otimes V}. \]
  We want to find a diagonal matrix \(G\) such that \(G^{-1}HG-c\mathrm {Id}\) is the generator of a continuous–time
 Markov process. As a necessary condition, we need that \(G^{-1}HG\) has rows which sum to \(c\);
 non–negativity is more difficult to ensure. One way to achieve this is with an
 eigenvector of eigenvalue \(c\). Namely, assume that \(g\) is a vector such that \(Hg=cg.\) If \(g\) has the
 form
-                                                                  
-
-                                                                  
                                  \[ g=\sum _{\boldsymbol {\mu }=(\mu _1,\mu _2)\in \mathcal {B}\times \mathcal {B}} g(\boldsymbol {\mu }) v_{\mu _1}\otimes v_{\mu _2} \]
  then the diagonal matrix \(G(\boldsymbol {\mu },\boldsymbol {\mu })=g(\boldsymbol {\mu })\) will satisfy the necessary requirement, as long as \(g(\boldsymbol {\mu })\) is always
 nonzero.
-</p><!-- l. 715 --><p class="noindent">As it turns out, \(g=v\otimes v\) (the tensor power of the highest weight vector) will satsify
+</p><!-- l. 722 --><p class="noindent">As it turns out, \(g=v\otimes v\) (the tensor power of the highest weight vector) will satsify
                                  \[ Hg=a^2g \]
  due to the form of the co–product and the central element. However, this choice will
 have zero entries. So instead we take \(g\) of the form
-                                 \[ \sum _{\boldsymbol {\mu }=(\mu _1,\mu _2)} c(\mu _1,\mu _2)\Delta (F^{\mu _1}F^{\mu _2}) v\otimes v \]
- for some appropriate choice of coefficients \(c(\mu _1,\mu _2)\) (reference the appendix for more detailed
-calculations).
                                                                   
 
                                                                   
-</p><!-- l. 726 -->
+                                 \[ \sum _{\boldsymbol {\mu }=(\mu _1,\mu _2)} c(\mu _1,\mu _2)\Delta (F^{\mu _1}F^{\mu _2}) v\otimes v \]
+ for some appropriate choice of coefficients \(c(\mu _1,\mu _2)\) (reference the appendix for more detailed
+calculations).
+</p><!-- l. 733 -->
 <h3 class="sectionHead" id="appendix"><span class="titlemark">6   </span> <a id="x1-140006"></a>Appendix</h3>
-<!-- l. 728 --><p class="noindent">This section will cover topics that were not included in the in–person lectures, but
+<!-- l. 735 --><p class="noindent">This section will cover topics that were not included in the in–person lectures, but
 are still worth mentioning. The links go to a separate webpage with the mathematical
 content.
 </p>
@@ -503,20 +507,20 @@ content.
      </li>
      <li class="itemize"> <a href="https://ximera.osu.edu/firststeps24html/aFirstStepInXimera/basics/Hecke_Algebras_WCAG">Hecke algebras</a>
 </li></ul>
-<!-- l. 740 -->
+<!-- l. 747 -->
 <h3 class="likesectionHead" id="references"><a id="x1-15000"></a>References</h3>
-<!-- l. 740 --><div class="thebibliography">
+<!-- l. 747 --><div class="thebibliography">
     <p class="bibitem"><span class="biblabel">
   [1]<span class="bibsp">   </span></span><a id="XADHR94"></a>F.  C.  Alcaraz,  M.  Droz,  M.  Henkel,  and  V.  Rittenberg,Ann.  Phys.
     (N.Y.)230:250 (1994).
+                                                                  
+
+                                                                  
     </p>
     <p class="bibitem"><span class="biblabel">
   [2]<span class="bibsp">   </span></span><a id="XBDJ99"></a>Baik, J.; Deift, P.; Johansson, K. (1999), ”On the distribution of the
     length  of  the  longest  increasing  subsequence  of  random  permutations”,
     Journal of the American Mathematical Society, 12 (4): 1119–1178,
-                                                                  
-
-                                                                  
     </p>
     <p class="bibitem"><span class="biblabel">
   [3]<span class="bibsp">   </span></span><a id="XBax72"></a>R.  J.  Baxter.  One-dimensional  anisotropic  Heisenberg  chain.  Ann.
@@ -549,13 +553,13 @@ content.
     <p class="bibitem"><span class="biblabel">
   [9]<span class="bibsp">   </span></span><a id="XJim85"></a>Jimbo, Michio (1985), ”A q-difference analogue of \(U(g)\) and the Yang-Baxter
     equation”, Letters in Mathematical Physics, 10 (1): 63–69,
+                                                                  
+
+                                                                  
     </p>
     <p class="bibitem"><span class="biblabel">
  [10]<span class="bibsp">   </span></span><a id="XJoh00"></a>Johansson,    K.,    ”Shape    fluctuations    and    random    matrices”,
     Communications in Mathematical Physics, 209 (2): 437–476, 2000.
-                                                                  
-
-                                                                  
     </p>
     <p class="bibitem"><span class="biblabel">
  [11]<span class="bibsp">   </span></span><a id="XMGP68"></a>MacDonald CT, Gibbs JH, Pipkin AC. Kinetics of biopolymerization
@@ -588,14 +592,14 @@ content.
     <p class="bibitem"><span class="biblabel">
  [18]<span class="bibsp">   </span></span><a id="XTW93"></a>Tracy, Craig A. Widom, Harold, ”Level-spacing distributions and the
     Airy kernel”, Physics Letters B. 305 (1—2): 115-–118 (1993).
+                                                                  
+
+                                                                  
     </p>
     <p class="bibitem"><span class="biblabel">
  [19]<span class="bibsp">   </span></span><a id="XTW94"></a>Tracy, C. A.; Widom, H. (1994), ”Level-spacing distributions and the
     Airy kernel”, Communications in Mathematical Physics, 159 (1): 151-–174
     (1994).
-                                                                  
-
-                                                                  
     </p>
     <p class="bibitem"><span class="biblabel">
  [20]<span class="bibsp">   </span></span><a id="XTW08"></a>C. Tracy and H. Widom, “Integral Formulas for the Asymmetric Simple
@@ -610,4 +614,4 @@ content.
     </div>
  
  
-<span ximera-compilation-date="" style="float:right"><small>2024-11-29 16:23:57</small></span></body></html>
+<span ximera-compilation-date="" style="float:right"><small>2024-11-29 17:30:03</small></span></body></html>

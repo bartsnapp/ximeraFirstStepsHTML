@@ -33,8 +33,8 @@ These lecture notes were created with \href{https://ximera.osu.edu/}{Ximera}, an
 interactive textbook platform hosted by Ohio State University. The Ximera Project is funded 2024-2026 (with no other external funding) by a 
 \$2,125,000 \href{https://www.ed.gov/grants-and-programs/grants-higher-education/improvement-postsecondary-education/open-textbooks-pilot-program}{Open Textbooks Pilot Program} grant from the federal Department of Education.
 
-I am still finding typos and mistakes, please so take this webpage as a draft for now. It is updated with all three lectures.
-The next update(s) will include appropriate references. To load the most updated version, click the orange ``update'' button
+These notes have not yet been peer--reviewed. However, it is updated with all three lectures.
+To load the most updated version, click the orange ``update'' button
 at the top of the page. If it is not there, then you are reading the most up-to-date version. The button looks like this:
 
 \includegraphics{UpdateButton.png}
@@ -500,7 +500,7 @@ the algebra such that the following diagram commutes:
    \draw[black,-latex,line width=2pt] (top)--(right) node[midway,above,sloped] () {$\mathrm{id} \otimes i$};
    \draw[black,-latex,line width=2pt] (left)--(bottom) node[midway,above] () {$m$};
    \draw[black,-latex,line width=2pt] (right)--(bottom) node[midway,above] () {$m$};
-   \draw[black,-latex,line width=2pt] (top)--(bottom) node[midway,above] () {$\mathrm{id}$};
+   \draw[black,-latex,line width=2pt] (top)--(bottom) node[midway,right] () {$\mathrm{id}$};
 \end{tikzpicture}
 
 Reversing the direction of the arrows, one obtains
@@ -514,7 +514,7 @@ Reversing the direction of the arrows, one obtains
    \draw[black,-latex,line width=2pt] (right)--(top) node[midway,above,sloped] () {$\mathrm{id} \otimes \epsilon$};
    \draw[black,-latex,line width=2pt] (bottom)--(left) node[midway,above] () {$\Delta$};
    \draw[black,-latex,line width=2pt] (bottom)--(right) node[midway,above] () {$\Delta$};
-   \draw[black,-latex,line width=2pt] (bottom)--(top) node[midway,above] () {$\mathrm{id}$};
+   \draw[black,-latex,line width=2pt] (bottom)--(top) node[midway,right] () {$\mathrm{id}$};
 \end{tikzpicture}
 
 A co--algebra is a vector space with a co--product and co--unit satisfying the above properties. For
@@ -592,6 +592,7 @@ the weights of the stochastic six vertex model, which we now define.
 The stochastic six vertex model was defined in \cite{GS92}, with 
 the generic six vertex model going back to \cite{Pau35}. The six weights
 are displayed below:
+
 \begin{tikzpicture}[scale=0.5]
    \draw [dashed](-1,0) -- (0,0) ;
    \draw [dashed] (0,0) -- (1,0) ;
@@ -624,17 +625,19 @@ are displayed below:
    \draw [->, very thick] (8,-2.5) -- (8,-1.5);
    \draw (9.5,-2.5) node {$1-b_2$};
 \end{tikzpicture}
+
 The number of arrows coming 
 in from the bottom and left must equal the number of arrows coming out
 from the top and right. Thus, there are $6 = \binom{4}{2}$ possible
 vertices. On a two--dimensional lattice, perhaps with fixed boundary conditions, 
 this defines a weight on configurations:
 
-\includegraphics{Images-figure6.eps}
+\includegraphics[height=4in]{Images-figure6.eps}
 
 \subsection{Fusion}
 In general, we do not really want to brute force solutions to the Yang--Baxter equation in arbitrary
 representations. Here, I present a way to construct new solutions from old solutions. 
+The original idea comes from \cite{CP16}.
 
 In linear algebra, for any vector space $V$, a symmetric tensor is an element of $V^{\otimes N}$ 
 preserved by any $P_{i,i+1}.$ For quantum groups, however, we have a $q$--deformation in the tensor powers
@@ -644,7 +647,7 @@ $$
 $$
 
 In lieu of an extensive algebraic discussion, we present it in probabilistic language. Recall
-Pitman--Rogers intertwining: suppose there are 
+Pitman--Rogers intertwining \cite{RP81{}}: suppose there are 
 two Markov kernels $\Lambda$ and $\Phi$ such that $\Lambda\Phi=\mathrm{Id}$. Let $Q=\Lambda P\Phi$ and 
 assume $\Lambda P = Q\Lambda.$ Then $\Phi$ defends a Markov projection from $P$ to $Q$:
 
@@ -670,16 +673,20 @@ which then follows from $\Lambda\Phi=\mathrm{Id}.$
 
 Calculating the fused vertex weights then requires orthogonal polynomials (please reference the Appendix).
 
-Question: do these weights satisfy YBE? In fact, they might not! At least
-for some Lie algebras. But they seem to for type $A.$
+At this point, a natural question arises: do these weights satisfy YBE? 
+For the stochastic vertex models, they do. For interacting particle systems
+such as ASEP, the situation seems to be dependent on the choice of 
+Lie algebra.
 
 \subsection{Construction with Central Elements}
+Here, we mention a method for constructing \underline{non--integrable}
+interacting particle systems using central elements. The original 
+argument goes back to \cite{Sch97} for ASEP (which happens to be integrable), 
+and was then generalized in \cite{CGRS16} for a partial exclusion process, 
+where an arbitrary number of particles may occupy a site.
 
 
-
-From here, let $k=q^h.$
-
-We define some subalgebras by letting $U^{> 0}$ be generated by $e,$ and $U^{<0}$ generated by $f$ and
+From here, let $k=q^h.$ We define some subalgebras by letting $U^{> 0}$ be generated by $e,$ and $U^{<0}$ generated by $f$ and
 $U^0$ generated by $k$. Analogously, $U^{\geq 0}$ is generated by $e,k$ and $U^{\leq 0}$ is generated
 by $f,k$. There are central elements, sometimes called Casimir elements, that have the form
 $$
