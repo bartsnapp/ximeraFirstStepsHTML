@@ -43,7 +43,7 @@ Recordings of the lectures are available on
 \href{https://warwick.ac.uk/fac/sci/maths/people/staff/oleg_zaboronski/jeffrey_kuan_visit/}{Oleg Zaboronski's webpage.} 
 
 Funding was provided by \href{https://www.lms.ac.uk/grants/visits-uk-scheme-2}{The London Mathematical Society} and 
-Lancaster University, University of Bristol, University of Edinburgh, Warwick University, Queen Mary University of London, and Ohio State University. 
+Lancaster University, University of Bristol, University of Edinburgh, Warwick University, Queen Mary University of London, and Ximera. 
 
 
 \section{Introduction}
@@ -55,7 +55,71 @@ famed Tracy--Widom distribution. The origin of these solutions are usually due t
 underlying the model. In these set of lecture notes, we will introduce the relevant algebraic background
 with a probabilistic researcher as the target audience. 
 
-For historical context, the terminology originates in integrable systems from Hamiltonian mechanics.
+We first summarize some mathematical results since the early 1990s which contextualize the field in
+its current (2024) state. The well--known 
+\href{https://en.wikipedia.org/wiki/Tracy%E2%80%93Widom_distribution}{Tracy--Widom distribution}
+was first discovered in \cite{TW93}, \cite{TW94}, where it describes the asymptotic fluctuations
+of the largest eigenvalues of the 
+\href{https://en.wikipedia.org/wiki/Random_matrix#Gaussian_ensembles}{Gaussian Unitary Ensemble}. 
+In those papers, the distibution is defined in terms of a Fredholm determinant.
+Several years later, a surprising result of \cite{BDJ99} proved that the Tracy--Widom distribution
+also occurs in the asymptotic fluctuations of longest increasing subsequences 
+of random permutations. At the time, there was no explanation for why the same distribution would
+occur in the asymptotics of seemingly unrelated models. 
+
+The aforementioned exact solutions are a common theme in 
+models with Tracy--Widom asymptotics. At this point in time,
+a complete list of all such models and relevant papers would be incredibly long, but for
+the purposes of these notes we can restrict to models with 
+known quantum group symmetry. The canonical such model is 
+the asymmetric simple exclusion process in one dimension. 
+For an example of what these exact formulas look like, 
+consider the result of \cite{TW08}, which shows that for 
+an ASEP with initial conditions $y_1<\ldots<y_N$, the
+probability at being in state $x_1<\ldots<x_N$ at time $t$
+is given by a sum over $N!$ terms, with each summand being 
+a $N$--fold integral:
+$$
+\sum_{\sigma \in S_N} \left(\frac{1}{2\pi \mathrm{i}}\right)^N\int_{C_r} \cdots \int_{C_r} A_{\sigma}\prod_j \xi_{\sigma(j)}^{x_j-y_{\sigma(j)}-1}e^{\sum_j \epsilon(\xi_j)t}d\xi_j.
+$$
+For completeness, we state what these terms are. As usual $S_N$ is the symmetric group on $N$ elements, 
+and an inversion of a permutation $\sigma$ is an ordered pair $(\sigma(j),\sigma(k))$ such that
+$j<k$ and $\sigma(j)>\sigma(k)$. The term $A_{\sigma}$ is defined to be
+$$
+A_{\sigma} = \prod_{(\alpha,\beta) \text{ is an inversion of } \sigma}{S_{\alpha\beta}}
+$$
+and $S_{\alpha\beta}$ is the ``scattering term''
+$$
+S_{\alpha\beta} = -\frac{1+q\xi_{\alpha}\xi_{\beta}-(1+q)\xi_{\alpha}}{1+q\xi_{\alpha}\xi_{\beta}-(1+q)\xi_{\beta}}.
+$$
+The term $q$ is the asymmetry parameter. When $q=0,$ the 
+totally asymmetric case, the formula reduces to a determinantal 
+expression found in \cite{Sch97a}. In this sense, the summation
+over the symmetric group $S_N$ is related to 
+\href{https://en.wikipedia.org/wiki/Leibniz_formula_for_determinants}{Leibniz's determinantal formula.}
+
+The asymptotic analysis proving Tracy--Widom convergence
+was done in the follow-up paper \cite{TW09}, generalizing the
+result for the totally asymmetric case $(q=0)$ in \cite{Joh00}.
+Generally speaking, exact formulas and asymptotic analysis are
+easier when $q=0.$ However, we will later see that this is not 
+true when using quantum groups. 
+
+At this point, the reader may be curious why any exact formulas
+should exist in the first place. This is due to the underlying 
+quantum group symmetry of ASEP. To quote \cite{TW07}, 
+
+``... it has been known for some time that the generator of ASEP
+is a similarity transformation of the quantum spin chain Hamiltonian
+known as the XXZ model. Since the XXZ Hamiltonian is diagonalizable
+by Bethe Ansatz, it is reasonable to expect that these ideas are 
+useful for ASEP.''
+
+\noindent These notes will explicitly explain the underlying 
+quantum group symmetry. 
+
+For even more historical context, the terminology for ``integrable probability''
+originates in integrable systems from Hamiltonian mechanics.
 In Hamiltonian mechanics, the phase space is represented as a smooth manifold with even dimension $2n,$
 with coordinates denoted $q_1,\ldots,q_n,p_1,\ldots,p_n$ for the momentum and position. An integrable
 system is a system with $n$ conserved quantities which are mutually Poisson commuting, 
@@ -85,7 +149,8 @@ To begin to motivate the notes, we first introduce the asymmetric simple exclusi
 the Heisenberg XXZ model and the quantum group $U_q(sl_2).$ 
 
 \subsection{Definition of ASEP}
-In ASEP, particles randomly jump on a lattice, which we assume to be
+ASEP was introduced in the mathematics community in \cite{Spi70}, 
+and previously in a biology paper \cite{MGP68}. In ASEP, particles randomly jump on a lattice, which we assume to be
 one--dimensional. At most one particle may occupy a site, and jumps to occupied sites are blocked (hence the term ``exclusion'').
 Jumps are nearest neighbour (hence the term ``simple''). If the jumps are continuous--time exponential 
 clocks with left rates $\alpha$ and right rates $\beta,$ then let $q=\sqrt{\beta/\alpha}$ denote the 
@@ -132,7 +197,7 @@ Similar notation using subscripts will be used throughout these notes.
 
 \subsection{ASEP and Yang--Baxter Equation}
 The corresponding notion of integrability in the quantum case comes from Yang--Baxter equation. 
-It was shown by Baxter that when a matrix solves the Yang--Baxter equation, there are corresponding
+It was shown by Baxter \cite{Bax72} that when a matrix solves the \href{https://en.wikipedia.org/wiki/Yang%E2%80%93Baxter_equation}{Yang--Baxter equation}, there are corresponding
 ``commuting transfer matrices,'' which are analogous to conserved quantities in the classical setting. 
 
 
@@ -215,7 +280,10 @@ of the XXZ model will lay the foundation for answering this question.
 Having established that ASEP is an integrable model at two lattice sites, it is natural to ask about
 other integrable models that look similar to ASEP, so that we can avoid re--inventing the wheel. Thus we 
 now turn our attention to a related model, called the quantum Heisenberg model. These were introduced
-by Werner Heisenberg to incorporate quantum mechanics into magnetism. Each lattice site has a microscopic
+by Werner Heisenberg \cite{Hei28} to incorporate quantum mechanics into magnetism, and \cite{GS92,ADHR94}
+pointed out the the XXZ Hamiltonian is conjugate to the ASEP generator. 
+
+Each lattice site has a microscopic
 magnetic dipole, which can either be up or down. If there are \(N\) lattice sites, 
 then the Hamiltonian acts on the \(2^N\)--dimensional vector space \((\mathbb{C}^2)^{\otimes N}.\)
 So, at the very least, the state space of the XXZ model is the same as the ASEP state space. 
@@ -285,7 +353,7 @@ Pauli matrices form a basis of the real Lie algebra \(su_2\) corresponding to th
 \(SU(2).\) Here, a real Lie group means that the underlying field is the real numbers, not that
 all the entries are real (consider the unit circle in the complex plane as a real Lie group, for example).
 
-The complex variant of \(SU(2)\) is the (non--compact) Lie group \(SL(2,\mathbb{C})\) of traceless 
+The complexification of \(SU(2)\) is the (non--compact) Lie group \(SL(2,\mathbb{C})\) of traceless 
 \(2 \times 2\) matrices with complex entries. For a variety of reasons, some of which answer historical,
 most mathematicians are introduce to the Lie algebra \(sl_2\) rather than \(su_2,\) so we will use that notation.
 
@@ -308,7 +376,7 @@ a free parameter, the algebra should be a one--parameter deformation of \(SU(2).
 the next topic of quantum groups. 
 
 \section{Quantum Group \(U_q(sl_2)\)}
-The Drinfel'd--Jimbo quantum groups are quantizations of the Lie groups. Rather confusingly, the
+The Drinfel'd--Jimbo quantum groups \cite{Dri85, Jim85} are quantizations of the Lie groups. Rather confusingly, the
 quantum groups are not themselves groups. 
 
 Before diving into the rigorous definition, one notes where the quantization occurs. Using probabilistic
@@ -356,7 +424,12 @@ the co--product becoming
 (Exercise to the reader why that is the same co--product). In words, \(h\) is primitive and \(k\) is 
 group--like.
 
-\subsection{Co-algebras and bi--algebras}
+\subsection{Hopf algebras}
+In this section, we will define \href{https://en.wikipedia.org/wiki/Hopf_algebra}{Hopf algebras,} 
+which are named after \href{https://en.wikipedia.org/wiki/Heinz_Hopf}{Heinz Hopf.} 
+(This is a different Hopf than the namesake of the Cole--Hopf trasnformation, who is named
+Eberhard Hopf). The original paper possibly goes back to \cite{Hop41}.
+
 While I presented the co--product as the object that allows for multiple lattice sites, that is of 
 course not how it is presented to algebraists. A more common description is that a co--algebra is
 dual to an algebra, with the co--product dual to the product. This subsection will provide a rigorous
@@ -619,7 +692,55 @@ I may make this a separate webpage later.
 
 \begin{thebibliography}{10}
 
+\bibitem{ADHR94} F. C. Alcaraz, M. Droz, M. Henkel, 
+and V. Rittenberg,Ann. Phys. (N.Y.)230:250 (1994).
+
+\bibitem{BDJ99} Baik, J.; Deift, P.; Johansson, K. (1999), "On the distribution of the length of the longest increasing subsequence of random permutations", 
+Journal of the American Mathematical Society, 12 (4): 1119--1178,
+
+\bibitem{Bax72} R. J. Baxter. One-dimensional anisotropic Heisenberg chain. 
+Ann. Physics, 70:323--337, 1972.
+
+\bibitem{Dri85} Drinfeld, V. G. (1985), "Hopf algebras and the quantum Yang–Baxter equation", 
+Doklady Akademii Nauk SSSR, 283 (5): 1060--1064, 
+
+\bibitem{Hei28} Heisenberg, W. (1 September 1928). "Zur Theorie des Ferromagnetismus" [On the theory of ferromagnetism]. 
+Zeitschrift für Physik (in German). 49 (9): 619--636.
+
+\bibitem{Hop41} Hopf, Heinz (1941). "Über die Topologie der Gruppen--Mannigfaltigkeiten und ihre Verallgemeinerungen". 
+Ann. of Math. 2 (in German). 42 (1): 22–52.
+
+\bibitem{Jim85} Jimbo, Michio (1985), "A q-difference analogue of $U(g)$ and the Yang-Baxter equation", 
+Letters in Mathematical Physics, 10 (1): 63--69, 
+
+\bibitem{Joh00} Johansson, K., "Shape fluctuations and random matrices", 
+Communications in Mathematical Physics, 209 (2): 437--476, 2000.
+
+\bibitem{MGP68} MacDonald CT, Gibbs JH, Pipkin AC. Kinetics of biopolymerization on nucleic acid templates. 
+Biopolymers. 1968;6(1):1--5.
+
+\bibitem{GS92} L.-H. Gwa and H. Spohn,Phys. Rev. A 46:844 (1992).
+
 \bibitem{Sch97} G. Sch\"{u}tz, Duality relations for asymmetric exclusion processes, J Stat Phys 86, 1265–1287 (1997).
+
+\bibitem{Sch97a} G. Sch\"{u}tz, Exact solution of the master equation
+for the asymmetric exclusion process. J. Stat Physics, \textbf{88} 427--445 (1997).
+
+\bibitem{Spi70} F. Spitzer, Interaction of Markov Processes, 
+Advances in Mathematics, Volume 5, Issue 2, October 1970, Pages 246--290.
+
+\bibitem{TW93}  Tracy, Craig A. Widom, Harold, "Level-spacing distributions and the Airy kernel", 
+Physics Letters B. 305 (1–-2): 115-–118 (1993). 
+
+\bibitem{TW94} Tracy, C. A.; Widom, H. (1994), "Level-spacing distributions and the Airy kernel", 
+Communications in Mathematical Physics, 159 (1): 151-–174 (1994).
+
+\bibitem{TW08} C. Tracy and H. Widom, ``Integral Formulas for the Asymmetric 
+Simple Exclusion Process,'' Comm. Math. Phys., volume 279, 
+pages 815--844 (2008).
+
+\bibitem{TW09} Tracy, C. A.; Widom, H., "Asymptotics in ASEP with step initial condition", 
+Communications in Mathematical Physics, 290 (1): 129–154, 2009.
 
 \end{thebibliography}
 
