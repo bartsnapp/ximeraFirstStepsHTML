@@ -100,7 +100,7 @@ that for an ASEP with initial conditions <math xmlns="http://www.w3.org/1998/Mat
     </mrow>
   </msub>
 </math>
-at time \(t\) is given by a sum over <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"> <mi>N</mi> <mo>!</mo> </math> terms, with each summand being a N–fold
+at time \(t\) is given by a sum over <span title="N factorial" role="math">\(N!\)</span> terms, with each summand being a N–fold
 integral:
                                  <div title="" role = "math"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
                                     <munder>
@@ -231,15 +231,65 @@ integral:
                                     </msub>
                                     <mo>.</mo>
                                   </math></div>
- For completeness, we state what these terms are. As usual \(S_N\) is the symmetric group
-on \(N\) elements, and an inversion of a permutation \(\sigma \) is an ordered pair \((\sigma (j),\sigma (k))\) such that \(j&lt;k\) and \(\sigma (j)&gt;\sigma (k)\).
-The term \(A_{\sigma }\) is defined to be
-                                                                  
-
-                                                                  
-                                 \[ A_{\sigma } = \prod _{(\alpha ,\beta ) \text { is an inversion of } \sigma }{S_{\alpha \beta }} \]
- and \(S_{\alpha \beta }\) is the “scattering term”
-                                 \[ S_{\alpha \beta } = -\frac {1+q\xi _{\alpha }\xi _{\beta }-(1+q)\xi _{\alpha }}{1+q\xi _{\alpha }\xi _{\beta }-(1+q)\xi _{\beta }}. \]
+For completeness, we state what these terms are. As usual <span title="S sub N" role="math">\(S_N\)</span> is the symmetric group
+on N elements, and an inversion of a permutation <span title="sigma" role="math">\(\sigma \)</span> is an ordered pair <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mo stretchy="false">(</mo>
+  <mi>&#x3C3;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>j</mi>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mi>&#x3C3;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+</math> such that <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>j</mi>
+  <mo>&lt;</mo>
+  <mi>k</mi>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>&#x3C3;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>j</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&gt;</mo>
+  <mi>&#x3C3;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+</math>.
+The term <span title="A sub sigma" role="math">\(A_{\sigma }\)</span> is defined to be
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>A</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3C3;</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x220F;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo stretchy="false">(</mo>
+      <mi>&#x3B1;</mi>
+      <mo>,</mo>
+      <mi>&#x3B2;</mi>
+      <mo stretchy="false">)</mo>
+      <mtext>&#xA0;is an inversion of&#xA0;</mtext>
+      <mi>&#x3C3;</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>S</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3B1;</mi>
+      <mi>&#x3B2;</mi>
+    </mrow>
+  </msub>
+</math>
+and \(S_{\alpha\beta}\) is the "scattering term"
+\[ S_{\alpha \beta } = -\frac {1+q\xi _{\alpha }\xi _{\beta }-(1+q)\xi _{\alpha }}{1+q\xi _{\alpha }\xi _{\beta }-(1+q)\xi _{\beta }}. \]
  The term \(q\) is the asymmetry parameter. When \(q=0,\) the totally asymmetric case, the
 formula reduces to a determinantal expression found in <span class="cite">[<a href="#XSch97a">16</a>]</span>. In this sense, the
 summation over the symmetric group \(S_N\) is related to  <a href="https://en.wikipedia.org/wiki/Leibniz_formula_for_determinants">Leibniz’s determinantal
