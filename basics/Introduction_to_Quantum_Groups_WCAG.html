@@ -374,11 +374,15 @@ formula.</a>
 </p><!-- l. 101 --><p class="noindent">The asymptotic analysis proving Tracy–Widom convergence was done in the
 follow-up paper <span class="cite">[<a href="#XTW09">21</a>]</span>, generalizing the result for the totally asymmetric case \((q=0)\) in
 <span class="cite">[<a href="#XJoh00">10</a>]</span>. Generally speaking, exact formulas and asymptotic analysis are easier
-when \(q=0.\) However, we will later see that this is not true when using quantum
+when <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>q</mi>
+  <mo>=</mo>
+  <mn>0</mn>
+</math>. However, we will later see that this is not true when using quantum
 groups.
 </p><!-- l. 108 --><p class="noindent">At this point, the reader may be curious why any exact formulas should exist in the
 first place. This is due to the underlying quantum group symmetry of ASEP. To
-quote <span class="cite">[?]</span>,
+quote <span class="cite">[<a href="#XTW07">20</a>]</span>,
 </p><!-- l. 112 --><p class="noindent">“... it has been known for some time that the generator of ASEP is a similarity
 transformation of the quantum spin chain Hamiltonian known as the XXZ model.
 Since the XXZ Hamiltonian is diagonalizable by Bethe Ansatz, it is reasonable to
@@ -386,11 +390,11 @@ expect that these ideas are useful for ASEP.”
 </p><!-- l. 118 --><p class="noindent">These notes will explicitly explain the underlying quantum group symmetry.
 </p><!-- l. 121 --><p class="noindent">For even more historical context, the terminology for “integrable probability”
 originates in integrable systems from Hamiltonian mechanics. In Hamiltonian
-mechanics, the phase space is represented as a smooth manifold with even dimension \(2n,\)
+mechanics, the phase space is represented as a smooth manifold with even dimension <span role="math">\(2n\)</span>,
 with coordinates denoted 
 <span title="q 1 dot dot dot q n comma p 1 dot dot dot comma p n" role="math">\(q_1,\ldots ,q_n,p_1,\ldots ,p_n\)</span>
 for the momentum and position. An integrable
-system is a system with \(n\) conserved quantities which are mutually Poisson
+system is a system with <span role="math">\(n\)</span> conserved quantities which are mutually Poisson
 commuting, and the Liouville–Arnold theorem states that the equations of
 motion can be solved in quadratures. For an explicit example, the harmonic
 oscillator in one dimension (imagine an object attached to a frictionless spring)
@@ -415,7 +419,25 @@ probability and mathematical physics as a motivation. The goal is for a reader w
 probability background to be able to read contemporary (as of 2024) research papers
 in integrable probability.
 </p><!-- l. 146 -->
-<h3 class="sectionHead" id="asep-xxz-and-uqsl"><span class="titlemark">3   </span> <a id="x1-30003"></a>ASEP, XXZ, and \(U_q(sl_2)\)</h3>
+<h3 class="sectionHead" id="asep-xxz-and-uqsl"><span class="titlemark">3   </span> <a id="x1-30003"></a>ASEP, XXZ, and <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>U</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>q</mi>
+    </mrow>
+  </msub>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mi>s</mi>
+    <msub>
+      <mi>l</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>2</mn>
+      </mrow>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math></h3>
 <!-- l. 148 --><p class="noindent">To begin to motivate the notes, we first introduce the asymmetric simple exclusion
 process (ASEP) and its relationship to the Heisenberg XXZ model and the quantum
 group \(U_q(sl_2).\)
