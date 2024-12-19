@@ -583,13 +583,7 @@ although of course probabilities are real numbers.
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi>&#x3B1;</mi>
   <mrow data-mjx-texclass="INNER">
-    mo {
-      transform: scaleY(4); /* Scales the element's height by 4 times */
-    }
     <mo data-mjx-texclass="OPEN">(</mo>
-    mo {
-      transform: scaleY(1); /* Scales the element's height by 4 times */
-    }
     <mtable columnalign="center center center center" columnspacing="1em" rowspacing="4pt">
       <mtr>
         <mtd>
@@ -666,8 +660,111 @@ although of course probabilities are real numbers.
 The constant <span role="math">\(\alpha \)</span> can be viewed as a time rescaling, so it can be removed without loss of
 generality.
 </p><!-- l. 186 --><p class="noindent">In a more general setting, where there are N lattice sites, the generator can be defined
-from the above \(4\times 4\) matrix, which we now denote \(\mathcal {L}.\) The generator is now a \(2^N \otimes 2^N\) and acts on \((\mathbb {C}^2)^{\otimes N}.\)
-Define \(\mathcal {L}_{i,i+1}\) by \[ \mathcal {L}_{i,i+1} = (\mathrm {Id}_2)^{i-1} \otimes \mathcal {L} \otimes (\mathrm {Id}_2)^{N-1}. \] With this notation, the generator is \[ \sum _{i=1}^{N-1} \mathcal {L}_{i,i+1}. \] Similar notation using subscripts
+from the above <span role="math">\(4\times 4\)</span> matrix, which we now denote <span role="math">\(\mathcal {L}.\)</span> The generator is now a <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msup>
+    <mn>2</mn>
+    <mrow data-mjx-texclass="ORD">
+      <mi>N</mi>
+    </mrow>
+  </msup>
+  <mo>&#x2297;</mo>
+  <msup>
+    <mn>2</mn>
+    <mrow data-mjx-texclass="ORD">
+      <mi>N</mi>
+    </mrow>
+  </msup>
+</math> matrix and acts on <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <msup>
+        <mrow data-mjx-texclass="ORD">
+          <mi mathvariant="double-struck">C</mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mn>2</mn>
+        </mrow>
+      </msup>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2297;</mo>
+      <mi>N</mi>
+    </mrow>
+  </msup>
+</math>.
+Define <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">L</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+</math> by <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">L</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <msub>
+        <mrow data-mjx-texclass="ORD">
+          <mi data-mjx-auto-op="false">Id</mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mn>2</mn>
+        </mrow>
+      </msub>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mo>&#x2297;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">L</mi>
+  </mrow>
+  <mo>&#x2297;</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <msub>
+        <mrow data-mjx-texclass="ORD">
+          <mi data-mjx-auto-op="false">Id</mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mn>2</mn>
+        </mrow>
+      </msub>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>N</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>.
+</math> Similar notation using subscripts
 will be used throughout these notes.
 </p><!-- l. 198 -->
 <h4 class="subsectionHead" id="asep-and-yangbaxter-equation"><span class="titlemark">3.2   </span> <a id="x1-50003.2"></a>ASEP and Yang–Baxter Equation</h4>
