@@ -1477,11 +1477,49 @@ Symbolically, we define an involution <span role="math">\(T\)</span> of <span ro
     </mrow>
   </msub>
 </math>.
-A mildly helpful observation here is that \(T\) is stochastic, so its composition with other stochastic
-matrices is also stochastic. Using these identities, one immediately verifies YBE for \(R_{\alpha ,0}\)
-and \(R_{1,\beta }.\) Furthermore, these two solutions are related up to the particle–hole
+A mildly helpful observation here is that <span math="role">\(T\)</span> is stochastic, so its composition with other stochastic
+matrices is also stochastic. Using these identities, one immediately verifies YBE for <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3B1;</mi>
+      <mo>,</mo>
+      <mn>0</mn>
+    </mrow>
+  </msub>
+</math>,
+and <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mi>&#x3B2;</mi>
+    </mrow>
+  </msub>
+</math>. Furthermore, these two solutions are related up to the particle–hole
 involution.
-</p><!-- l. 266 --><p class="noindent">One notices that \(P\circ R_{\alpha ,0}-\mathrm {id}_4\) is the generator of ASEP at two lattice sites. It is then natural to
+</p><!-- l. 266 --><p class="noindent">One notices that <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>P</mi>
+  <mo>&#x2218;</mo>
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3B1;</mi>
+      <mo>,</mo>
+      <mn>0</mn>
+    </mrow>
+  </msub>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mi data-mjx-auto-op="false">id</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>4</mn>
+    </mrow>
+  </msub>
+</math> is the generator of ASEP at two lattice sites. It is then natural to
 ask whether or not addition by constants affects integrability. The answer is “no”
 (otherwise integrable probability would not exist). As some intuition, let us suppose
 that the generator has an explicit set of eigenvectors and eigenvalues. In general, an
@@ -1494,9 +1532,6 @@ sites.
 </p><!-- l. 275 --><p class="noindent">At this juncture, it is reasonable to object that nothing has been said about the
 integrability of ASEP on arbitrarily many lattice sites. We will put this question on
 hold, as the next section’s discussion of the XXZ model will lay the foundation for
-                                                                  
-
-                                                                  
 answering this question.
 </p><!-- l. 279 -->
 <h4 class="subsectionHead" id="xxz-model"><span class="titlemark">3.3   </span> <a id="x1-60003.3"></a>XXZ model</h4>
@@ -1508,16 +1543,395 @@ Werner Heisenberg <span class="cite">[<a href="#XHei28">7</a>]</span> to incorpo
 <span class="cite">[<a href="#XGS92">12</a>, <a href="#XADHR94">1</a>]</span> pointed out the the XXZ Hamiltonian is conjugate to the ASEP
 generator.
 </p><!-- l. 286 --><p class="noindent">Each lattice site has a microscopic magnetic dipole, which can either be up or down.
-If there are \(N\) lattice sites, then the Hamiltonian acts on the \(2^N\)–dimensional vector space \((\mathbb {C}^2)^{\otimes N}.\)
+If there are N lattice sites, then the Hamiltonian acts on the <span role="math">\(2^N\)</span>–dimensional vector space <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <msup>
+        <mrow data-mjx-texclass="ORD">
+          <mi mathvariant="double-struck">C</mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mn>2</mn>
+        </mrow>
+      </msup>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2297;</mo>
+      <mi>N</mi>
+    </mrow>
+  </msup>
+</math>.
 So, at the very least, the state space of the XXZ model is the same as the ASEP
 state space.
-</p><!-- l. 291 --><p class="noindent">To define the model, first recall that Pauli spin matrices: \[ \sigma ^1 = \left (\begin{array}{cc} 0 &amp; 1 \\ 1 &amp; 0 \end{array}\right ), \quad \quad \sigma ^2 = \left ( \begin{array}{cc} 0 &amp; -i \\ i &amp; 0 \end{array}\right ), \quad \quad \sigma ^3 = \left ( \begin{array}{cc} 1 &amp; 0 \\ 0 &amp; -1 \end{array}\right ). \] The notation \(\sigma ^x,\sigma ^y,\sigma ^z\) are
+</p><!-- l. 291 --><p class="noindent">To define the model, first recall that Pauli spin matrices: 
+  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+    <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <msup>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msup>
+          <mo>=</mo>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mo>,</mo>
+          <mstyle scriptlevel="0">
+            <mspace width="1em"></mspace>
+          </mstyle>
+          <msup>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+            </mrow>
+          </msup>
+          <mo>=</mo>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;</mo>
+                  <mi>i</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>i</mi>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mo>,</mo>
+          <mstyle scriptlevel="0">
+            <mspace width="1em"></mspace>
+          </mstyle>
+          <msup>
+            <mi>&#x3C3;</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>3</mn>
+            </mrow>
+          </msup>
+          <mo>=</mo>
+          <mrow data-mjx-texclass="INNER">
+            <mo data-mjx-texclass="OPEN">(</mo>
+            <mtable columnalign="center center" columnspacing="1em" rowspacing="4pt">
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mo>&#x2212;</mo>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo data-mjx-texclass="CLOSE">)</mo>
+          </mrow>
+          <mo>.</mo>
+          <mo>.</mo>
+          <mo>.</mo>
+          <mo>.</mo>
+          <mtext>&#xA0;</mtext>
+        </mtd>
+      </mtr>
+    </mtable>
+  </math>
+The notation <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msup>
+    <mi>&#x3C3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+    </mrow>
+  </msup>
+  <mo>,</mo>
+  <msup>
+    <mi>&#x3C3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>y</mi>
+    </mrow>
+  </msup>
+  <mo>,</mo>
+  <msup>
+    <mi>&#x3C3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>z</mi>
+    </mrow>
+  </msup>
+</math> are
 often used instead. Note that these are traceless and are Hermitian, the
 latter property being important in physics (since Hermitian matrices have
 real eigenvalues, and these eigenvalues correspond to physical quantities).
-Letting \[ \sigma ^a_j = (\mathrm {Id})^{\otimes j-1} \otimes \sigma ^a \otimes (\mathrm {Id})^{\otimes N-j} \] so that \(\sigma ^a_j\) acts on the \(j\)–th lattice site while fixing the others, the
-Hamiltonian is then \[ \frac {-1}{2}\sum _{j=1}^N \left ( J_x \sigma ^1_j \sigma ^1_{j+1} + J_y \sigma ^2_j \sigma ^2_{j+1} + J_z \sigma ^3_j\sigma ^3_{j+1} - h\sigma ^3_j\right ). \] where \(J_x,J_y,J_z\) are some coupling constants and \(h\) is the external field.
-We impose periodic boundary conditions, so that \(\sigma ^a_{N+1}=\sigma ^a_1.\) If \(J_x,J_y,J_z\) are distinct then one
+Letting 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msubsup>
+    <mi>&#x3C3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>a</mi>
+    </mrow>
+  </msubsup>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mi data-mjx-auto-op="false">Id</mi>
+  </mrow>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2297;</mo>
+      <mi>j</mi>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mo>&#x2297;</mo>
+  <msup>
+    <mi>&#x3C3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>a</mi>
+    </mrow>
+  </msup>
+  <mo>&#x2297;</mo>
+  <mo stretchy="false">(</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mi data-mjx-auto-op="false">Id</mi>
+  </mrow>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2297;</mo>
+      <mi>N</mi>
+      <mo>&#x2212;</mo>
+      <mi>&#x237;</mi>
+    </mrow>
+  </msup>
+</math>
+so that <span role="math">\(\sigma ^a_j\)</span> acts on the j–th lattice site while fixing the others, the
+Hamiltonian is then 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <mrow>
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <munderover>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>N</mi>
+    </mrow>
+  </munderover>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msub>
+      <mi>J</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>x</mi>
+      </mrow>
+    </msub>
+    <msubsup>
+      <mi>&#x3C3;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mn>1</mn>
+      </mrow>
+    </msubsup>
+    <msubsup>
+      <mi>&#x3C3;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mn>1</mn>
+      </mrow>
+    </msubsup>
+    <mo>+</mo>
+    <msub>
+      <mi>J</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>y</mi>
+      </mrow>
+    </msub>
+    <msubsup>
+      <mi>&#x3C3;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mn>2</mn>
+      </mrow>
+    </msubsup>
+    <msubsup>
+      <mi>&#x3C3;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mn>2</mn>
+      </mrow>
+    </msubsup>
+    <mo>+</mo>
+    <msub>
+      <mi>J</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>z</mi>
+      </mrow>
+    </msub>
+    <msubsup>
+      <mi>&#x3C3;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mn>3</mn>
+      </mrow>
+    </msubsup>
+    <msubsup>
+      <mi>&#x3C3;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mn>3</mn>
+      </mrow>
+    </msubsup>
+    <mo>&#x2212;</mo>
+    <mi>h</mi>
+    <msubsup>
+      <mi>&#x3C3;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+      </mrow>
+      <mrow data-mjx-texclass="ORD">
+        <mn>3</mn>
+      </mrow>
+    </msubsup>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>.</mo>
+</math>
+where <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+    </mrow>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>y</mi>
+    </mrow>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>z</mi>
+    </mrow>
+  </msub>
+</math> are some coupling constants and h is the external field.
+We impose periodic boundary conditions, so that <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msubsup>
+    <mi>&#x3C3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>N</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>a</mi>
+    </mrow>
+  </msubsup>
+  <mo>=</mo>
+  <msubsup>
+    <mi>&#x3C3;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>u</mi>
+    </mrow>
+  </msubsup>
+</math>. If <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+    </mrow>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>y</mi>
+    </mrow>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>z</mi>
+    </mrow>
+  </msub>
+</math> are distinct then one
 obtains the XYZ model. If \(J_x=J_y \neq J_z\) then this is the XXZ model; if \(J_x=J_y=J_z\) then it is the XXX
 model.
 </p><!-- l. 310 --><p class="noindent">Each summand in the Hamiltonian can be written as a four by four matrix: \[ \left (\begin{array}{cccc} J_z + 2h &amp; 0 &amp; 0 &amp; J_x-J_y \\ 0 &amp; -J_z &amp; J_x + J_y &amp; 0 \\ 0 &amp; J_x + J_y &amp; -J_z &amp; 0 \\ J_x - J_y &amp; 0 &amp; 0 &amp; J_z-2h \end{array}\right ) \] If \(J_x=J_y,\)
