@@ -1932,19 +1932,381 @@ We impose periodic boundary conditions, so that <math xmlns="http://www.w3.org/1
     </mrow>
   </msub>
 </math> are distinct then one
-obtains the XYZ model. If \(J_x=J_y \neq J_z\) then this is the XXZ model; if \(J_x=J_y=J_z\) then it is the XXX
+obtains the XYZ model. If <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>y</mi>
+    </mrow>
+  </msub>
+  <mo>&#x2260;</mo>
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>z</mi>
+    </mrow>
+  </msub>
+</math> then this is the XXZ model; if <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>y</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>z</mi>
+    </mrow>
+  </msub>
+</math> then it is the XXX
 model.
-</p><!-- l. 310 --><p class="noindent">Each summand in the Hamiltonian can be written as a four by four matrix: \[ \left (\begin{array}{cccc} J_z + 2h &amp; 0 &amp; 0 &amp; J_x-J_y \\ 0 &amp; -J_z &amp; J_x + J_y &amp; 0 \\ 0 &amp; J_x + J_y &amp; -J_z &amp; 0 \\ J_x - J_y &amp; 0 &amp; 0 &amp; J_z-2h \end{array}\right ) \] If \(J_x=J_y,\)
+</p><!-- l. 310 --><p class="noindent">Each summand in the Hamiltonian can be written as a four by four matrix: 
+  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mtable columnalign="center center center center" columnspacing="1em" rowspacing="4pt">
+        <mtr>
+          <mtd>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>z</mi>
+              </mrow>
+            </msub>
+            <mo>+</mo>
+            <mn>2</mn>
+            <mi>h</mi>
+          </mtd>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>x</mi>
+              </mrow>
+            </msub>
+            <mo>&#x2212;</mo>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>y</mi>
+              </mrow>
+            </msub>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+          <mtd>
+            <mo>&#x2212;</mo>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>z</mi>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>x</mi>
+              </mrow>
+            </msub>
+            <mo>+</mo>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>y</mi>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>x</mi>
+              </mrow>
+            </msub>
+            <mo>+</mo>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>y</mi>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <mo>&#x2212;</mo>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>z</mi>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>x</mi>
+              </mrow>
+            </msub>
+            <mo>&#x2212;</mo>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>y</mi>
+              </mrow>
+            </msub>
+          </mtd>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+          <mtd>
+            <msub>
+              <mi>J</mi>
+              <mrow data-mjx-texclass="ORD">
+                <mi>z</mi>
+              </mrow>
+            </msub>
+            <mo>&#x2212;</mo>
+            <mn>2</mn>
+            <mi>h</mi>
+          </mtd>
+        </mtr>
+      </mtable>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+  </math>
+If <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>x</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>y</mi>
+    </mrow>
+  </msub>
+</math>,
 as assumed in the XXZ model, then the top–right and bottom–left entries
 are zero. In this case, the non–zero entries are at least the same as in the
 ASEP generator. Recalling the previous section’s heuristic that adding by
-constants does not change integrability, we can set \(J_z=1,h=0\) to obtain the matrix
-\[ \mathrm {Id}_4 + \left ( \begin{array}{cccc} 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; -2 &amp; 2J_x &amp; 0 \\ 0 &amp; 2J_x &amp; -2 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array}\right ). \]
+constants does not change integrability, we can set <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mi>J</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>z</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mi>h</mi>
+  <mo>=</mo>
+  <mn>0</mn>
+</math> to obtain the matrix
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mi data-mjx-auto-op="false">Id</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>4</mn>
+    </mrow>
+  </msub>
+  <mo>+</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+          <msub>
+            <mi>J</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>x</mi>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>2</mn>
+          <msub>
+            <mi>J</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mi>x</mi>
+            </mrow>
+          </msub>
+        </mtd>
+        <mtd>
+          <mo>&#x2212;</mo>
+          <mn>2</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>.
 </p><!-- l. 332 --><p class="noindent">At this point, it is worth noticing that the YBE is a statement about operators on
 vector spaces, which should not depend on the choice of bases on the vector spaces.
 In other words, conjugation (which corresponds to a change of basis) should not
-affect integrability. As it turns out, conjugation by \[ \left ( \begin{array}{cccc} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; \gamma -1 &amp; 0 \\ 0 &amp; 0 &amp; \gamma &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{array} \right ) \] results in the ASEP generator on
-two sites. (Exercise left to the reader).
+affect integrability. As it turns out, conjugation by 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mtable columnalign="center center center center" columnspacing="1em" rowspacing="4pt">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mi>&#x3B3;</mi>
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mi>&#x3B3;</mi>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math>
+results in the ASEP generator on two sites. (Exercise left to the reader).
 </p><!-- l. 347 -->
                                                                   
 
