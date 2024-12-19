@@ -660,7 +660,7 @@ although of course probabilities are real numbers.
 The constant <span role="math">\(\alpha \)</span> can be viewed as a time rescaling, so it can be removed without loss of
 generality.
 </p><!-- l. 186 --><p class="noindent">In a more general setting, where there are N lattice sites, the generator can be defined
-from the above <span role="math">\(4\times 4\)</span> matrix, which we now denote <span role="math">\(\mathcal {L}.\)</span> The generator is now a <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+from the above <span role="math">\(4\times 4\)</span> matrix, which we now denote L. The generator is now a <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
   <msup>
     <mn>2</mn>
     <mrow data-mjx-texclass="ORD">
@@ -773,9 +773,165 @@ Yang–Baxter equation. It was shown by Baxter <span class="cite">[<a href="#XBa
 <a href="https://en.wikipedia.org/wiki/Yang%E2%80%93Baxter_equation">Yang–Baxter equation</a>, there are corresponding “commuting transfer matrices,”
 which are analogous to conserved quantities in the classical setting.
 </p><!-- l. 205 --><p class="noindent">Using the same notation as in the previous section, we say that a matrix \(R\) solves the
-<span class="underline">braided Yang–Baxter Equation</span> if: \[ R_{12}R_{23}R_{12} = R_{23}R_{12}R_{23}. \] Somewhat confusingly, this equation is also
+<span class="underline">braided Yang–Baxter Equation</span> if: 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>2</mn>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>2</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>2</mn>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+ .
+</math> Somewhat confusingly, this equation is also
 sometimes called the braid equation or just the Yang–Baxter equation. An equivalent
-formulation is \[ \check {R}_{12}\check {R}_{13}\check {R}_{23} = \check {R}_{23}\check {R}_{13}\check {R}_{12} \] where \(\check {R} = P \circ R\) and \(P(x \otimes y) = y \otimes x\) permutes the tensor power (exercise left to the
+formulation is 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>2</mn>
+    </mrow>
+  </msub>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>2</mn>
+    </mrow>
+  </msub>
+</math>
+where <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>R</mi>
+      <mo stretchy="false">&#x2C7;</mo>
+    </mover>
+  </mrow>
+  <mo>=</mo>
+  <mi>P</mi>
+  <mo>&#x2218;</mo>
+  <mi>R</mi>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>P</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2297;</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>y</mi>
+  <mo>&#x2297;</mo>
+  <mi>x</mi>
+</math> permutes the tensor power (exercise left to the
 reader).
                                                                   
 
