@@ -2471,7 +2471,7 @@ XXX model for <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
   <mi>y</mi>
   <mo>,</mo>
   <mi>z</mi>
-</math>. However, for the XXZ model, the commutation only works for <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+</math>. However, for the XXZ model, the commutation only works for <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
   <mi>a</mi>
   <mo>=</mo>
   <mi>z</mi>
@@ -2493,33 +2493,267 @@ free parameter, the algebra should be a one–parameter deformation of <math xml
 </math>. This leads
 into the next topic of quantum groups.
 </p><!-- l. 378 -->
-<h3 class="sectionHead" id="quantum-group-uqsl"><span class="titlemark">4   </span> <a id="x1-80004"></a>Quantum Group \(U_q(sl_2)\)</h3>
+<h3 class="sectionHead" id="quantum-group-uqsl"><span class="titlemark">4   </span> <a id="x1-80004"></a>Quantum Group <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mi>U</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>q</mi>
+    </mrow>
+  </msub>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mi>s</mi>
+    <msub>
+      <mi>l</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>2</mn>
+      </mrow>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math></h3>
 <!-- l. 379 --><p class="noindent">The Drinfel’d–Jimbo quantum groups <span class="cite">[<a href="#XDri85">6</a>, <a href="#XJim85">9</a>]</span> are quantizations of the Lie groups.
 Rather confusingly, the quantum groups are not themselves groups.
 </p><!-- l. 382 --><p class="noindent">Before diving into the rigorous definition, one notes where the quantization
 occurs. Using probabilistic intuition, we expect that the SSEP should have an
-underlying \(sl_2\) symmetry, whereas the ASEP should have the quantum group
+underlying <span role="math">\(sl_2\)</span> symmetry, whereas the ASEP should have the quantum group
 symmetry. However, SSEP and ASEP on a single lattice site are identical, so the
 quantization must require multiple lattice sites. We’ve established that in this
-case, the vector space is \((\mathbb {C}^{\otimes 2})^{\otimes N}.\) This raises the question: how does \(sl_2\) act on tensor
+case, the vector space is <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <msup>
+        <mrow data-mjx-texclass="ORD">
+          <mi mathvariant="double-struck">C</mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mo>&#x2297;</mo>
+          <mn>2</mn>
+        </mrow>
+      </msup>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2297;</mo>
+      <mi>N</mi>
+    </mrow>
+  </msup>
+</math>. This raises the question: how does <span role="math">\(sl_2\)</span> act on tensor
 powers?
 </p><!-- l. 389 --><p class="noindent">To answer this question, we take an aside about Lie algebras, which are tangent
-spaces to Lie groups at the origin. What this implies is that for a Lie group \(G\) with a
-                                                                  
-
-                                                                  
-Lie algebra \(g,\) we have that \[ X \in g \text { implies } \exp (tX) \in G \text { for all } t\in \mathbb {R} \] and \[ X = \frac {d}{dt} \exp (tX) \Big |_{t=0}. \] Setting \(g=g_X(t)=\exp (tX),\) the natural action of a group on tensor
-products is \[ g(v \otimes w)= gv \otimes gw. \] Taking derivatives and heuristically using Leibniz’s rule for derivative of
-products, we obtain \[ X(v \otimes w) = Xv \otimes w + v \otimes Xw. \] This is expressed through the <span class="underline">co–product</span> \(\Delta : g \rightarrow g \otimes g\) defined by
-\[ \Delta (X) = 1 \otimes X + X \otimes 1. \]
+spaces to Lie groups at the origin. What this implies is that for a Lie group G with a
+Lie algebra g, we have that 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>X</mi>
+  <mo>&#x2208;</mo>
+  <mi>g</mi>
+  <mtext>&#xA0;implies&#xA0;</mtext>
+  <mi>exp</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mi>X</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2208;</mo>
+  <mi>G</mi>
+  <mtext>&#xA0;for all&#xA0;</mtext>
+  <mi>t</mi>
+  <mo>&#x2208;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mi mathvariant="double-struck">R</mi>
+  </mrow>
+</math>
+and 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>X</mi>
+  <mo>=</mo>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN" fence="true" stretchy="true" symmetric="true"></mo>
+      <mfrac>
+        <mi>d</mi>
+        <mrow>
+          <mi>d</mi>
+          <mi>t</mi>
+        </mrow>
+      </mfrac>
+      <mi>exp</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>t</mi>
+      <mi>X</mi>
+      <mo stretchy="false">)</mo>
+      <mo data-mjx-texclass="CLOSE">|</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>t</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+  </msub>
+</math>.
+Setting <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>g</mi>
+  <mo>=</mo>
+  <msub>
+    <mi>g</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>X</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>exp</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mi>X</mi>
+  <mo stretchy="false">)</mo>
+</math>, the natural action of a group on tensor
+products is 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>v</mi>
+  <mo>&#x2297;</mo>
+  <mi>w</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>g</mi>
+  <mi>v</mi>
+  <mo>&#x2297;</mo>
+  <mi>g</mi>
+  <mi>w</mi>
+</math> Taking derivatives and heuristically using Leibniz’s rule for derivative of
+products, we obtain 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>X</mi>
+  <mo stretchy="false">(</mo>
+  <mi>v</mi>
+  <mo>&#x2297;</mo>
+  <mi>w</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>X</mi>
+  <mi>v</mi>
+  <mo>&#x2297;</mo>
+  <mi>w</mi>
+  <mo>+</mo>
+  <mi>v</mi>
+  <mo>&#x2297;</mo>
+  <mi>X</mi>
+  <mi>w</mi>
+</math>.
+This is expressed through the <span class="underline">co–product</span> <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi mathvariant="normal">&#x394;</mi>
+  <mo>:</mo>
+  <mi>g</mi>
+  <mo stretchy="false">&#x2192;</mo>
+  <mi>g</mi>
+  <mo>&#x2297;</mo>
+  <mi>g</mi>
+</math> defined by
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="normal">&#x394;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>X</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>&#x2297;</mo>
+  <mi>X</mi>
+  <mo>+</mo>
+  <mi>X</mi>
+  <mo>&#x2297;</mo>
+  <mn>1</mn>
+</math>.
 </p><!-- l. 411 --><p class="noindent">Since it is the co–product that allows for the algebra to act on multiple lattice sites
 (i.e. tensor powers), the quantization occurs in the co–product, not the algebra itself!
-As it turns out, the right deformation is \[ \Delta (e) = q^h \otimes e + e \otimes 1, \quad \Delta (f) = 1 \otimes f + f \otimes q^{-h}, \quad \Delta (h)=h\otimes 1 + 1\otimes h, \] where we interpret \(q^h\) as a formal power series
-in \(h.\) Note that we do not deform the co–product of \(h,\) which is consistent with \(\sigma ^z\)
-commuting with the XXZ model.
-</p><!-- l. 419 --><p class="noindent">Depending on the preferences of the author, the generator \(h\) may be replaced with \(k:=q^h\)
-with the co–product becoming \[ \Delta (k) = k \otimes k. \] (Exercise to the reader why that is the same
-co–product). In words, \(h\) is primitive and \(k\) is group–like.
+As it turns out, the right deformation is 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="normal">&#x394;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>e</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msup>
+    <mi>q</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+    </mrow>
+  </msup>
+  <mo>&#x2297;</mo>
+  <mi>e</mi>
+  <mo>+</mo>
+  <mi>e</mi>
+  <mo>&#x2297;</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi mathvariant="normal">&#x394;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>f</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>&#x2297;</mo>
+  <mi>f</mi>
+  <mo>+</mo>
+  <mi>f</mi>
+  <mo>&#x2297;</mo>
+  <msup>
+    <mi>q</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mi>h</mi>
+    </mrow>
+  </msup>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi mathvariant="normal">&#x394;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>h</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>h</mi>
+  <mo>&#x2297;</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo>&#x2297;</mo>
+  <mi>h</mi>
+</math>,
+where we interpret <span role="math">\(q^h\)</span> as a formal power series
+in h. Note that we do not deform the co–product of h, which is consistent with 
+<span role="math">\(\sigma ^z\)</span> commuting with the XXZ model.
+</p><!-- l. 419 --><p class="noindent">Depending on the preferences of the author, the generator h may be replaced with <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>k</mi>
+  <mo>:=</mo>
+  <msup>
+    <mi>q</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>h</mi>
+    </mrow>
+  </msup>
+</math>
+with the co–product becoming <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="normal">&#x394;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>k</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>k</mi>
+  <mo>&#x2297;</mo>
+  <mi>k</mi>
+</math>. (Exercise to the reader why that is the same
+co–product). In words, h is primitive and k is group–like.
 </p><!-- l. 427 -->
 <h4 class="subsectionHead" id="hopf-algebras"><span class="titlemark">4.1   </span> <a id="x1-90004.1"></a>Hopf algebras</h4>
 <!-- l. 428 --><p class="noindent">In this section, we will define  <a href="https://en.wikipedia.org/wiki/Hopf_algebra">Hopf algebras,</a> which are named after  <a href="https://en.wikipedia.org/wiki/Heinz_Hopf">Heinz Hopf.</a>
@@ -2536,16 +2770,104 @@ algebra is actually itself a space of differential operators on a Lie group (it 
 direction derivative), so is a space of functions on the algebra of smooth functions on
 the Lie group. Thus, you would expect a Lie algebra to have a co–algebra
 structure.
-</p><!-- l. 444 --><p class="noindent">Recall that an algebra \(A\) is a vector space with a multiplication operator \[ m: A \otimes A \rightarrow A \] which
-assumed to be bilinear. It is also associative in the sense that \[ m(x \otimes m(y \otimes z)) = m(m(x \otimes y) \otimes z), \] which essentially
-means that \( x(yz) = (xy)z.\) This is equivalently stated as \[ m \circ (m \otimes \mathrm {id}) = m \circ (\mathrm {id} \otimes m). \] Additionally, there is an identity element \(1 \in A\)
-satisfying \[ m(1 \otimes x) = m(x \otimes 1) = x. \] This can be written as an inclusion from the underlying field \(F\) to the
-algebra \(A.\)
+</p><!-- l. 444 --><p class="noindent">Recall that an algebra A is a vector space with a multiplication operator 
+  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+    <mi>m</mi>
+    <mo>:</mo>
+    <mi>A</mi>
+    <mo>&#x2297;</mo>
+    <mi>A</mi>
+    <mo stretchy="false">&#x2192;</mo>
+    <mi>A</mi>
+  </math>
+which assumed to be bilinear. It is also associative in the sense that 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>m</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2297;</mo>
+  <mi>m</mi>
+  <mo stretchy="false">(</mo>
+  <mi>y</mi>
+  <mo>&#x2297;</mo>
+  <mi>z</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>m</mi>
+  <mo stretchy="false">(</mo>
+  <mi>m</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2297;</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2297;</mo>
+  <mi>z</mi>
+  <mo stretchy="false">)</mo>
+</math>,
+which essentially means that <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>x</mi>
+  <mo stretchy="false">(</mo>
+  <mi>y</mi>
+  <mi>z</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mi>z</mi>
+</math>. This is equivalently stated as 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>m</mi>
+  <mo>&#x2218;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>m</mi>
+  <mo>&#x2297;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mi data-mjx-auto-op="false">id</mi>
+  </mrow>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>m</mi>
+  <mo>&#x2218;</mo>
+  <mo stretchy="false">(</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mi data-mjx-auto-op="false">id</mi>
+  </mrow>
+  <mo>&#x2297;</mo>
+  <mi>m</mi>
+  <mo stretchy="false">)</mo>
+</math>.
+Additionally, there is an identity element <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mn>1</mn>
+  <mo>&#x2208;</mo>
+  <mi>A</mi>
+</math>
+satisfying <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>m</mi>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>&#x2297;</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>m</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2297;</mo>
+  <mn>1</mn>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>x</mi>
+</math>. This can be written as an inclusion from the underlying field F to the
+algebra A.
 </p><!-- l. 462 --><p class="noindent">Before defining co–algebras, it will be useful to draw certain commutative diagrams.
                                                                   
 
                                                                   
-The associativity can be written as  <img alt="[Picture]" src="Introduction_to_Quantum_Groups-bae53b21480fc93c9dd5b0c7399c691c.svg"/>
+The associativity can be written as</p><p class="noindent">  <img alt="[Picture]" src="Introduction_to_Quantum_Groups-bae53b21480fc93c9dd5b0c7399c691c.svg"/>
 </p><!-- l. 476 --><p class="noindent">If one reverses the arrow of this diagram, which is also fortunately easy on Tikz, one
 obtains
 </p><!-- l. 478 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-dd7c25167eaff271578cab4b6c343436.svg"/>
