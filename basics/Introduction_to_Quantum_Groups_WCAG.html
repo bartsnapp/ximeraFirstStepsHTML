@@ -995,9 +995,231 @@ matrix.
 </p><!-- l. 236 --><p class="noindent">A probabilist may remark that a permutation matrix and an identity matrix are both
 examples of a stochastic matrix, albeit somewhat trivial examples. It may then be
 natural to try to find more general stochastic matrices which solve the Yang–Baxter
-equation. The “simplest” generalization occurs when \(V\) is two–dimensional, with basis \(e_1,e_2.\)
-Using exclusion processes as a prototype, we can define the operator \(R_{\alpha \beta }\) by \[ R_{\alpha \beta }(e_1 \otimes e_1) = e_1 \otimes e_1, \quad R_{\alpha \beta }(e_2\otimes e_2) = e_2 \otimes e_2 \] and
-\begin{align*} R_{\alpha \beta }(e_1 \otimes e_2) &amp;= (1-\alpha )e_1 \otimes e_2 + \alpha e_2 \otimes e_1,\\ R_{\alpha \beta }(e_2 \otimes e_1) &amp;= \beta e_1\otimes e_2 + (1-\beta )e_2 \otimes e_1. \end{align*}
+equation. The “simplest” generalization occurs when <span role="math">\(V\)</span> is two–dimensional, with basis <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+    </mrow>
+  </msub>
+</math>
+Using exclusion processes as a prototype, we can define the operator <span role="math">\(R_{\alpha \beta }\)</span> by <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3B1;</mi>
+      <mi>&#x3B2;</mi>
+    </mrow>
+  </msub>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msub>
+      <mi>e</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo>&#x2297;</mo>
+    <msub>
+      <mi>e</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <msub>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>&#x2297;</mo>
+  <msub>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3B1;</mi>
+      <mi>&#x3B2;</mi>
+    </mrow>
+  </msub>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msub>
+      <mi>e</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>2</mn>
+      </mrow>
+    </msub>
+    <mo>&#x2297;</mo>
+    <msub>
+      <mi>e</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>2</mn>
+      </mrow>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <msub>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+    </mrow>
+  </msub>
+  <mo>&#x2297;</mo>
+  <msub>
+    <mi>e</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+    </mrow>
+  </msub>
+</math> and
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable columnalign="left" columnspacing="1em" rowspacing="4pt">
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>R</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3B1;</mi>
+            <mi>&#x3B2;</mi>
+          </mrow>
+        </msub>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <msub>
+            <mi>e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo>&#x2297;</mo>
+          <msub>
+            <mi>e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mn>1</mn>
+        <mo>&#x2212;</mo>
+        <mi>&#x3B1;</mi>
+        <mo stretchy="false">)</mo>
+        <msub>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2297;</mo>
+        <msub>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mi>&#x3B1;</mi>
+        <msub>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2297;</mo>
+        <msub>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>R</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>&#x3B1;</mi>
+            <mi>&#x3B2;</mi>
+          </mrow>
+        </msub>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">(</mo>
+          <msub>
+            <mi>e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <mo>&#x2297;</mo>
+          <msub>
+            <mi>e</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <mo data-mjx-texclass="CLOSE">)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mi>&#x3B2;</mi>
+        <msub>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2297;</mo>
+        <msub>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mn>1</mn>
+        <mo>&#x2212;</mo>
+        <mi>&#x3B2;</mi>
+        <mo stretchy="false">)</mo>
+        <msub>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2297;</mo>
+        <msub>
+          <mi>e</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
 </p><!-- l. 249 --><p class="noindent">Inserting this matrix into the Yang–Baxter equation and evaluating at \(e_1 \otimes e_1 \otimes e_2,\) one finds that
 \(\alpha (1-\beta )=0\) is a necessary requirement for a solution to YBE. Evaluating \( R_{\alpha ,1}\) and \(R_{0,\beta }\) at \(e_1\otimes e_2 \otimes e_1\) and \(e_2 \otimes e_1 \otimes e_1\) yields no
 aditional equations. (Exercise left to the reader)
