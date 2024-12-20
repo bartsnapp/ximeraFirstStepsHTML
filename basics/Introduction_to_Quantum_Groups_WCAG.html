@@ -3585,7 +3585,13 @@ called the highest weight vector, such that
   <mi>v</mi>
 </math>. Then the action of the Casimir on the highest weight vector is
 given by
-                                 \[ Cv = av \]
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>C</mi>
+  <mi>v</mi>
+  <mo>=</mo>
+  <mi>a</mi>
+  <mi>v</mi>
+</math>
  for some complex number <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
   <mi>C</mi>
   <mi>v</mi>
@@ -3630,33 +3636,265 @@ as <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
   <msup>
   <mi>U</mi>
   <mrow data-mjx-texclass="ORD">
-    <mi>&#x3BC;</mi>
+    <mi>&#x2264;</mi>
     <mn>0</mn>
   </mrow>
 </math>.
-</p><!-- l. 708 --><p class="noindent">We define the Hamiltonian \(H\) by taking the co–product of \(C\) on tensor powers of
+</p><!-- l. 708 --><p class="noindent">We define the Hamiltonian H by taking the co–product of C on tensor powers of
 representations:
-                                                                  
-
-                                                                  
-                                 \[ H = \Delta (C) \vert _{V \otimes V}. \]
- We want to find a diagonal matrix \(G\) such that \(G^{-1}HG-c\mathrm {Id}\) is the generator of a continuous–time
-Markov process. As a necessary condition, we need that \(G^{-1}HG\) has rows which sum to \(c\);
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>H</mi>
+  <mo>=</mo>
+  <msub>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN" fence="true" stretchy="true" symmetric="true"></mo>
+      <mi mathvariant="normal">&#x394;</mi>
+      <mo stretchy="false">(</mo>
+      <mi>C</mi>
+      <mo stretchy="false">)</mo>
+      <mo data-mjx-texclass="CLOSE">|</mo>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>V</mi>
+      <mo>&#x2297;</mo>
+      <mi>V</mi>
+    </mrow>
+  </msub>
+</math>
+ We want to find a diagonal matrix G such that <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msup>
+    <mi>G</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mi>H</mi>
+  <mi>G</mi>
+  <mo>&#x2212;</mo>
+  <mi>c</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mi data-mjx-auto-op="false">Id</mi>
+  </mrow>
+</math> is the generator of a continuous–time
+Markov process. As a necessary condition, we need that <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msup>
+    <mi>G</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo>&#x2212;</mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+  <mi>H</mi>
+  <mi>G</mi>
+</math> has rows which sum to c;
 non–negativity is more difficult to ensure. One way to achieve this is with an
-eigenvector of eigenvalue \(c\). Namely, assume that \(g\) is a vector such that \(Hg=cg.\) If \(g\) has the
+eigenvector of eigenvalue c. Namely, assume that g is a vector such that <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>H</mi>
+  <mi>g</mi>
+  <mo>=</mo>
+  <mi>c</mi>
+  <mi>g</mi>
+</math>. If g has the
 form
-                                 \[ g=\sum _{\boldsymbol {\mu }=(\mu _1,\mu _2)\in \mathcal {B}\times \mathcal {B}} g(\boldsymbol {\mu }) v_{\mu _1}\otimes v_{\mu _2} \]
- then the diagonal matrix \(G(\boldsymbol {\mu },\boldsymbol {\mu })=g(\boldsymbol {\mu })\) will satisfy the necessary requirement, as long as \(g(\boldsymbol {\mu })\) is always
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>g</mi>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="bold-italic">&#x3BC;</mi>
+      <mo>=</mo>
+      <mrow data-mjx-texclass="INNER">
+        <mo data-mjx-texclass="OPEN">(</mo>
+        <msub>
+          <mi>&#x3BC;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>&#x3BC;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo data-mjx-texclass="CLOSE">)</mo>
+      </mrow>
+      <mo>&#x2208;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">B</mi>
+      </mrow>
+      <mo>&#xD7;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">B</mi>
+      </mrow>
+    </mrow>
+  </munder>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold-italic">&#x3BC;</mi>
+  <mo stretchy="false">)</mo>
+  <msub>
+    <mi>v</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3BC;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mn>1</mn>
+        </mrow>
+      </msub>
+    </mrow>
+  </msub>
+  <mo>&#x2297;</mo>
+  <msub>
+    <mi>v</mi>
+    <mrow data-mjx-texclass="ORD">
+      <msub>
+        <mi>&#x3BC;</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mn>2</mn>
+        </mrow>
+      </msub>
+    </mrow>
+  </msub>
+</math>
+ then the diagonal matrix <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>G</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold-italic">&#x3BC;</mi>
+  <mo>,</mo>
+  <mi mathvariant="bold-italic">&#x3BC;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold-italic">&#x3BC;</mi>
+  <mo stretchy="false">)</mo>
+</math> will satisfy the necessary requirement, as long as <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="bold-italic">&#x3BC;</mi>
+  <mo stretchy="false">)</mo>
+</math> is always
 nonzero.
-</p><!-- l. 722 --><p class="noindent">As it turns out, \(g=v\otimes v\) (the tensor power of the highest weight vector) will satsify
-                                 \[ Hg=a^2g \]
- due to the form of the co–product and the central element. However, this choice will
-have zero entries. So instead we take \(g\) of the form
+</p><!-- l. 722 --><p class="noindent">As it turns out, <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>g</mi>
+  <mo>=</mo>
+  <mi>v</mi>
+  <mo>&#x2297;</mo>
+  <mi>v</mi>
+</math> (the tensor power of the highest weight vector) will satsify
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>H</mi>
+  <mi>g</mi>
+  <mo>=</mo>
+  <msup>
+    <mi>a</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+    </mrow>
+  </msup>
+  <mi>g</mi>
+</math>
+due to the form of the co–product and the central element. However, this choice will
+have zero entries. So instead we take g of the form
                                                                   
-
-                                                                  
-                                 \[ \sum _{\boldsymbol {\mu }=(\mu _1,\mu _2)} c(\mu _1,\mu _2)\Delta (F^{\mu _1}F^{\mu _2}) v\otimes v \]
- for some appropriate choice of coefficients \(c(\mu _1,\mu _2)\) (reference the appendix for more detailed
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>&#x3BC;</mi>
+      <mo>=</mo>
+      <mrow data-mjx-texclass="INNER">
+        <mo data-mjx-texclass="OPEN">(</mo>
+        <msub>
+          <mi>&#x3BC;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>&#x3BC;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo data-mjx-texclass="CLOSE">)</mo>
+      </mrow>
+    </mrow>
+  </munder>
+  <mi>c</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msub>
+      <mi>&#x3BC;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo>,</mo>
+    <msub>
+      <mi>&#x3BC;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>2</mn>
+      </mrow>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mi mathvariant="normal">&#x394;</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msup>
+      <mi>F</mi>
+      <mrow data-mjx-texclass="ORD">
+        <msub>
+          <mi>&#x3BC;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+      </mrow>
+    </msup>
+    <msup>
+      <mi>F</mi>
+      <mrow data-mjx-texclass="ORD">
+        <msub>
+          <mi>&#x3BC;</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mrow>
+    </msup>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mi>v</mi>
+  <mo>&#x2297;</mo>
+  <mi>v</mi>
+</math>
+for some appropriate choice of coefficients <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>c</mi>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msub>
+      <mi>&#x3BC;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo>,</mo>
+    <msub>
+      <mi>&#x3BC;</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mn>2</mn>
+      </mrow>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math> (reference the appendix for more detailed
 calculations).
 </p><!-- l. 733 -->
 <h3 class="sectionHead" id="appendix"><span class="titlemark">6   </span> <a id="x1-140006"></a>Appendix</h3>
