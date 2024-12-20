@@ -2994,15 +2994,72 @@ there is an invertible element <math xmlns="http://www.w3.org/1998/Math/MathML" 
   <mi>x</mi>
   <mo stretchy="false">)</mo>
   <mi>R</mi>
-</math>for all <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+</math> for all <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
   <mi>x</mi>
   <mo>&#x2208;</mo>
   <mi>H</mi>
 </math>.
 </p><!-- l. 555 --><p class="noindent">An almost co–commtuative Hopf algebra is quasi–triangular if the additional
-relations hold for the element \(R\):
-                                 \[ (\Delta \otimes \mathrm {id})(R) = R_{13}R_{23}, \quad (\mathrm {id} \otimes \Delta )(R) = R_{13}R_{12}. \]
- In a quasi–triangular Hopf algebra, the \(R\)–matrix satisfies the Yang–Baxter
+relations hold for the element R:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">(</mo>
+  <mi mathvariant="normal">&#x394;</mi>
+  <mo>&#x2297;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mi data-mjx-auto-op="false">id</mi>
+  </mrow>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <mi>R</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mo stretchy="false">(</mo>
+  <mtext>&#xA0;id&#xA0;</mtext>
+  <mo>&#x2297;</mo>
+  <mi mathvariant="normal">&#x394;</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <mi>R</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <msub>
+    <mi>R</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>2</mn>
+    </mrow>
+  </msub>
+</math>
+In a quasi–triangular Hopf algebra, the R–matrix satisfies the Yang–Baxter
 equation.
                                                                   
 
@@ -3014,31 +3071,257 @@ equation.
 <!-- l. 565 --><p class="noindent">Having shown that solutions to Yang–Baxter Equation can come from Hopf algebras,
 we now introduce a spectral–dependent Yang–Baxter Equation that comes from
 affine Lie algebras.
-</p><!-- l. 568 --><p class="noindent">Given a finite–dimensional Lie algebra \(\mathfrak {g}\), define its affinization by
-                                 \[ \hat {\mathfrak {g}} = \mathfrak {g} \otimes _{\mathbb {C}} \oplus \mathbb {C}[t,t^{-1}] \oplus \mathbb {C}c \]
- where \(c\) is a central element. In words, this is a one–dimensional central extension of
-the loop algebra over \(\mathfrak {g}.\) The Lie bracket is then defined by
-                                 \[ [a\otimes t^n, b\otimes t^m] = [a,b] \otimes t^{n+m} + (a,b)n\delta _{m,-n}c \]
- where \((\cdot ,\cdot )\) is the Cartan–Killing form on \(\mathfrak {g}.\) This Lie algebra is now infinite–dimensional,
+</p><!-- l. 568 --><p class="noindent">Given a finite–dimensional Lie algebra <span role="math">\(\mathfrak {g}\)</span>, define its affinization by
+  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mrow data-mjx-texclass="ORD">
+          <mi mathvariant="fraktur">g</mi>
+        </mrow>
+        <mo stretchy="false">^</mo>
+      </mover>
+    </mrow>
+    <mo>=</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="fraktur">g</mi>
+    </mrow>
+    <msub>
+      <mo>&#x2297;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mrow data-mjx-texclass="ORD">
+          <mi mathvariant="double-struck">C</mi>
+        </mrow>
+      </mrow>
+    </msub>
+    <mo>&#x2295;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="double-struck">C</mi>
+    </mrow>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">[</mo>
+      <mi>t</mi>
+      <mo>,</mo>
+      <msup>
+        <mi>t</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo>&#x2212;</mo>
+          <mn>1</mn>
+        </mrow>
+      </msup>
+      <mo data-mjx-texclass="CLOSE">]</mo>
+    </mrow>
+    <mo>&#x2295;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="double-struck">C</mi>
+    </mrow>
+    <mi>c</mi>
+  </math>
+where c is a central element. In words, this is a one–dimensional central extension of
+the loop algebra over <span role="math">\(\mathfrak {g}\)</span>. The Lie bracket is then defined by
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">[</mo>
+    <mi>a</mi>
+    <mo>&#x2297;</mo>
+    <msup>
+      <mi>t</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>n</mi>
+      </mrow>
+    </msup>
+    <mo>,</mo>
+    <mi>b</mi>
+    <mo>&#x2297;</mo>
+    <msup>
+      <mi>t</mi>
+      <mrow data-mjx-texclass="ORD">
+        <mi>m</mi>
+      </mrow>
+    </msup>
+    <mo data-mjx-texclass="CLOSE">]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mo stretchy="false">[</mo>
+  <mi>a</mi>
+  <mo>,</mo>
+  <mi>b</mi>
+  <mo stretchy="false">]</mo>
+  <mo>&#x2297;</mo>
+  <msup>
+    <mi>t</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>n</mi>
+      <mo>+</mo>
+      <mi>m</mi>
+    </mrow>
+  </msup>
+  <mo>+</mo>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo>,</mo>
+  <mi>b</mi>
+  <mo stretchy="false">)</mo>
+  <mi>n</mi>
+  <msub>
+    <mi>&#x3B4;</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>m</mi>
+      <mo>,</mo>
+      <mo>&#x2212;</mo>
+      <mi>n</mi>
+    </mrow>
+  </msub>
+  <mi>c</mi>
+</math>
+where <span role="math">\((\cdot ,\cdot )\)</span> is the Cartan–Killing form on <span role="math">\(\mathfrak {g}\)</span>. This Lie algebra is now infinite–dimensional,
 which makes its representation theory tricker.
                                                                   
 
                                                                   
-</p><!-- l. 580 --><p class="noindent">There is an analogous quantum group \(\mathcal {U}_q(\mathfrak {g}),\) which has an \(R\)–matrix satisfying Yang–Baxter
-equation. For modules where \(c\) acts as \(0\) (level \(0\) representations), we can define an
-evaluation module by takng a module of \(\mathfrak {g}\) and then letting \(t\) act as multiplication
-by \(z\). If the element \(R\) now acts on evaluation modules, then it depends on a
+</p><!-- l. 580 --><p class="noindent">There is an analogous quantum group <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mi data-mjx-variant="-tex-calligraphic" mathvariant="script">U</mi>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi>q</mi>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mi mathvariant="fraktur">g</mi>
+  </mrow>
+  <mo stretchy="false">)</mo>
+</math> which has an R–matrix satisfying Yang–Baxter
+equation. For modules where c acts as 0 (level 0 representations), we can define an
+evaluation module by takng a module of <span role="math">\(\mathfrak {g}\)</span> and then letting t act as multiplication
+by z. If the element R now acts on evaluation modules, then it depends on a
 parameter which we call the spectral parameter. The Yang–Baxter equation now
 reads
-                                 \[ \check {R}_{12}(z) \check {R}_{13}(zw) \check {R}_{23}(w) = \check {R}_{23}(w) \check {R}_{13}(zw) \check {R}_{12}(z). \]
- If we attempt to find \(4\times 4\) solutions to the spectral–dependent YBE analogous to ASEP,
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>2</mn>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>z</mi>
+  <mo stretchy="false">)</mo>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>z</mi>
+  <mi>w</mi>
+  <mo stretchy="false">)</mo>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>w</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>2</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>w</mi>
+  <mo stretchy="false">)</mo>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>3</mn>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>z</mi>
+  <mi>w</mi>
+  <mo stretchy="false">)</mo>
+  <msub>
+    <mrow data-mjx-texclass="ORD">
+      <mover>
+        <mi>R</mi>
+        <mo stretchy="false">&#x2C7;</mo>
+      </mover>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>2</mn>
+    </mrow>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>z</mi>
+  <mo stretchy="false">)</mo>
+</math>
+If we attempt to find <span role="math">\(4\times 4\)</span> solutions to the spectral–dependent YBE analogous to ASEP,
 we get a two–parameter family of solutions, which end up being the weights of the
 stochastic six vertex model, which we now define.
 </p><!-- l. 592 --><p class="noindent">The stochastic six vertex model was defined in <span class="cite">[<a href="#XGS92">12</a>]</span>, with the generic six vertex model
 going back to <span class="cite">[<a href="#XPau35">14</a>]</span>. The six weights are displayed below:
 </p><!-- l. 596 --><p class="noindent"><img alt="[Picture]" src="Introduction_to_Quantum_Groups-a7a136b8c2b8d54f27e03e7d75c5c8e9.svg"/>
 </p><!-- l. 629 --><p class="noindent">The number of arrows coming in from the bottom and left must equal the number of
-arrows coming out from the top and right. Thus, there are \(6 = \binom {4}{2}\) possible vertices. On a
+arrows coming out from the top and right. Thus, there are <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mn>6</mn>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mrow data-mjx-texclass="OPEN">
+      <mo minsize="2.047em" maxsize="2.047em">(</mo>
+    </mrow>
+    <mfrac linethickness="0">
+      <mn>4</mn>
+      <mn>2</mn>
+    </mfrac>
+    <mrow data-mjx-texclass="CLOSE">
+      <mo minsize="2.047em" maxsize="2.047em">)</mo>
+    </mrow>
+  </mrow>
+</math> possible vertices. On a
 two–dimensional lattice, perhaps with fixed boundary conditions, this defines a
 weight on configurations:
 </p><!-- l. 635 --><p class="noindent"><img alt="PIC" height="289" src="Images-figure6.svg" width="325"/>
