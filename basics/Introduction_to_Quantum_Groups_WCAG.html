@@ -3377,23 +3377,106 @@ tensor power
   <mtext>.&#xA0;</mtext>
 </math>
 </p><!-- l. 649 --><p class="noindent">In lieu of an extensive algebraic discussion, we present it in probabilistic language.
-Recall Pitman–Rogers intertwining <a href="#XRP81">[14]</a>: suppose there are two Markov kernels \(\Lambda \) and \(\Phi \)
-such that \(\Lambda \Phi =\mathrm {Id}\). Let \(Q=\Lambda P\Phi \) and assume \(\Lambda P = Q\Lambda .\) Then \(\Phi \) defends a Markov projection from \(P\) to
-\(Q\):
+Recall Pitman–Rogers intertwining <a href="#XRP81">[13]</a>: suppose there are two Markov kernels <span role="math">\(\Lambda \)</span> and <span>(\Phi \)</span>
+such that <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mi mathvariant="normal">&#x3A6;</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mi data-mjx-auto-op="false">Id</mi>
+  </mrow>
+</math>. Let <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>Q</mi>
+  <mo>=</mo>
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mi>P</mi>
+  <mi mathvariant="normal">&#x3A6;</mi>
+</math> and assume <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mi>P</mi>
+  <mo>=</mo>
+  <mi>Q</mi>
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mo>.</mo>
+</math> Then <span role="math">\(\Phi \)</span> defends a Markov projection from P to
+Q:
 </p><!-- l. 655 --><p class="noindent"><img alt="PIC" src="../pictures/MarkovProjection.png"/>
-</p><!-- l. 657 --><p class="noindent">More specifically, if \(X(t)\) is a Markov process on state space \(S\) and \(\Phi :S\rightarrow \hat {S}\) is deterministic, with a
-Markov kernel \(\Lambda : \hat {S}\rightarrow S,\) then \(\Phi (X(t))\) is a Markov process on \(\hat {S}.\)
+</p><!-- l. 657 --><p class="noindent">More specifically, if <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>X</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+</math> is a Markov process on state space S and <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi mathvariant="normal">&#x3A6;</mi>
+  <mo>:</mo>
+  <mi>S</mi>
+  <mo stretchy="false">&#x2192;</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>S</mi>
+      <mo stretchy="false">^</mo>
+    </mover>
+  </mrow>
+</math> is deterministic, with a
+Markov kernel  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mo>:</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mover>
+      <mi>S</mi>
+      <mo stretchy="false">^</mo>
+    </mover>
+  </mrow>
+  <mo stretchy="false">&#x2192;</mo>
+  <mi>S</mi>
+  <mo>,</mo>
+</math>
+then <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi mathvariant="normal">&#x3A6;</mi>
+  <mo stretchy="false">(</mo>
+  <mi>X</mi>
+  <mo stretchy="false">(</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">)</mo>
+</math> is a Markov process on <span role="math">\(\hat {S}\)</span>.
 </p><!-- l. 660 --><p class="noindent">This procedure is sometimes called fusion.
 </p><!-- l. 662 --><p class="noindent">This intertwining can be constructed algebraically, but instead we draw a metaphor
 with stationary measures. We want to show that
-                                 \[ \Lambda P = \Lambda P \Phi \Lambda . \]
- If for all \(v\), we have that \(v\Lambda \) is stationary under \(P\), i.e. \(v\Lambda P = v\Lambda \), then the above intertwining
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mi>P</mi>
+  <mo>=</mo>
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mi>P</mi>
+  <mi mathvariant="normal">&#x3A6;</mi>
+  <mi mathvariant="normal">&#x39B;</mi>
+</math>
+ If for all v, we have that <span role="math">\(v\Lambda \)</span> is stationary under P, i.e. <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>v</mi>
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mi>P</mi>
+  <mo>=</mo>
+  <mi>v</mi>
+  <mi mathvariant="normal">&#x39B;</mi>
+</math>, then the above intertwining
 becomes
-                                                                  
-
-                                                                  
-                                 \[ v\Lambda = v\Lambda \Phi \Lambda \]
- which then follows from \(\Lambda \Phi =\mathrm {Id}.\)
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>v</mi>
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mo>=</mo>
+  <mi>v</mi>
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mi mathvariant="normal">&#x3A6;</mi>
+  <mi mathvariant="normal">&#x39B;</mi>
+</math>
+ which then follows from <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi mathvariant="normal">&#x39B;</mi>
+  <mi mathvariant="normal">&#x3A6;</mi>
+  <mo>=</mo>
+  <mtext>&#xA0;Id.&#xA0;</mtext>
+</math>
 </p><!-- l. 674 --><p class="noindent">Calculating the fused vertex weights then requires orthogonal polynomials (please
 reference the Appendix).
 </p><!-- l. 676 --><p class="noindent">At this point, a natural question arises: do these weights satisfy YBE? For the
